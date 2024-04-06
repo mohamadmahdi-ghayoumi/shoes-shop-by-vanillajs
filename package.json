@@ -9,7 +9,11 @@
     "preview": "vite preview"
   },
   "devDependencies": {
+    "@iconify-json/bi": "^1.1.23",
+    "@iconify-json/ion": "^1.1.17",
+    "@iconify-json/mdi": "^1.1.65",
     "@iconify-json/simple-icons": "^1.1.98",
+    "@iconify-json/uis": "^1.1.8",
     "@iconify/tailwind": "^0.1.4",
     "autoprefixer": "^10.4.19",
     "postcss": "^8.4.38",
