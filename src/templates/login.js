@@ -6,12 +6,12 @@ export function loginForm() {
   // inputPassword.addEventListener()
   const element = El({
     element: "div",
-    className: "h-full flex flex-col ",
+    className: "h-full flex flex-col  ",
     children: [
       El({
         element: "div",
         innerText: "",
-        className: "h-[56px] flex  ",
+        className: "h-[56px] flex  items-center ",
         children: [
           El({
             element: "a",
@@ -21,7 +21,7 @@ export function loginForm() {
               El({
                 element: "span",
                 className:
-                  "w-[32px] h-[32px] mx-[24px] icon-[ic--sharp-arrow-back] my-[12px]",
+                  "w-[32px] h-[32px] mx-[24px] icon-[ic--sharp-arrow-back] mt-[21px]",
               }),
             ],
           }),
@@ -144,7 +144,10 @@ export function loginForm() {
       } else {
         console.log("zart");
         // location.assign("/home");
-        window.location.href = 'homepage';
+        window.location.href = "homepage";
+        // document.addEventListener("animalfound", (e) => {
+        //   console.log(e.detail.name);
+        // });
       }
     });
   }

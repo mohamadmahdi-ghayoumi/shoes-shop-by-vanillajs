@@ -11,26 +11,52 @@ export function buttonsBrand() {
         element: "div",
         className: "flex gap-[41px] mt-[12px] mx[9px]",
         children: [
-          buttonBrand({ logo: "icon-[simple-icons--nike]", brand: "Nike" }),
-          buttonBrand({ logo: "icon-[gg--adidas]", brand: "Adidas" }),
-          buttonBrand({ logo: "icon-[simple-icons--puma]", brand: "Puma" }),
-          buttonBrand({ logo: "icon-[simple-icons--reebok]", brand: "Reebok" }),
+          buttonBrand({
+            logo: "icon-[simple-icons--nike]",
+            brand: "Nike",
+            className: "items-center justify-center",
+          }),
+          buttonBrand({
+            logo: "icon-[gg--adidas]",
+            brand: "Adidas",
+            className: "items-center justify-center",
+          }),
+          buttonBrand({
+            logo: "icon-[simple-icons--puma]",
+            brand: "Puma",
+            className: "items-center justify-center",
+          }),
+          buttonBrand({
+            logo: "icon-[simple-icons--reebok]",
+            brand: "Asics",
+            className: "items-center justify-center",
+          }),
         ],
       }),
       El({
         element: "div",
         className: "flex gap-[41px] mb-[12px] mx[9px]",
         children: [
-          buttonBrand({ logo: "icon-[simple-icons--nike]", brand: "Nike" }),
+          buttonBrand({
+            logo: "icon-[simple-icons--nike]",
+            brand: "Reebok",
+            className: "items-center justify-center",
+          }),
           buttonBrand({
             logo: "icon-[simple-icons--newbalance]",
-            brand: "New Ba..",
+            brand: "New Balance",
+            className: " justify-center",
           }),
-          buttonBrand({ logo: "icon-[gg--adidas]", brand: "Adidas" }),
+          buttonBrand({
+            logo: "icon-[gg--adidas]",
+            brand: "Converse",
+            className: "items-center justify-center",
+          }),
 
           buttonBrand({
             logo: "icon-[icon-park-outline--more-two]",
             brand: "more",
+            className: "items-center justify-center",
           }),
         ],
       }),

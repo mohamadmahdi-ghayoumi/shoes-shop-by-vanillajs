@@ -15,7 +15,7 @@ export function cartproduct({ product }) {
       El({
         element: "h2",
         className:
-          "font-bold mt-[12px] mb[8px] whitespace-nowrap overflow-hidden overflow-ellipsis",
+          "font-bold mt-[12px] mb-[8px] whitespace-nowrap overflow-hidden overflow-ellipsis",
         innerText: name,
       }),
       El({

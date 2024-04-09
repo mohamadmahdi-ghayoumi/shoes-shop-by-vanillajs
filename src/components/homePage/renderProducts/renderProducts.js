@@ -22,6 +22,5 @@ export function home(filter) {
       Element.append(productCard);
     });
   });
-  console.log(Element);
   return Element;
 }
