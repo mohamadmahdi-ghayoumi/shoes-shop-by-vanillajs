@@ -2,9 +2,9 @@
   "users": [
     {
       "id": 1,
-      "name": "Your Name",
-      "email": "Your Email",
-      "password": "Your Password",
+      "name": "mohamadmahdi",
+      "email": "mohamad@gamil.com",
+      "password": "mohamad",
       "cart": [],
       "orders": [],
       "wishlist": []
@@ -14,7 +14,7 @@
     {
       "id": 1,
       "name": "Nike React Infinity Run Flyknit",
-      "brand": "NIKE",
+      "brand": "nike",
       "gender": "MEN",
       "category": "RUNNING",
       "price": 160,
@@ -27,7 +27,7 @@
     {
       "id": 2,
       "name": "Nike React Miler",
-      "brand": "NIKE",
+      "brand": "nike",
       "gender": "MEN",
       "category": "RUNNING",
       "price": 130,
@@ -40,7 +40,7 @@
     {
       "id": 3,
       "name": "Nike Air Zoom Pegasus 37",
-      "brand": "NIKE",
+      "brand": "nike",
       "gender": "WOMEN",
       "category": "RUNNING",
       "price": 120,
@@ -53,7 +53,7 @@
     {
       "id": 4,
       "name": "Nike Joyride Run Flyknit",
-      "brand": "NIKE",
+      "brand": "nike",
       "gender": "WOMEN",
       "category": "RUNNING",
       "price": 180,
@@ -66,7 +66,7 @@
     {
       "id": 5,
       "name": "Nike Mercurial Vapor 13 Elite FG",
-      "brand": "NIKE",
+      "brand": "nike",
       "gender": "WOMEN",
       "category": "FOOTBALL",
       "price": 250,
@@ -92,7 +92,7 @@
     {
       "id": 7,
       "name": "Nike Phantom Venom Academy FG",
-      "brand": "NIKE",
+      "brand": "nike",
       "gender": "WOMEN",
       "category": "FOOTBALL",
       "price": 80,
@@ -105,7 +105,7 @@
     {
       "id": 8,
       "name": "Asics Phantom Vision Elite Dynamic Fit FG",
-      "brand": "ASICS",
+      "brand": "asics",
       "gender": "MEN",
       "category": "FOOTBALL",
       "price": 145,
@@ -118,7 +118,7 @@
     {
       "id": 9,
       "name": "Asics Phantom Vision Elite Dynamic Fit FG",
-      "brand": "ASICS",
+      "brand": "asics",
       "gender": "MEN",
       "category": "FOOTBALL",
       "price": 137,
@@ -235,7 +235,7 @@
     {
       "id": 18,
       "name": "Asics Joyride Run Flyknit",
-      "brand": "ASICS",
+      "brand": "asics",
       "gender": "WOMEN",
       "category": "RUNNING",
       "price": 180,
@@ -248,7 +248,7 @@
     {
       "id": 19,
       "name": "Asics Phantom Vision Elite Dynamic Fit FG",
-      "brand": "ASICS",
+      "brand": "asics",
       "gender": "WOMEN",
       "category": "FOOTBALL",
       "price": 150,

@@ -1,15 +1,17 @@
+import { getUser } from "../api/get/getUser";
 import { El } from "../utils/create-element";
+// import { home } from "./home";
 
 export function loginForm() {
   // inputPassword.addEventListener()
   const element = El({
     element: "div",
-    className: "h-full",
+    className: "h-full flex flex-col ",
     children: [
       El({
         element: "div",
         innerText: "",
-        className: "h-[56px]  items-center flex",
+        className: "h-[56px] flex  ",
         children: [
           El({
             element: "a",
@@ -17,9 +19,9 @@ export function loginForm() {
             className: "",
             children: [
               El({
-                element: "img",
-                src: "../src/assets/image/arrow-left.png",
-                className: "w-[32px] h-[32px] mx-[24px]",
+                element: "span",
+                className:
+                  "w-[32px] h-[32px] mx-[24px] icon-[ic--sharp-arrow-back] my-[12px]",
               }),
             ],
           }),
@@ -57,7 +59,7 @@ export function loginForm() {
       }),
       El({
         element: "div",
-        className: "flex  w-full relative h-[37px] mb-[21px]",
+        className: "flex w-full relative h-[37px] mb-[21px]",
         children: [
           El({
             element: "span",
@@ -71,12 +73,6 @@ export function loginForm() {
             placeholder: "Password",
             id: "input-password",
             type: "password",
-            // eventListener: [
-            //   {
-            //     event: "onkeyup",
-            //     callback: inputPassword,
-            //   },
-            // ],
             onkeyup: inputPassword,
           }),
           El({
@@ -107,9 +103,11 @@ export function loginForm() {
       El({
         element: "button",
         className:
-          "mt-[270px] bg-[#212529] mb-[32px] mx-[24px] rounded-3xl h-[47px] w-[380px] text-white",
+          "mt-[270px] bg-[#212529] mb-[32px] m-auto rounded-3xl h-[47px] w-[380px] text-white",
 
         innerText: "Sing In",
+        id: "Btn-singIn",
+        onclick: btnSingIn,
       }),
     ],
   });
@@ -120,24 +118,36 @@ export function loginForm() {
   }
 
   function inputEmail() {
-    document.getElementById("span-envelope").classList.add("text-black");
+    document.getElementById("span-envelope").classList.add("text-blue");
   }
 
   document.addEventListener("DOMContentLoaded", function () {
     const passIn = document.getElementById("input-password");
-    const btn = document.getElementById("span-eye");
-    btn.addEventListener("click", function () {
+    const showPass = document.getElementById("span-eye");
+    showPass.addEventListener("click", function () {
       const type =
         passIn.getAttribute("type") === "password" ? "text" : "password";
       passIn.setAttribute("type", type);
     });
-    const loginForm = document.getElementById("loginForm");
-    loginForm.addEventListener("submit", function (event) {
-      event.preventDefault();
-      loginForm.reset(); // Reset the form
-      alert("Form submitted");
-    });
   });
+
+  function btnSingIn() {
+    getUser().then((data) => {
+      console.log(data.password);
+      const inputPass = document.getElementById("input-password");
+      const inputEmail = document.getElementById("input-Email");
+      if (
+        inputPass.value == data[0].password &&
+        inputEmail.value == data[0].email
+      ) {
+        console.log("ok");
+      } else {
+        console.log("zart");
+        // location.assign("/home");
+        window.location.href = 'homepage';
+      }
+    });
+  }
 
   return element;
 }
