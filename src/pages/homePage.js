@@ -44,7 +44,7 @@ export function homePage() {
       El({
         element: "div",
         id: "home",
-        // children: home("all"),
+        children: [home("all")],
       }),
       footerHomePage(),
     ],
