@@ -3,7 +3,7 @@ import { El } from "../../../utils/create-element";
 import { cartproduct } from "../../cartproduct/cartproduct";
 // import { productcarts } from "../widget/productcarts";
 
-export function home(filter) {
+export function renderProducts(filter) {
   if (!filter) {
     filter = "all";
   }

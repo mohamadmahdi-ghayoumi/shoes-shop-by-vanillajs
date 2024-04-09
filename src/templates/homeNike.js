@@ -1,4 +1,4 @@
-import { home } from "../components/homePage/renderProducts/renderProducts";
+import {  renderProducts } from "../components/homePage/renderProducts/renderProducts";
 import { El } from "../utils/create-element";
 
 export function homeNike() {
@@ -33,7 +33,7 @@ export function homeNike() {
         ],
       }),
 
-      home("nike"),
+      renderProducts("nike"),
     ],
   });
 

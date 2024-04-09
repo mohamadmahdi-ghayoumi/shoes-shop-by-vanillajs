@@ -1,4 +1,4 @@
-import { home } from "../components/homePage/renderProducts/renderProducts";
+import {  renderProducts } from "../components/homePage/renderProducts/renderProducts";
 import { El } from "../utils/create-element";
 
 export function homeAllBrands() {
@@ -31,7 +31,7 @@ export function homeAllBrands() {
         ],
       }),
 
-      home(),
+      renderProducts(),
     ],
   });
 

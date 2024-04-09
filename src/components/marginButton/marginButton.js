@@ -1,5 +1,5 @@
 import { El } from "../../utils/create-element";
-import { home } from "../homePage/renderProducts/renderProducts";
+import { renderProducts } from "../homePage/renderProducts/renderProducts";
 
 export function marginButton({ Brand }) {
   const button = El({
@@ -16,7 +16,7 @@ export function marginButton({ Brand }) {
       render.remove();
     }
     const main = document.getElementById("home");
-    let productFilter = home(filterBrand);
+    let productFilter = renderProducts(filterBrand);
     main.append(productFilter);
     console.log(main);
   });
