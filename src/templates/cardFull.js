@@ -1,5 +1,7 @@
 import { headerBack } from "../layout/header/headerback";
 import { El } from "../utils/create-element";
+import { buttonsColor } from "../widget/cardfull/buttonsColor/buttonsColor";
+import { buttonsSize } from "../widget/cardfull/buttonsSize/buttonsSize";
 
 export function cardFullDetail() {
   function imageCard() {
@@ -86,30 +88,7 @@ export function cardFullDetail() {
                   className: "font-bold mb-2",
                   innerText: "Size",
                 }),
-                El({
-                  element: "div",
-                  className: "flex items-center gap-3",
-                  children: [
-                    El({
-                      element: "button",
-                      className:
-                        "rounded-full border-[2px] p-1 border-gray-600 text-gray-600 w-[40px] h-[40px] font-bold",
-                      innerText: "43",
-                    }),
-                    El({
-                      element: "button",
-                      className:
-                        "rounded-full border-[2px] p-1 border-gray-600 text-gray-600 w-[40px] h-[40px] font-bold",
-                      innerText: "42",
-                    }),
-                    El({
-                      element: "button",
-                      className:
-                        "rounded-full border-[2px] p-1 border-gray-600 text-gray-600 w-[40px] h-[40px] font-bold",
-                      innerText: "41",
-                    }),
-                  ],
-                }),
+                buttonsSize(),
               ],
             }),
             El({
@@ -121,54 +100,8 @@ export function cardFullDetail() {
                   className: "font-bold mb-2",
                   innerText: "Color",
                 }),
-                El({
-                  element: "div",
-                  className: "flex items-center  overflow-y-auto gap-3",
-                  children: [
-                    El({
-                      element: "button",
-                      className:
-                        "rounded-full border-[2px] p-5 border-none  font-bold bg-red-600",
-                      innerText: "",
-                    }),
-                    El({
-                      element: "button",
-                      className:
-                        "rounded-full border-[2px] p-5 border-none  font-bold bg-red-600",
-                      innerText: "",
-                    }),
-                    El({
-                      element: "button",
-                      className:
-                        "rounded-full border-[2px] p-5 border-none  font-bold bg-red-600",
-                      innerText: "",
-                    }),
-                    El({
-                      element: "button",
-                      className:
-                        "rounded-full border-[2px] p-5 border-none  font-bold bg-red-600",
-                      innerText: "",
-                    }),
-                    El({
-                      element: "button",
-                      className:
-                        "rounded-full border-[2px] p-5 border-none  font-bold bg-red-600",
-                      innerText: "",
-                    }),
-                    El({
-                      element: "button",
-                      className:
-                        "rounded-full border-[2px] p-5 border-none  font-bold bg-red-600",
-                      innerText: "",
-                    }),
-                    El({
-                      element: "button",
-                      className:
-                        "rounded-full border-[2px] p-5 border-none  font-bold bg-red-600",
-                      innerText: "",
-                    }),
-                  ],
-                }),
+
+                buttonsColor(),
               ],
             }),
           ],
@@ -229,8 +162,16 @@ export function cardFullDetail() {
             }),
             El({
               element: "button",
-              className: "bg-black text-white w-full rounded-3xl text-[12px]",
+              className:
+                "bg-black text-white w-full rounded-3xl relative text-[14px]",
               innerText: "Add to Card",
+              children: [
+                El({
+                  element: "span",
+                  className:
+                    "icon-[lets-icons--bag-fill] text-white absolute  w-[17px]  h-[17px] start-[60px] top-[14px]",
+                }),
+              ],
             }),
           ],
         }),
