@@ -1,6 +1,6 @@
 import { getProducts } from "../../../api/get/getProducts";
 import { El } from "../../../utils/create-element";
-import { cartproduct } from "../../cartproduct/cartproduct";
+import { cartproduct } from "../cartproduct/cartproduct";
 // import { productcarts } from "../widget/productcarts";
 
 export function renderProducts(filter) {

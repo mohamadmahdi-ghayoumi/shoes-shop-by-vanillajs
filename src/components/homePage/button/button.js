@@ -1,4 +1,4 @@
-import { El } from "../../utils/create-element";
+import { El } from "../../../utils/create-element";
 
 export function buttonBrand({ logo, brand, className }) {
   function btnBrand(e) {
@@ -11,34 +11,30 @@ export function buttonBrand({ logo, brand, className }) {
     console.log(brand);
     switch (`${brand}`) {
       case "Nike":
-        window.location.href = "shoesnike";
+        window.location.href = "shoes-nike";
         break;
       case "Adidas":
-        window.location.href = "shoesadidas";
+        window.location.href = "shoes-adidas";
         break;
       case "Puma":
-        window.location.href = "shoespuma";
+        window.location.href = "shoes-puma";
         break;
       case "Asics":
-        window.location.href = "shoesasics";
+        window.location.href = "shoes-asics";
         break;
       case "Converse":
-        window.location.href = "shoesconverse";
+        window.location.href = "shoes-converse";
         break;
       case "New Balance":
-        window.location.href = "shoesnewbalance";
+        window.location.href = "shoes-newbalance";
         break;
       case "Reebok":
-        window.location.href = "shoesreebok";
+        window.location.href = "shoes-reebok";
         break;
       case "more":
-        window.location.href = "shoesallbrands";
+        window.location.href = "shoes-allbrands";
         break;
-
-      // case "All":
-      //   window.location.href = "shoesadidas";
     }
-    // const homeBrand = homePageBrand(brand);
   }
 
   return El({

@@ -1,5 +1,5 @@
-import { El } from "../../utils/create-element";
-import { renderProducts } from "../homePage/renderProducts/renderProducts";
+import { El } from "../../../utils/create-element";
+import { renderProducts } from "../renderProducts/renderProducts";
 
 export function marginButton({ Brand }) {
   const button = El({

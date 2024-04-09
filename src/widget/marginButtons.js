@@ -1,4 +1,4 @@
-import { marginButton } from "../components/marginButton/marginButton";
+import { marginButton } from "../components/homePage/marginButton/marginButton";
 import { El } from "../utils/create-element";
 
 export function marginButtons() {

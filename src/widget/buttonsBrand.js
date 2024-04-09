@@ -1,4 +1,4 @@
-import { buttonBrand } from "../components/button/button";
+import { buttonBrand } from "../components/homePage/button/button";
 import { El } from "../utils/create-element";
 
 export function buttonsBrand() {

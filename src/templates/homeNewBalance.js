@@ -1,4 +1,5 @@
 import {  renderProducts } from "../components/homePage/renderProducts/renderProducts";
+import { headerBack } from "../layout/header/headerback";
 import { El } from "../utils/create-element";
 
 export function homeNewBalance() {
@@ -8,32 +9,9 @@ export function homeNewBalance() {
     element: "div",
     className: "",
     children: [
-      El({
-        element: "div",
-        innerText: "",
-        className: "h-[56px] flex items-center ",
-        children: [
-          El({
-            element: "a",
-            href: "/homepage",
-            className: "",
-            children: [
-              El({
-                element: "span",
-                className:
-                  "w-[32px] h-[32px] mx-[24px] icon-[ic--sharp-arrow-back] mt-[21px]",
-              }),
-            ],
-          }),
-          El({
-            element: "div",
-            innerText: "newBalance",
-            className: "font-bold text-[20px]  mt-[12px] ml-[0px]",
-          }),
-        ],
-      }),
+        headerBack("New Balance"),
 
-      renderProducts("newbalance"),
+      renderProducts("new balance"),
     ],
   });
 

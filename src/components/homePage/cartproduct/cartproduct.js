@@ -1,4 +1,4 @@
-import { El } from "../../utils/create-element";
+import { El } from "../../../utils/create-element";
 
 export function cartproduct({ product }) {
   const { name, price, imageURL } = product;

@@ -1,6 +1,10 @@
 import { El } from "../../../utils/create-element";
 
 export function seeAll() {
+function goPageSeeAll(){
+    window.location.href = "/shoes-mostpopular";
+}
+
   return El({
     element: "div",
     children: [
@@ -16,6 +20,7 @@ export function seeAll() {
           El({
             element: "span",
             className: "font-bold",
+            onclick: goPageSeeAll,
             innerText: "See All",
           }),
         ],
