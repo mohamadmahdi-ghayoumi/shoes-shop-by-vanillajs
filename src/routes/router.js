@@ -11,6 +11,7 @@ import { homePuma } from "../templates/homePuma.js";
 import { homeConverse } from "../templates/homeConverse.js";
 import { homeAllBrands } from "../templates/homeAllBrands.js";
 import { mostPopular } from "../templates/mostPopular.js";
+import { cardFullDetail } from "../templates/cardFull.js";
 
 export const router = new Navigo("/");
 
@@ -47,4 +48,11 @@ router
   })
   .on("/shoes-mostpopular", () => {
     changePage(mostPopular);
+  })
+  .on("/cardfulldetail", () => {
+    changePage(cardFullDetail);
   });
+
+// .on("/products/:id", ({ data }) => {
+//   changePage(ProductPage, data);
+// })

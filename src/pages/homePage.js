@@ -6,6 +6,8 @@ import { marginButtons } from "../widget/marginButtons";
 import { searchBox } from "../components/homePage/searchbox/searchBox";
 import { seeAll } from "../components/homePage/seeAll/seeAll";
 import { renderProducts } from "../components/homePage/renderProducts/renderProducts";
+document.title = "home page";
+
 export function homePage() {
   return El({
     element: "div",

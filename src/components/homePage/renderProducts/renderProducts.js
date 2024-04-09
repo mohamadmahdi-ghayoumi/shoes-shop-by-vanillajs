@@ -13,14 +13,14 @@ export function renderProducts(filter) {
     className:
       "flex flex-wrap gap-[6px] m-[24px] mb-[80px] justify-center items-center",
     id: "render",
-    children: [],
   });
   getProducts(filter).then((carts) => {
-    // console.log(carts)
     carts.map((product) => {
       const productCard = cartproduct({ product });
       Element.append(productCard);
     });
   });
+  // console.log(Element)
+  
   return Element;
 }

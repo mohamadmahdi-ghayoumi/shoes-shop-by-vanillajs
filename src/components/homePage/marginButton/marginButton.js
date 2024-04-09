@@ -8,6 +8,7 @@ export function marginButton({ Brand }) {
       "border-[2px] rounded-full font-semibold hover:bg-gray-700 hover:text-white border-black inline-block px-[20px] text-[16px] m-auto	py-[5px]",
     innerText: Brand,
   });
+  
   button.addEventListener("click", (e) => {
     let filterBrand = e.target.innerText.toLowerCase();
     const render = document.getElementById("render");
@@ -17,8 +18,10 @@ export function marginButton({ Brand }) {
     }
     const main = document.getElementById("home");
     let productFilter = renderProducts(filterBrand);
+    console.log(productFilter);
+
     main.append(productFilter);
-    console.log(main);
+    // console.log(main);
   });
 
   return button;
