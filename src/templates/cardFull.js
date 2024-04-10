@@ -9,20 +9,22 @@ import { priceCard } from "../widget/cardfull/price-card/priceCard";
 import { quantityCard } from "../widget/cardfull/quantityCard/quantityCard";
 import { swiperCard } from "../widget/cardfull/swiperCard/swiperCard";
 
-export function cardFullDetail() {
-
-
+export function cardFullDetail({ product }) {
   const Element = El({
     element: "div",
     className: "flex flex-col ",
     children: [
       headerBack(""),
-      swiperCard(),
-      favoriteCard(),
+      swiperCard({ product }),
+      favoriteCard({ product }),
       descriptionCard(),
       colorSizeBtn(),
       quantityCard(),
-      priceCard(),
+      priceCard({ product }),
+      El({
+        element: "div",
+        innerText: "fsdfsdg",
+      }),
     ],
   });
 

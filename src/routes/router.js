@@ -12,6 +12,7 @@ import { homeConverse } from "../templates/homeConverse.js";
 import { homeAllBrands } from "../templates/homeAllBrands.js";
 import { mostPopular } from "../templates/mostPopular.js";
 import { cardFullDetail } from "../templates/cardFull.js";
+import { Product } from "../templates/test.js";
 
 export const router = new Navigo("/");
 
@@ -51,8 +52,8 @@ router
   })
   .on("/cardfulldetail", () => {
     changePage(cardFullDetail);
-  });
+  })
 
-// .on("/products/:id", ({ data }) => {
-//   changePage(ProductPage, data);
-// })
+  .on("/products/:id", ({ data }) => {
+    changePage(Product, data);
+  });

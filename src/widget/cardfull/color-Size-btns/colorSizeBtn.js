@@ -1,10 +1,11 @@
 import { El } from "../../../utils/create-element";
 import { buttonsColor } from "../buttonsColor/buttonsColor";
 import { buttonsSize } from "../buttonsSize/buttonsSize";
+import { quantityCard } from "../quantityCard/quantityCard";
 
 export function colorSizeBtn() {
   return El({
-    element: "div",
+    element: "form",
     className: "flex mb-3 mx-[24px]",
     children: [
       El({
@@ -31,6 +32,7 @@ export function colorSizeBtn() {
           buttonsColor(),
         ],
       }),
+      // quantityCard()
     ],
   });
 }
