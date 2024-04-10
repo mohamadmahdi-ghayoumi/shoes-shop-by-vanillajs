@@ -15,8 +15,9 @@ export function priceCard({product}) {
     const quantity = document.querySelector("#span-count").innerText;
     if (color !== null && size !== null && quantity != "0") {
       console.log(color.value);
-      console.log(size.value);
-      console.log(quantity);
+      // console.log(size.value);
+      // console.log(quantity);
+
     } else {
       // alert("all item shoul be selected");
     }
@@ -38,7 +39,9 @@ export function priceCard({product}) {
           El({
             element: "div",
             className: "font-bold text-[20px]",
-            innerText: product.price,
+            innerText: "$ 0",
+            id : "totalPrice"
+      
           }),
         ],
       }),

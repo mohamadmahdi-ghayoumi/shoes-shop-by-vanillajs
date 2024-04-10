@@ -12,7 +12,7 @@ import { homeConverse } from "../templates/homeConverse.js";
 import { homeAllBrands } from "../templates/homeAllBrands.js";
 import { mostPopular } from "../templates/mostPopular.js";
 import { cardFullDetail } from "../templates/cardFull.js";
-import { Product } from "../templates/test.js";
+import { Product } from "../templates/selectedProduct.js";
 
 export const router = new Navigo("/");
 

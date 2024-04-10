@@ -3,6 +3,13 @@ import { El } from "../../../utils/create-element";
 export function quantityCard() {
   let counter = 0;
 
+
+
+
+
+
+
+  
   function subtractButton() {
     const quantityCounter = document.getElementById("span-count");
     if (counter > 0) {

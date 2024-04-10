@@ -1,6 +1,5 @@
-import { router } from "json-server";
+import { router } from "../../../routes/router";
 import { El } from "../../../utils/create-element";
-
 
 export function Link({ href, ...rest }) {
   return El({
@@ -9,7 +8,8 @@ export function Link({ href, ...rest }) {
     eventListener: [
       {
         event: "click",
-        callback: () => {
+        callback: (event) => {
+          event.preventDefault();
           router.navigate(href);
         },
       },
