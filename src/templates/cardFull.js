@@ -15,8 +15,9 @@ export function cardFullDetail({ product }) {
     if (quantityCounter > 0) {
       quantityCounter--;
       document.getElementById("span-count").innerText = quantityCounter;
-      document.getElementById("totalPrice").innerText =`$ ${product.price * quantityCounter}`
-     ;
+      document.getElementById("totalPrice").innerText = `$ ${
+        product.price * quantityCounter
+      }`;
     }
   }
 
@@ -24,12 +25,13 @@ export function cardFullDetail({ product }) {
     let quantityCounter = parseInt(
       document.getElementById("span-count").innerText
     );
-    console.log(quantityCounter);
     if (quantityCounter < 3) {
       quantityCounter++;
-      console.log(product.price)
       document.getElementById("span-count").innerText = quantityCounter;
-      document.getElementById("totalPrice").innerText =`$ ${product.price * quantityCounter}`    }
+      document.getElementById("totalPrice").innerText = `$ ${
+        product.price * quantityCounter
+      }`;
+    }
   }
 
   const Element = El({

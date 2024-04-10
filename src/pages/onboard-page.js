@@ -1,6 +1,6 @@
 import { El } from "../utils/create-element";
 
-export function onBordingPage() {
+export function onBordingPageOne() {
   const Element = El({
     element: "div",
     className: "  ",

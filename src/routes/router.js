@@ -13,14 +13,14 @@ import { homeAllBrands } from "../templates/homeAllBrands.js";
 import { mostPopular } from "../templates/mostPopular.js";
 import { cardFullDetail } from "../templates/cardFull.js";
 import { Product } from "../templates/selectedProduct.js";
-import { onBordingPage } from "../pages/onboard-page.js";
+import {  onBordingPageOne } from "../pages/onboard-page.js";
 import { onboradingpageTwo } from "../templates/onboradingpage-Two.js";
 
 export const router = new Navigo("/");
 
 router
 .on("/", () => {
-  changePage(onBordingPage);
+  changePage(onBordingPageOne);
 }).on("/onboradingpageTwo", () => {
   changePage(onboradingpageTwo);
 })

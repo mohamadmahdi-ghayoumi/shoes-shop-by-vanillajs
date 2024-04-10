@@ -1,6 +1,10 @@
+import { addToWishlist } from "../../../api/post/postProduct";
 import { El } from "../../../utils/create-element";
 
 export function favoriteCard({ product }) {
+  function sendToWishlist(){
+    addToWishlist(product)
+  }
   return El({
     element: "div",
     className: "flex justify-between items-center mt-[10px] mx-[24px]",
@@ -12,6 +16,7 @@ export function favoriteCard({ product }) {
       }),
       El({
         element: "span",
+        onclick : sendToWishlist,
         className: "icon-[ph--heart-light] w-[24px] h-[24px]",
       }),
     ],

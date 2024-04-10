@@ -1,6 +1,7 @@
+import { addToCart } from "../../../api/post/postProduct";
 import { El } from "../../../utils/create-element";
 
-export function priceCard({product}) {
+export function priceCard({ product }) {
   // function addToCard() {
   //   const count = document.getElementById("span-count")
   //   const color = document.getElementById
@@ -12,12 +13,21 @@ export function priceCard({product}) {
     e.preventDefault();
     const color = document.querySelector("input[name='color']:checked");
     const size = document.querySelector("input[name='size']:checked");
+
     const quantity = document.querySelector("#span-count").innerText;
     if (color !== null && size !== null && quantity != "0") {
       console.log(color.value);
       // console.log(size.value);
       // console.log(quantity);
-
+      const colorValue = color.value;
+      const sizeValue = size.value;
+      const data = {
+        ...product,
+        colors: colorValue,
+        sizes: sizeValue,
+        quantity : quantity, //quantity
+      };
+      addToCart(data);
     } else {
       // alert("all item shoul be selected");
     }
@@ -40,8 +50,7 @@ export function priceCard({product}) {
             element: "div",
             className: "font-bold text-[20px]",
             innerText: "$ 0",
-            id : "totalPrice"
-      
+            id: "totalPrice",
           }),
         ],
       }),
