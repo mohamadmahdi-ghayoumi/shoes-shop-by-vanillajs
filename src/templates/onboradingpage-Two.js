@@ -1,22 +1,8 @@
 import { El } from "../utils/create-element";
 
-// export function onboradingpageTwo(){
-//     return El({
-//         element : "img",
-//         src : "src/assets/image/background-onboarding-two.png",
-//         className : "relative",
-//         children : [
-//             El({
-//                 element : "p",
-//                 className : "top-[629px] start-[32px] text-white absolute ",
-//                 innerText: "Welcome to 👋"
-//             })
-//         ]
-//     })
 
-// }
 
-export function onboradingpageTwo() {
+export function onboradingPageTwo() {
   const Element =  El({
     element: "div",
     className:
@@ -41,8 +27,6 @@ export function onboradingpageTwo() {
     ],
     
   })
-  
-
 
   setTimeout(() => {
     window.location.href = "/login";

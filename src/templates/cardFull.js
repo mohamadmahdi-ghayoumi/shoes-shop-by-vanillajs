@@ -83,10 +83,6 @@ export function cardFullDetail({ product }) {
         ],
       }),
       priceCard({ product }),
-      El({
-        element: "div",
-        innerText: "fsdfsdg",
-      }),
     ],
   });
 

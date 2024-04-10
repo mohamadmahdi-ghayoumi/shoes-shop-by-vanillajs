@@ -25,7 +25,7 @@ export function priceCard({ product }) {
         ...product,
         colors: colorValue,
         sizes: sizeValue,
-        quantity : quantity, //quantity
+        quantity: quantity, //quantity
       };
       addToCart(data);
     } else {
@@ -35,11 +35,11 @@ export function priceCard({ product }) {
 
   return El({
     element: "div",
-    className: "flex gap-[40px] mx-[24px]",
+    className: "flex gap-[40px] ml-[24px] ",
     children: [
       El({
         element: "div",
-        className: "",
+        className: "w-[20%]",
         children: [
           El({
             element: "div",

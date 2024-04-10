@@ -13,17 +13,22 @@ import { homeAllBrands } from "../templates/homeAllBrands.js";
 import { mostPopular } from "../templates/mostPopular.js";
 import { cardFullDetail } from "../templates/cardFull.js";
 import { Product } from "../templates/selectedProduct.js";
-import {  onBordingPageOne } from "../pages/onboard-page.js";
-import { onboradingpageTwo } from "../templates/onboradingpage-Two.js";
+import { onboardingOnePage } from "../pages/onboardingOne-page.js";
+import { onboardingTwoPage } from "../pages/onboradingTwo-page.js";
+import { WishlistPage } from "../templates/wishlistPage.js";
 
 export const router = new Navigo("/");
 
 router
-.on("/", () => {
-  changePage(onBordingPageOne);
-}).on("/onboradingpageTwo", () => {
-  changePage(onboradingpageTwo);
-})
+  .on("/", () => {
+    changePage(onboardingOnePage);
+  })
+  .on("/WishlistPage", () => {
+    changePage(WishlistPage);
+  })
+  .on("/onboradingpageTwo", () => {
+    changePage(onboardingTwoPage);
+  })
   .on("/login", () => {
     changePage(loginForm);
   })
