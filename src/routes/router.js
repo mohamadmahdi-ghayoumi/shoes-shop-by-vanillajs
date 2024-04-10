@@ -13,11 +13,15 @@ import { homeAllBrands } from "../templates/homeAllBrands.js";
 import { mostPopular } from "../templates/mostPopular.js";
 import { cardFullDetail } from "../templates/cardFull.js";
 import { Product } from "../templates/selectedProduct.js";
+import { onBordingPage } from "../pages/onboard-page.js";
 
 export const router = new Navigo("/");
 
 router
   .on("/", () => {
+    changePage(onBordingPage);
+  })
+  .on("/login", () => {
     changePage(loginForm);
   })
   .on("/homepage", () => {
