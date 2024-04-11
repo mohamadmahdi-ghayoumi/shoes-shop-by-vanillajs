@@ -16,12 +16,11 @@ export function renderWishlist(filter) {
       "flex flex-wrap gap-[6px] m-[24px] mb-[80px] justify-center items-center",
     id: "render",
   });
-  
-  getUser(filter).then((carts) => {
+
+  getProductsWishlist(filter).then((carts) => {
     console.log(filter);
-    console.log(carts[0].wishlist);
-    let wishlist = carts[0].wishlist
-    wishlist.map((product) => {
+    console.log(carts);
+    carts.map((product) => {
       const productCard = cartproduct({ product });
       Element.append(productCard);
     });

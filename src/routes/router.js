@@ -17,6 +17,7 @@ import { onboardingOnePage } from "../pages/onboardingOne-page.js";
 import { onboardingTwoPage } from "../pages/onboradingTwo-page.js";
 import { WishlistPage } from "../pages/whishlist-page.js";
 import { myCartPageTemplate } from "../templates/myCartPage.js";
+import { brandPage } from "../templates/brandPage.js";
 
 export const router = new Navigo("/");
 
@@ -71,5 +72,11 @@ router
   })
 
   .on("/products/:id", ({ data }) => {
+    console.log(data)
+
     changePage(Product, data);
+  })
+  .on("/brand/:brand", ({ data }) => {
+    console.log(data)
+    changePage(brandPage, data);
   });

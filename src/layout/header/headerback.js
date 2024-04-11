@@ -1,3 +1,4 @@
+// import { log } from "console";
 import { El } from "../../utils/create-element";
 export function headerBack(name, icon) {
   return El({
@@ -29,7 +30,7 @@ export function headerBack(name, icon) {
         children: [
           El({
             element: "span",
-            className: `w-[32px] h-[32px] mx-[24px] ${icon} mt-[21px] ml-[330px]`,
+            className: `w-[32px] h-[32px] ${icon} mt-[21px] ml-[80px]`,
           }),
         ],
       }),

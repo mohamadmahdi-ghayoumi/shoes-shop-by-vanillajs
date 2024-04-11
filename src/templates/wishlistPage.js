@@ -8,7 +8,7 @@ export function WishlistPageTemplate() {
     element: "div",
     className: "",
     children: [
-      headerBack("My Wishlist" , "icon-[iconamoon--search-thin]"),
+      headerBack("My Wishlist", "icon-[iconamoon--search-thin]"),
       borderBtns(),
       El({
         element: "div",

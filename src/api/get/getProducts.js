@@ -27,12 +27,47 @@ export const getProductById = async (id) => {
   return response.data;
 };
 
-export const getProductsWishlist = async (brand) => {
+export const getProductByBrand = async (brand) => {
   if (brand == "all") {
-    const response = await axios.get(`${BASE_URL}/wishlist`);
+    const response = await axios.get(`${BASE_URL}/products`);
+
     return response.data;
   } else {
-    const response = await axios.get(`${BASE_URL}/wishlist?brand=${brand}`);
-    return response.data;
+    const response = await axios.get(`${BASE_URL}/products?brand=${brand}`);
+    // console.log(JSON.parse(JSON.stringify(response)).data);
+    // console.log(`brand= ${response}`);
+
+    // const brandData = JSON.parse(JSON.stringify(response)).data
+    // setTimeout(console.log(`brand ++ ${response.data}`) , 0)
+    return response;
   }
 };
+
+// export const getProductsWishlist = async (brand) => {
+//   if (brand == "all") {
+//     const response = await axios.get(`${BASE_URL}/wishlist`);
+//     return response.data;
+//   } else {
+//     const response = await axios.get(`${BASE_URL}/wishlist?brand=${brand}`);
+//     return response.data;
+//   }
+
+
+
+
+
+  
+// };
+
+
+export async function getProductsWishlist(brand) {
+  const res = await axios.get(`${BASE_URL}/users`);
+  const response = res.data[0].wishlist;
+  console.log(brand);
+  if (brand != 'all') {
+  const final = response.filter((item) => item.brand == brand);
+  return final;
+  } else {
+  return response;
+  }
+  }
