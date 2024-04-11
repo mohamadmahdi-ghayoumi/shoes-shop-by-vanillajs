@@ -3,12 +3,12 @@ import { renderWishlist } from "../components/wishlist/renderWishlist/renderWish
 import { headerBack } from "../layout/header/headerback";
 import { El } from "../utils/create-element";
 
-export function WishlistPage() {
+export function WishlistPageTemplate() {
   const Elemenet = El({
     element: "div",
     className: "",
     children: [
-      headerBack("My Wishlist"),
+      headerBack("My Wishlist" , "icon-[iconamoon--search-thin]"),
       borderBtns(),
       El({
         element: "div",

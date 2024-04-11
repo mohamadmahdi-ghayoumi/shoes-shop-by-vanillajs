@@ -15,7 +15,7 @@ import { cardFullDetail } from "../templates/cardFull.js";
 import { Product } from "../templates/selectedProduct.js";
 import { onboardingOnePage } from "../pages/onboardingOne-page.js";
 import { onboardingTwoPage } from "../pages/onboradingTwo-page.js";
-import { WishlistPage } from "../templates/wishlistPage.js";
+import { WishlistPage } from "../pages/whishlist-page.js";
 
 export const router = new Navigo("/");
 
