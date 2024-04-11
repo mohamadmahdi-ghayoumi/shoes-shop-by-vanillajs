@@ -7,23 +7,23 @@ import { BASE_URL } from "../const";
 //   return response;
 // }
 
-// export async function addToCart(data) {
-//   const { data: userData } = await axios.get(`${BASE_URL}/users/1`);
+export async function addToCart(data) {
+  const { data: userData } = await axios.get(`${BASE_URL}/users/1`);
 
-//   const cart = userData.cart.concat(data);
-//   let response = await axios.patch(`${BASE_URL}/users/1`, { cart });
+  const cart = userData.cart.concat(data);
+  let response = await axios.patch(`${BASE_URL}/users/1`, { cart });
 
-//   return response.data;
-// }
+  return response.data;
+}
 
-// export async function addToWishlist(data) {
-//   const { data: userData } = await axios.get(`${BASE_URL}/users/1`);
+export async function addToWishlist(data) {
+  const { data: userData } = await axios.get(`${BASE_URL}/users/1`);
 
-//   const wishlist = userData.wishlist.concat(data);
-//   let response = await axios.patch(`${BASE_URL}/users/1`, { wishlist });
+  const wishlist = userData.wishlist.concat(data);
+  let response = await axios.patch(`${BASE_URL}/users/1`, { wishlist });
 
-//   return response.data;
-// }
+  return response.data;
+}
 
 export async function postProductWhislist(data) {
   const response = await axios.post(`${BASE_URL}/wishlist`, data);

@@ -3,15 +3,22 @@ import { El } from "../../utils/create-element";
 export function footerHomePage() {
   return El({
     element: "div",
-    className: "flex bg-white gap-[44px] w-[428px] h-[66px] items-center justify-center fixed bottom-0",
+    className:
+      "flex bg-white gap-[44px] w-[428px] h-[66px] items-center justify-center fixed bottom-0",
     children: [
       El({
         element: "div",
         className: "flex flex-col items-center",
         children: [
           El({
-            element: "span",
-            className: "icon-[ion--home-sharp] w-[24px] h-[24px]",
+            element: "a",
+            href: "./homepage",
+            children: [
+              El({
+                element: "span",
+                className: "icon-[ion--home-sharp] w-[24px] h-[24px]",
+              }),
+            ],
           }),
           El({
             element: "span",
@@ -30,9 +37,15 @@ export function footerHomePage() {
             className: "icon-[bi--bag] w-[24px] h-[24px]",
           }),
           El({
-            element: "span",
-            className: "",
-            innerText : "Cart"
+            element: "a",
+            href: "./mycartpage",
+            children: [
+              El({
+                element: "span",
+                className: "",
+                innerText: "Cart",
+              }),
+            ],
           }),
         ],
       }),
@@ -42,12 +55,18 @@ export function footerHomePage() {
         className: "flex flex-col items-center",
         children: [
           El({
-            element: "span",
-            className: "icon-[cil--cart] w-[24px] h-[24px]",
+            element: "a",
+            href: "./",
+            children: [
+              El({
+                element: "span",
+                className: "icon-[cil--cart] w-[24px] h-[24px]",
+              }),
+            ],
           }),
           El({
             element: "span",
-            className : "",
+            className: "",
             innerText: "Orders",
           }),
         ],
@@ -58,12 +77,18 @@ export function footerHomePage() {
         className: "flex flex-col items-center",
         children: [
           El({
-            element: "span",
-            className: "icon-[bi--wallet2] w-[24px] h-[24px]",
+            element: "a",
+            href: "./",
+            children: [
+              El({
+                element: "span",
+                className: "icon-[bi--wallet2] w-[24px] h-[24px]",
+              }),
+            ],
           }),
           El({
             element: "span",
-            className : "",
+            className: "",
             innerText: "Wallet",
           }),
         ],
@@ -74,12 +99,18 @@ export function footerHomePage() {
         className: "flex flex-col items-center",
         children: [
           El({
-            element: "span",
-            className: "icon-[iconamoon--profile-light] w-[24px] h-[24px]",
+            element: "a",
+            href: "./",
+            children: [
+              El({
+                element: "span",
+                className: "icon-[iconamoon--profile-light] w-[24px] h-[24px]",
+              }),
+            ],
           }),
           El({
             element: "span",
-            className : "",
+            className: "",
             innerText: "Profile",
           }),
         ],

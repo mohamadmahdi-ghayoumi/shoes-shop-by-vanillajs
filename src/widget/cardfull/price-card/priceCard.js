@@ -1,5 +1,6 @@
 // import { addToCart, postProductCard } from "../../../api/post/postProduct";
-import { postProductCard } from "../../../api/post/postProduct";
+import { getUser } from "../../../api/get/getUser";
+import { addToCart } from "../../../api/post/postProduct";
 import { El } from "../../../utils/create-element";
 
 export function priceCard({ product }) {
@@ -27,9 +28,10 @@ export function priceCard({ product }) {
         sizes: sizeValue,
         quantity: quantity, //quantity
       };
-      console.log(data);
-      postProductCard(data)
-      // addToCart(data);
+      // console.log(data);
+      // getUser().
+      // postProductCard(data)
+      addToCart(data);
     } else {
       // alert("all item shoul be selected");
     }

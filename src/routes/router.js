@@ -16,6 +16,7 @@ import { Product } from "../templates/selectedProduct.js";
 import { onboardingOnePage } from "../pages/onboardingOne-page.js";
 import { onboardingTwoPage } from "../pages/onboradingTwo-page.js";
 import { WishlistPage } from "../pages/whishlist-page.js";
+import { myCartPageTemplate } from "../templates/myCartPage.js";
 
 export const router = new Navigo("/");
 
@@ -25,6 +26,9 @@ router
   })
   .on("/wishlistpage", () => {
     changePage(WishlistPage);
+  })
+  .on("/mycartpage", () => {
+    changePage(myCartPageTemplate);
   })
   .on("/onboradingpageTwo", () => {
     changePage(onboardingTwoPage);

@@ -30,7 +30,7 @@ export function loginForm() {
       El({
         element: "img",
         className: "m-auto w-[54px] h-[81px] mt-[76px] mb-[118px]",
-        src: "../src/assets/image/logo-login.png ",
+        src: "src/assets/image/logo-login.png ",
       }),
       El({
         element: "h1",
@@ -144,7 +144,7 @@ export function loginForm() {
       } else {
         console.log("zart");
         // location.assign("/home");
-        window.location.href = "homepage";
+        window.location.href = "/homepage";
         // document.addEventListener("animalfound", (e) => {
         //   console.log(e.detail.name);
         // });

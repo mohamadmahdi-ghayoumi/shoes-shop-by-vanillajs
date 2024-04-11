@@ -1,5 +1,5 @@
 import { El } from "../../utils/create-element";
-export function headerBack(name , icon) {
+export function headerBack(name, icon) {
   return El({
     element: "div",
     innerText: "",
@@ -19,8 +19,8 @@ export function headerBack(name , icon) {
       }),
       El({
         element: "div",
+        className: "font-bold text-[20px] pr-[100px]  mt-[12px] ",
         innerText: name,
-        className: "font-bold text-[20px]  mt-[12px] ml-[0px]",
       }),
       El({
         element: "a",
@@ -29,8 +29,7 @@ export function headerBack(name , icon) {
         children: [
           El({
             element: "span",
-            className:
-              `w-[32px] h-[32px] mx-[24px] ${icon} mt-[21px] ml-[330px]`,
+            className: `w-[32px] h-[32px] mx-[24px] ${icon} mt-[21px] ml-[330px]`,
           }),
         ],
       }),

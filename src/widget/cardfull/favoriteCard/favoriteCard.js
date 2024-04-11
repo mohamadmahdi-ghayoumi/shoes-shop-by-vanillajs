@@ -1,5 +1,5 @@
 import {
-  postProductWhislist,
+  addToWishlist,
 } from "../../../api/post/postProduct";
 import { El } from "../../../utils/create-element";
 
@@ -9,8 +9,8 @@ export function favoriteCard({ product }) {
     iconHeart.classList.remove("icon-[ph--heart-light]");
     iconHeart.classList.add("icon-[icon-park-solid--like]");
     iconHeart.classList.add("text-red-500");
-    postProductWhislist(product);
-    // addToWishlist(product)
+    // postProductWhislist(product);
+    addToWishlist(product)
   }
   return El({
     element: "div",
