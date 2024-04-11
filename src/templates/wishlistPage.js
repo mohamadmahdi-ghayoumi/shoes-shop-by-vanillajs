@@ -1,15 +1,22 @@
-import { renderProducts } from "../components/homePage/renderProducts/renderProducts";
+import { borderBtns } from "../components/wishlist/borderBtns/borderBtns";
+import { renderWishlist } from "../components/wishlist/renderWishlist/renderWishlist";
 import { headerBack } from "../layout/header/headerback";
 import { El } from "../utils/create-element";
 
-export function WishlistPage(){
-  
-            const Elemenet = El({
-              element: "div",
-              className: "",
-              children: [headerBack("My Wishlist"), renderProducts("reebok")],
-            });
-          
-return Elemenet
+export function WishlistPage() {
+  const Elemenet = El({
+    element: "div",
+    className: "",
+    children: [
+      headerBack("My Wishlist"),
+      borderBtns(),
+      El({
+        element: "div",
+        id: "home",
+        children: [renderWishlist("all")],
+      }),
+    ],
+  });
 
+  return Elemenet;
 }

@@ -1,4 +1,5 @@
-import { addToCart } from "../../../api/post/postProduct";
+// import { addToCart, postProductCard } from "../../../api/post/postProduct";
+import { postProductCard } from "../../../api/post/postProduct";
 import { El } from "../../../utils/create-element";
 
 export function priceCard({ product }) {
@@ -16,7 +17,6 @@ export function priceCard({ product }) {
 
     const quantity = document.querySelector("#span-count").innerText;
     if (color !== null && size !== null && quantity != "0") {
-      console.log(color.value);
       // console.log(size.value);
       // console.log(quantity);
       const colorValue = color.value;
@@ -27,7 +27,9 @@ export function priceCard({ product }) {
         sizes: sizeValue,
         quantity: quantity, //quantity
       };
-      addToCart(data);
+      console.log(data);
+      postProductCard(data)
+      // addToCart(data);
     } else {
       // alert("all item shoul be selected");
     }

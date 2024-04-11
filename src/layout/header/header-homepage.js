@@ -19,17 +19,17 @@ export function headerHomePage() {
             element: "div",
             className: "flex flex-col",
             children: [
-                El({ 
-                    element: "span",
-                     className: "" ,
-                     innerText : "Good Morning 👋" 
-                    }),
-                    El({ 
-                        element: "span",
-                         className: "" ,
-                         innerText : "Mohamadmahdi ghayoumi"
-                        })
-                ],
+              El({
+                element: "span",
+                className: "",
+                innerText: "Good Morning 👋",
+              }),
+              El({
+                element: "span",
+                className: "",
+                innerText: "Mohamadmahdi ghayoumi",
+              }),
+            ],
           }),
         ],
       }),
@@ -43,8 +43,15 @@ export function headerHomePage() {
             className: "icon-[iwwa--alarm] w-[22.5px] h-[24px]",
           }),
           El({
-            element: "span",
-            className: "icon-[ph--heart-light] w-[24px] h-[24px]",
+            element: "a",
+            className: "",
+            href: "./wishlistpage",
+            children: [
+              El({
+                element: "span",
+                className: "icon-[ph--heart-light] w-[24px] h-[24px]",
+              }),
+            ],
           }),
         ],
       }),

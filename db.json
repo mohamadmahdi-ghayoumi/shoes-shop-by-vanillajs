@@ -5,71 +5,154 @@
       "name": "mohamadmahdi",
       "email": "mohamad@gamil.com",
       "password": "mohamad",
-      "cart": [
-        {
-          "id": 2,
-          "name": "Nike React Miler",
-          "brand": "nike",
-          "gender": "MEN",
-          "category": "RUNNING",
-          "price": 130,
-          "sizes": "43",
-          "colors": "bg-blue-500",
-          "items_left": 3,
-          "imageURL": "https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/i1-5cc7de3b-2afc-49c2-a1e4-0508997d09e6/react-miler-mens-running-shoe-DgF6nr.jpg",
-          "slug": "nike-react-miler",
-          "quantity": "1"
-        }
+      "orders": []
+    }
+  ],
+  "cart": [
+    {
+      "id": 2,
+      "name": "Nike React Miler",
+      "brand": "nike",
+      "gender": "MEN",
+      "category": "RUNNING",
+      "price": 130,
+      "sizes": "43",
+      "colors": "bg-blue-500",
+      "items_left": 3,
+      "imageURL": "https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/i1-5cc7de3b-2afc-49c2-a1e4-0508997d09e6/react-miler-mens-running-shoe-DgF6nr.jpg",
+      "slug": "nike-react-miler",
+      "quantity": "1"
+    },
+    {
+      "id": 4,
+      "name": "Nike Joyride Run Flyknit",
+      "brand": "nike",
+      "gender": "WOMEN",
+      "category": "RUNNING",
+      "price": 180,
+      "sizes": "43",
+      "colors": "bg-blue-500",
+      "items_left": 3,
+      "imageURL": "https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/99a7d3cb-e40c-4474-91c2-0f2e6d231fd2/joyride-run-flyknit-womens-running-shoe-HcfnJd.jpg",
+      "slug": "nike-joyride-run-flyknit",
+      "quantity": "2"
+    }
+  ],
+  "wishlist": [
+    {
+      "id": 1,
+      "name": "Nike React Infinity Run Flyknit",
+      "brand": "nike",
+      "gender": "MEN",
+      "category": "RUNNING",
+      "price": 160,
+      "sizes": [
+        41,
+        43,
+        45
       ],
-      "orders": [],
-      "wishlist": [
-        {
-          "id": 1,
-          "name": "Nike React Infinity Run Flyknit",
-          "brand": "nike",
-          "gender": "MEN",
-          "category": "RUNNING",
-          "price": 160,
-          "sizes": [
-            41,
-            43,
-            45
-          ],
-          "colors": [
-            "black",
-            "brown",
-            "white",
-            "blue",
-            "red"
-          ],
-          "items_left": 3,
-          "imageURL": "https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/i1-665455a5-45de-40fb-945f-c1852b82400d/react-infinity-run-flyknit-mens-running-shoe-zX42Nc.jpg",
-          "slug": "nike-react-infinity-run-flyknit"
-        },
-        {
-          "id": 1,
-          "name": "Nike React Infinity Run Flyknit",
-          "brand": "nike",
-          "gender": "MEN",
-          "category": "RUNNING",
-          "price": 160,
-          "sizes": [
-            41,
-            43,
-            45
-          ],
-          "colors": [
-            "black",
-            "brown",
-            "white",
-            "blue",
-            "red"
-          ],
-          "items_left": 3,
-          "imageURL": "https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/i1-665455a5-45de-40fb-945f-c1852b82400d/react-infinity-run-flyknit-mens-running-shoe-zX42Nc.jpg",
-          "slug": "nike-react-infinity-run-flyknit"
-        }
-      ]
+      "colors": [
+        "black",
+        "brown",
+        "white",
+        "blue",
+        "red"
+      ],
+      "items_left": 3,
+      "imageURL": "https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/i1-665455a5-45de-40fb-945f-c1852b82400d/react-infinity-run-flyknit-mens-running-shoe-zX42Nc.jpg",
+      "slug": "nike-react-infinity-run-flyknit"
+    },
+    {
+      "id": 2,
+      "name": "Nike React Miler",
+      "brand": "nike",
+      "gender": "MEN",
+      "category": "RUNNING",
+      "price": 130,
+      "sizes": [
+        41,
+        43,
+        45
+      ],
+      "colors": [
+        "black",
+        "brown",
+        "white",
+        "blue",
+        "red"
+      ],
+      "items_left": 3,
+      "imageURL": "https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/i1-5cc7de3b-2afc-49c2-a1e4-0508997d09e6/react-miler-mens-running-shoe-DgF6nr.jpg",
+      "slug": "nike-react-miler"
+    },
+    {
+      "id": 13,
+      "name": "Club C Revenge Mens",
+      "brand": "reebok",
+      "gender": "KIDS",
+      "category": "RUNNING",
+      "price": 110,
+      "sizes": [
+        41,
+        43,
+        45
+      ],
+      "colors": [
+        "black",
+        "brown",
+        "white",
+        "blue",
+        "red"
+      ],
+      "items_left": 3,
+      "imageURL": "https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/33888130-0320-41a1-ba53-a026decd8aa2/joyride-dual-run-big-kids-running-shoe-1HDJF8.jpg",
+      "slug": "nike-joyride-dual-run"
+    },
+    {
+      "id": 14,
+      "name": "Club C Revenge Mens",
+      "brand": "reebok",
+      "gender": "KIDS",
+      "category": "RUNNING",
+      "price": 80,
+      "sizes": [
+        41,
+        43,
+        45
+      ],
+      "colors": [
+        "black",
+        "brown",
+        "white",
+        "blue",
+        "red"
+      ],
+      "items_left": 3,
+      "imageURL": "https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/i1-73e54c0b-11a6-478b-9f90-bd97fcde872d/renew-run-big-kids-running-shoe-5Bpz93.jpg",
+      "slug": "nike-renew-run"
+    },
+    {
+      "id": 4,
+      "name": "Nike Joyride Run Flyknit",
+      "brand": "nike",
+      "gender": "WOMEN",
+      "category": "RUNNING",
+      "price": 180,
+      "sizes": [
+        41,
+        43,
+        45
+      ],
+      "colors": [
+        "black",
+        "brown",
+        "white",
+        "blue",
+        "red"
+      ],
+      "items_left": 3,
+      "imageURL": "https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/99a7d3cb-e40c-4474-91c2-0f2e6d231fd2/joyride-run-flyknit-womens-running-shoe-HcfnJd.jpg",
+      "slug": "nike-joyride-run-flyknit"
     }
   ],
   "products": [

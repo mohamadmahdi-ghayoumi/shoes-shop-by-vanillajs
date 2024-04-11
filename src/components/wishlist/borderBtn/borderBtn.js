@@ -1,8 +1,8 @@
 import { El } from "../../../utils/create-element";
-import { renderWishlist } from "../../wishlist/renderWishlist/renderWishlist";
-import { renderProducts } from "../renderProducts/renderProducts";
+import { renderWishlist } from "../renderWishlist/renderWishlist";
 
-export function marginButton({ Brand }) {
+
+export function borderBtn({ Brand }) {
   const button = El({
     element: "div",
     className:
@@ -18,8 +18,8 @@ export function marginButton({ Brand }) {
       render.remove();
     }
     const main = document.getElementById("home");
-    let productFilter = renderProducts(filterBrand);
-    let productFilterr = renderWishlist(filterBrand);
+    // let productFilter = renderProducts(filterBrand);
+    let productFilter = renderWishlist(filterBrand);
 
     console.log(productFilter);
 

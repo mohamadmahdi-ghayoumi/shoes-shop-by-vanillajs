@@ -1,15 +1,16 @@
-import { addToWishlist } from "../../../api/post/postProduct";
+import {
+  postProductWhislist,
+} from "../../../api/post/postProduct";
 import { El } from "../../../utils/create-element";
 
 export function favoriteCard({ product }) {
-  function sendToWishlist(){
-const iconHeart = document.getElementById("iconHeart")
-iconHeart.classList.remove("icon-[ph--heart-light]")
-iconHeart.classList.add("icon-[icon-park-solid--like]")
-iconHeart.classList.add("text-red-500")
-
-    addToWishlist(product)
-//<span class="icon-[icon-park-solid--like]" style="color: #ffffff;"></span>
+  function sendToWishlist() {
+    const iconHeart = document.getElementById("iconHeart");
+    iconHeart.classList.remove("icon-[ph--heart-light]");
+    iconHeart.classList.add("icon-[icon-park-solid--like]");
+    iconHeart.classList.add("text-red-500");
+    postProductWhislist(product);
+    // addToWishlist(product)
   }
   return El({
     element: "div",
@@ -22,7 +23,7 @@ iconHeart.classList.add("text-red-500")
       }),
       El({
         element: "span",
-        onclick : sendToWishlist,
+        onclick: sendToWishlist,
         id: "iconHeart",
         className: "icon-[ph--heart-light] w-[24px] h-[24px]",
       }),

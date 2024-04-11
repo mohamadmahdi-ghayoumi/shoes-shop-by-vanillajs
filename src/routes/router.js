@@ -23,7 +23,7 @@ router
   .on("/", () => {
     changePage(onboardingOnePage);
   })
-  .on("/WishlistPage", () => {
+  .on("/wishlistpage", () => {
     changePage(WishlistPage);
   })
   .on("/onboradingpageTwo", () => {
