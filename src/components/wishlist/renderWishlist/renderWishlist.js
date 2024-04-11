@@ -18,17 +18,10 @@ export function renderWishlist(filter) {
     id: "render",
   });
 
-<<<<<<< HEAD
-  getProductsWishlist(filter).then((carts) => {
-    console.log(filter);
-    console.log(carts);
-    carts.map((product) => {
-      const productCard = cartproduct({ product });
-=======
+ 
   getWishlistProduct(filter).then((carts) => {
     carts.map((product) => {
       const productCard = cardForWishlistPage({ product });
->>>>>>> feature/mycartpage
       Element.append(productCard);
     });
   });

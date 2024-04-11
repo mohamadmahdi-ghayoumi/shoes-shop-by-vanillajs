@@ -17,11 +17,10 @@ import { onboardingOnePage } from "../pages/onboardingOne-page.js";
 import { onboardingTwoPage } from "../pages/onboradingTwo-page.js";
 import { WishlistPage } from "../pages/whishlist-page.js";
 import { myCartPageTemplate } from "../templates/myCartPage.js";
-<<<<<<< HEAD
 import { brandPage } from "../templates/brandPage.js";
-
 import { cardForWishlistPage } from "../components/wishlist/cardForWishlistPage/cardForWishlistPage.js";
->>>>>>> feature/mycartpage
+
+// import { cardForWishlistPage } from "../components/wishlist/cardForWishlistPage/cardForWishlistPage.js";
 
 export const router = new Navigo("/");
 

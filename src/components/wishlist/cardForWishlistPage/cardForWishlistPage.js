@@ -16,20 +16,20 @@ export function cardForWishlistPage({ product }) {
             className: "relative",
             children: [
               El({
-                element: "div",
-                className:
-                  "rounded-2xl h-[182px] w-[182px] relative",
+                element: "img",
+                className: "rounded-2xl h-[182px] w-[182px] relative",
                 src: imageURL,
               }),
               El({
                 element: "div",
                 className:
-                  " absolute bg-black top-1 end-2 w-[40px] h-[40px] rounded-full ",
-              }),
-              El({
-                element: "img",
-                className: " absolute  top-1 end-2 bg-white",
-                src: "./src/assets/image/Vector.svg",
+                  "bg-gray-900 p-1 absolute top-3 right-5 rounded-full flex item-center justify-center",
+                children: [
+                  El({
+                    element: "span",
+                    className: "icon-[clarity--heart-solid] text-white ",
+                  }),
+                ],
               }),
             ],
           }),

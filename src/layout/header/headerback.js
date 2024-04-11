@@ -7,17 +7,19 @@ export function headerBack(name, icon) {
     className: "h-[56px] flex items-center mb-3",
     children: [
       El({
-        element: "a",
-        href: "/homepage",
-        className: "",
-        children: [
-          El({
-            element: "span",
-            className:
-              "w-[32px] h-[32px] mx-[24px] icon-[ic--sharp-arrow-back] mt-[21px]",
-          }),
+        element: "span",
+        className:
+          "w-[32px] h-[32px] mx-[24px] icon-[ic--sharp-arrow-back] mt-[21px]",
+        eventListener: [
+          {
+            event: "click",
+            callback: () => {
+              window.history.back();
+            },
+          },
         ],
       }),
+
       El({
         element: "div",
         className: "font-bold text-[20px] pr-[100px]  mt-[12px] ",

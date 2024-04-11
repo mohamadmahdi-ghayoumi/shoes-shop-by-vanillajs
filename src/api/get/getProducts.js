@@ -43,31 +43,6 @@ export const getProductByBrand = async (brand) => {
   }
 };
 
-<<<<<<< HEAD
-// export const getProductsWishlist = async (brand) => {
-//   if (brand == "all") {
-//     const response = await axios.get(`${BASE_URL}/wishlist`);
-//     return response.data;
-//   } else {
-//     const response = await axios.get(`${BASE_URL}/wishlist?brand=${brand}`);
-//     return response.data;
-//   }
-
-
-
-
-
-  
-// };
-
-
-export async function getProductsWishlist(brand) {
-  const res = await axios.get(`${BASE_URL}/users`);
-  const response = res.data[0].wishlist;
-  console.log(brand);
-  if (brand != 'all') {
-  const final = response.filter((item) => item.brand == brand);
-=======
 
 export async function getWishlistProduct(filter) {
   const res = await axios.get(`${BASE_URL}/users`);
@@ -75,13 +50,8 @@ export async function getWishlistProduct(filter) {
   // console.log(filter);
   if (filter != 'all') {
   const final = response.filter((item) => item.brand == filter);
->>>>>>> feature/mycartpage
   return final;
   } else {
   return response;
   }
-<<<<<<< HEAD
   }
-=======
-  }
->>>>>>> feature/mycartpage
