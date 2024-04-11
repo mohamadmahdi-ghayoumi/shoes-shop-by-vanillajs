@@ -17,7 +17,11 @@ import { onboardingOnePage } from "../pages/onboardingOne-page.js";
 import { onboardingTwoPage } from "../pages/onboradingTwo-page.js";
 import { WishlistPage } from "../pages/whishlist-page.js";
 import { myCartPageTemplate } from "../templates/myCartPage.js";
+<<<<<<< HEAD
 import { brandPage } from "../templates/brandPage.js";
+
+import { cardForWishlistPage } from "../components/wishlist/cardForWishlistPage/cardForWishlistPage.js";
+>>>>>>> feature/mycartpage
 
 export const router = new Navigo("/");
 
@@ -80,3 +84,6 @@ router
     console.log(data)
     changePage(brandPage, data);
   });
+// .on("/", () => {
+//   changePage(cardForWishlistPage);
+// });

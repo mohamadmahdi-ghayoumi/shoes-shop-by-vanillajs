@@ -5,7 +5,7 @@ export function marginButtons() {
 
   const elemenet =  El({
     element: "div",
-    className: "flex overflow-y-auto  gap-[12px] pl-[24px] scrollbar-none	 ",
+    className: "flex overflow-y-auto  gap-[12px] pl-[24px] hideScroll	 ",
     children: [
       marginButton({ Brand: "All" }),
       marginButton({ Brand: "Nike" }),
