@@ -6,7 +6,7 @@ export function borderBtns() {
 
   const elemenet =  El({
     element: "div",
-    className: "flex overflow-y-auto  gap-[12px] pl-[24px] scrollbar-none	 ",
+    className: "flex overflow-y-auto  gap-[12px] pl-[24px] hideScroll	 ",
     children: [
       borderBtn({ Brand: "All" }),
       borderBtn({ Brand: "Nike" }),
