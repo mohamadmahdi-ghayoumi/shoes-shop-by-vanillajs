@@ -3,12 +3,12 @@ import { El } from "../../../utils/create-element";
 export function notFoundPage() {
   return El({
     element: "div",
-    id : "notfoundpage",
+    id: "notfoundpage",
     className: "flex flex-col justify-center items-center hidden",
     children: [
       El({
         element: "img",
-        className: "",
+        className: "w-[300px]",
         src: "src/assets/image/notfound.png",
       }),
       El({
@@ -19,7 +19,8 @@ export function notFoundPage() {
       El({
         element: "span",
         className: " text-[24px] mx-[30px] text-center text-gray-600 mt-5",
-        innerText: "Sorru, the keyword you entered cannot be found,please check again or search with another keyword",
+        innerText:
+          "Sorry, the keyword you entered cannot be found,please check again or search with another keyword",
       }),
     ],
   });
