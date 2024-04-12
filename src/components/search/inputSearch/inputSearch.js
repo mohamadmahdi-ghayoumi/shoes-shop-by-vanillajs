@@ -9,23 +9,21 @@ import { renderCardApiSearch } from "../renderCardApiSearch/renderCardApiSearch"
 export function inputSearch() {
   function searchInput() {
     const searchInput = document.getElementById("inputSearch").value;
-   
-   
-   
-    if (searchInput != null) {
+
+    if (searchInput == "") {
+      const searchDataComment = document.getElementById("searchDataComment");
+      searchDataComment.innerHTML = "";
+      searchDataComment.append(...renderData());
+      renderCardApiSearch();
+    } else if (searchInput) {
       setLocalStorage("recentSearch", [
         searchInput,
         ...getLocalStorage("recentSearch"),
       ]);
-      console.log("por");
-
       renderData();
       renderCardApiSearch();
-    } else {
-      console.log("khali");
-      renderCardApiSearch();
     }
-   
+
     // if (searchInput != null) {
     //   setLocalStorage("recentSearch", [
     //     searchInput,
