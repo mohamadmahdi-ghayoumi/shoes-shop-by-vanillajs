@@ -1,9 +1,9 @@
+import { router } from "../../../routes/router";
 import { El } from "../../../utils/create-element";
 
 export function searchBox() {
   function goPageSearch() {
-    console.log("df");
-  }
+    window.location.href = "/searchpage"  }
 
   return El({
     element: "div",
@@ -12,7 +12,9 @@ export function searchBox() {
         element: "input",
         className: " w-[380px] m-auto ml-[30px] relative mt-[16px] pl-[28px]",
         placeholder: "Search",
-        onkeyup: goPageSearch,
+        onkeyup:    goPageSearch     
+
+        // router.navigate("./searchpage"),
       }),
       El({
         element: "span",

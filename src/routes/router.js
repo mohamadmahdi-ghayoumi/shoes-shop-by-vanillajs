@@ -19,6 +19,8 @@ import { WishlistPage } from "../pages/whishlist-page.js";
 import { myCartPageTemplate } from "../templates/myCartPage.js";
 import { brandPage } from "../templates/brandPage.js";
 import { cardForWishlistPage } from "../components/wishlist/cardForWishlistPage/cardForWishlistPage.js";
+import { searchBox } from "../components/homePage/searchbox/searchBox.js";
+import { searchPage } from "../templates/searchPage.js";
 
 // import { cardForWishlistPage } from "../components/wishlist/cardForWishlistPage/cardForWishlistPage.js";
 
@@ -82,6 +84,8 @@ router
   .on("/brand/:brand", ({ data }) => {
     console.log(data)
     changePage(brandPage, data);
+  }).on("/searchpage", () => {
+    changePage(searchPage);
   });
 // .on("/", () => {
 //   changePage(cardForWishlistPage);

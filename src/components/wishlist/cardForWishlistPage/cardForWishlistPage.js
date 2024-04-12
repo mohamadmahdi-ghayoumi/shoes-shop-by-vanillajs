@@ -3,6 +3,7 @@ import { Link } from "../../homePage/link/link";
 
 export function cardForWishlistPage({ product }) {
   const { name, price, imageURL, id } = product;
+  console.log({ product });
 
   return Link({
     href: `/products/${id}`,

@@ -1,4 +1,4 @@
-import { getProductByBrand } from "../api/get/getProducts";
+// import { getProductByBrand } from "../api/get/getProducts";
 import { renderProducts } from "../components/homePage/renderProducts/renderProducts";
 import { El } from "../utils/create-element";
 import { brandPage } from "./brandPage";
