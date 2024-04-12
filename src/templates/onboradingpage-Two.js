@@ -1,9 +1,7 @@
 import { El } from "../utils/create-element";
 
-
-
 export function onboradingPageTwo() {
-  const Element =  El({
+  const Element = El({
     element: "div",
     className:
       "bg-[url(./src/assets/image/background-onboarding-two.png)] w-full h-[925px]",
@@ -25,15 +23,11 @@ export function onboradingPageTwo() {
           "The best sneakers & shoes e-commerse app of the century for your fashion needs!",
       }),
     ],
-    
-  })
+  });
 
   setTimeout(() => {
-    window.location.href = "/login";
-    ;
-  }, "3000")
+    window.location.href = "/slider";
+  }, "3000");
 
-return Element
-
-  ;
+  return Element;
 }

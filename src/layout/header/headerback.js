@@ -4,7 +4,7 @@ export function headerBack(name, icon) {
   return El({
     element: "div",
     innerText: "",
-    className: "h-[56px] flex items-center mb-3",
+    className: "h-[56px] flex items-center mb-3 mt-[10px]",
     children: [
       El({
         element: "span",

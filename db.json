@@ -29,52 +29,22 @@
           "items_left": 3,
           "imageURL": "https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/i1-5cc7de3b-2afc-49c2-a1e4-0508997d09e6/react-miler-mens-running-shoe-DgF6nr.jpg",
           "slug": "nike-react-miler"
-        },
+        }
+      ],
+      "cart": [
         {
-          "id": 3,
-          "name": "Nike Air Zoom Pegasus 37",
+          "id": 4,
+          "name": "Nike Joyride Run Flyknit",
           "brand": "nike",
           "gender": "WOMEN",
           "category": "RUNNING",
-          "price": 120,
-          "sizes": [
-            41,
-            43,
-            45
-          ],
-          "colors": [
-            "black",
-            "brown",
-            "white",
-            "blue",
-            "red"
-          ],
+          "price": 180,
+          "sizes": "43",
+          "colors": "bg-red-500",
           "items_left": 3,
-          "imageURL": "https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/i1-33b0a0a5-c171-46cc-ad20-04a768703e47/air-zoom-pegasus-37-womens-running-shoe-Jl0bDf.jpg",
-          "slug": "nike-air-zoom-pegasus-37"
-        },
-        {
-          "id": 6,
-          "name": "Converse Phantom Venom Academy FG",
-          "brand": "converse",
-          "gender": "WOMEN",
-          "category": "FOOTBALL",
-          "price": 150,
-          "sizes": [
-            41,
-            43,
-            45
-          ],
-          "colors": [
-            "black",
-            "brown",
-            "white",
-            "blue",
-            "red"
-          ],
-          "items_left": 3,
-          "imageURL": "https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/s1amp7uosrn0nqpsxeue/phantom-vision-elite-dynamic-fit-fg-firm-ground-soccer-cleat-19Kv1V.jpg",
-          "slug": "nike-phantom-vision-elite-dynamic-fit-fg"
+          "imageURL": "https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/99a7d3cb-e40c-4474-91c2-0f2e6d231fd2/joyride-run-flyknit-womens-running-shoe-HcfnJd.jpg",
+          "slug": "nike-joyride-run-flyknit",
+          "quantity": "2"
         },
         {
           "id": 8,
@@ -83,70 +53,14 @@
           "gender": "MEN",
           "category": "FOOTBALL",
           "price": 145,
-          "sizes": [
-            41,
-            43,
-            45
-          ],
-          "colors": [
-            "black",
-            "brown",
-            "white",
-            "blue",
-            "red"
-          ],
+          "sizes": "43",
+          "colors": "bg-blue-500",
           "items_left": 3,
           "imageURL": "https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/vhbwnkor8sxt8qtecgia/mercurial-vapor-13-elite-tech-craft-fg-firm-ground-soccer-cleat-l38JPj.jpg",
-          "slug": "nike-mercurial-vapor-13-elite-tech-craft-fg"
-        },
-        {
-          "id": 2,
-          "name": "Nike React Miler",
-          "brand": "nike",
-          "gender": "MEN",
-          "category": "RUNNING",
-          "price": 130,
-          "sizes": [
-            41,
-            43,
-            45
-          ],
-          "colors": [
-            "black",
-            "brown",
-            "white",
-            "blue",
-            "red"
-          ],
-          "items_left": 3,
-          "imageURL": "https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/i1-5cc7de3b-2afc-49c2-a1e4-0508997d09e6/react-miler-mens-running-shoe-DgF6nr.jpg",
-          "slug": "nike-react-miler"
-        },
-        {
-          "id": 2,
-          "name": "Nike React Miler",
-          "brand": "nike",
-          "gender": "MEN",
-          "category": "RUNNING",
-          "price": 130,
-          "sizes": [
-            41,
-            43,
-            45
-          ],
-          "colors": [
-            "black",
-            "brown",
-            "white",
-            "blue",
-            "red"
-          ],
-          "items_left": 3,
-          "imageURL": "https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/i1-5cc7de3b-2afc-49c2-a1e4-0508997d09e6/react-miler-mens-running-shoe-DgF6nr.jpg",
-          "slug": "nike-react-miler"
+          "slug": "nike-mercurial-vapor-13-elite-tech-craft-fg",
+          "quantity": "1"
         }
-      ],
-      "cart": []
+      ]
     }
   ],
   "products": [

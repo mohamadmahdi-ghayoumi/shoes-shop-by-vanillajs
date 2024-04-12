@@ -10,6 +10,7 @@
     "json": "npx json-server db.json --watch"
   },
   "devDependencies": {
+    "@iconify-json/ant-design": "^1.1.16",
     "@iconify-json/bi": "^1.1.23",
     "@iconify-json/cil": "^1.1.8",
     "@iconify-json/clarity": "^1.1.12",
@@ -38,7 +39,7 @@
     "json-server": "^0.17.4",
     "lodash": "^4.17.21",
     "navigo": "^8.11.1",
-    "swiper": "^11.1.0",
+    "swiper": "^11.1.1",
     "tailwind-scrollbar": "^3.1.0"
   }
 }

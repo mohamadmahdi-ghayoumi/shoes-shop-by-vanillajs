@@ -1,6 +1,7 @@
+import { borderBtnsMyCart } from "../components/myCart/borderBtnsMyCart/borderBtnsMyCart";
+import { renderMyCart } from "../components/myCart/renderMyCard/renderMyCart";
 import { borderBtns } from "../components/wishlist/borderBtns/borderBtns";
-import { renderWishlist } from "../components/wishlist/renderWishlist/renderWishlist";
-import { headerBack } from "../layout/header/headerback";
+import { headerMyCart } from "../layout/header/headerMyCart";
 import { El } from "../utils/create-element";
 
 export function myCartPageTemplate() {
@@ -8,12 +9,12 @@ export function myCartPageTemplate() {
     element: "div",
     className: "",
     children: [
-      headerBack("My Cart", "icon-[iconamoon--search-thin]"),
-      borderBtns(),
+      headerMyCart(),
+      borderBtnsMyCart(),
       El({
         element: "div",
         id: "home",
-        children: [renderWishlist("all")],
+        children: [renderMyCart("all")],
       }),
     ],
   });

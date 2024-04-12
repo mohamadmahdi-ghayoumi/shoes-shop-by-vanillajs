@@ -2,14 +2,14 @@ import Navigo from "navigo";
 import { changePage } from "../utils/change-page";
 import { loginForm } from "../templates/login";
 import { homePage } from "../pages/homePage.js";
-import { homeAdidas } from "../templates/homeAdidas.js";
-import { homeNike } from "../templates/homeNike.js";
-import { homeReebok } from "../templates/homeReebok.js";
-import { homeNewBalance } from "../templates/homeNewBalance.js";
-import { homeAsics } from "../templates/homeAsics.js";
-import { homePuma } from "../templates/homePuma.js";
-import { homeConverse } from "../templates/homeConverse.js";
-import { homeAllBrands } from "../templates/homeAllBrands.js";
+import { homeAdidas } from "../templates/page-brand/homeAdidas.js";
+import { homeNike } from "../templates/page-brand/homeNike.js";
+import { homeReebok } from "../templates/page-brand/homeReebok.js";
+import { homeNewBalance } from "../templates/page-brand/homeNewBalance.js";
+import { homeAsics } from "../templates/page-brand/homeAsics.js";
+import { homePuma } from "../templates/page-brand/homePuma.js";
+import { homeConverse } from "../templates/page-brand/homeConverse.js";
+import { homeAllBrands } from "../templates/page-brand/homeAllBrands.js";
 import { mostPopular } from "../templates/mostPopular.js";
 import { cardFullDetail } from "../templates/cardFull.js";
 import { Product } from "../templates/selectedProduct.js";
@@ -21,6 +21,7 @@ import { brandPage } from "../templates/brandPage.js";
 import { cardForWishlistPage } from "../components/wishlist/cardForWishlistPage/cardForWishlistPage.js";
 import { searchBox } from "../components/homePage/searchbox/searchBox.js";
 import { searchPage } from "../templates/searchPage.js";
+import { StartSlider } from "../templates/onboardingpage-three.js";
 
 // import { cardForWishlistPage } from "../components/wishlist/cardForWishlistPage/cardForWishlistPage.js";
 
@@ -29,6 +30,9 @@ export const router = new Navigo("/");
 router
   .on("/", () => {
     changePage(onboardingOnePage);
+  })
+  .on("/slider", () => {
+    changePage(StartSlider);
   })
   .on("/wishlistpage", () => {
     changePage(WishlistPage);
@@ -77,14 +81,15 @@ router
   })
 
   .on("/products/:id", ({ data }) => {
-    console.log(data)
+    console.log(data);
 
     changePage(Product, data);
   })
   .on("/brand/:brand", ({ data }) => {
-    console.log(data)
+    console.log(data);
     changePage(brandPage, data);
-  }).on("/searchpage", () => {
+  })
+  .on("/searchpage", () => {
     changePage(searchPage);
   });
 // .on("/", () => {

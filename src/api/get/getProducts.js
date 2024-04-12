@@ -23,16 +23,9 @@ export const getProducts = async (brand) => {
 };
 
 export const getProductsSearch = async (filter) => {
-
-    const response = await axios.get(`${BASE_URL}/products?q=${filter}`);
-    return response.data;
-  
+  const response = await axios.get(`${BASE_URL}/products?q=${filter}`);
+  return response.data;
 };
-
-
-
-
-
 
 export const getProductById = async (id) => {
   const response = await axios.get(`${BASE_URL}/products/${id}`);
@@ -55,30 +48,26 @@ export const getProductById = async (id) => {
 //   }
 // };
 
-
 export async function getWishlistProduct(filter) {
   const res = await axios.get(`${BASE_URL}/users`);
   const response = res.data[0].wishlist;
   // console.log(filter);
-  if (filter != 'all') {
-  const final = response.filter((item) => item.brand == filter);
-  return final;
-  } else {
-  return response;
-  }
-  }
-
-
-
-
-  export async function getCardProduct(filter) {
-    const res = await axios.get(`${BASE_URL}/users`);
-    const response = res.data[0].card;
-    // console.log(filter);
-    if (filter != 'all') {
+  if (filter != "all") {
     const final = response.filter((item) => item.brand == filter);
     return final;
-    } else {
+  } else {
     return response;
-    }
-    }
+  }
+}
+
+export async function getCardProduct(filter) {
+  const res = await axios.get(`${BASE_URL}/users`);
+  const response = res.data[0].cart;
+  console.log(res.data[0].cart);
+  if (filter != "all") {
+    const final = response.filter((item) => item.brand == filter);
+    return final;
+  } else {
+    return response;
+  }
+}
