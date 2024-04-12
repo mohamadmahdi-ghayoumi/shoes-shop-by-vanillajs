@@ -1,3 +1,4 @@
+import { headerSearchApi } from "../components/search/headerSearchApi/headerSearchApi";
 import { inputSearch } from "../components/search/inputSearch/inputSearch";
 import { renderData } from "../components/search/renderData/renderData";
 // import { renderData } from "../components/search/renderData/renderData";
@@ -13,24 +14,18 @@ export function searchPage() {
     className: "",
     children: [
       inputSearch(),
+      headerSearchApi(),
       titleSearch(),
-      //    El({
-      //   element : "div",
-      //   className : "",
-      //   id : "searchDataComment",
-      //   children : []
-      // })
-   El({
-        element : "div",
-        className : "",
-        id : "searchDataComment",
-        children : [      ...renderData(),
-]
-      }),
-      
       El({
         element: "div",
         className: "",
+        id: "searchDataComment",
+        children: [...renderData()],
+      }),
+      El({
+        element: "div",
+        className:
+          "flex flex-wrap gap-[6px] m-[24px] mb-[80px] justify-center  items-center",
         id: "cardsProduct",
         children: [],
       }),

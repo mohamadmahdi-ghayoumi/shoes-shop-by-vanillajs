@@ -4,60 +4,41 @@ import { getLocalStorage, setLocalStorage } from "../../../utils/localStorage";
 import { renderData } from "../renderData/renderData";
 import { getProductsSearch } from "../../../api/get/getProducts";
 import { cardForWishlistPage } from "../../wishlist/cardForWishlistPage/cardForWishlistPage";
+import { renderCardApiSearch } from "../renderCardApiSearch/renderCardApiSearch";
 
 export function inputSearch() {
   function searchInput() {
     const searchInput = document.getElementById("inputSearch").value;
-    if (searchInput) {
+   
+   
+   
+    if (searchInput != null) {
       setLocalStorage("recentSearch", [
         searchInput,
         ...getLocalStorage("recentSearch"),
       ]);
+      console.log("por");
+
       renderData();
       renderCardApiSearch();
-    }
-    else{
+    } else {
+      console.log("khali");
       renderCardApiSearch();
-
     }
-  }
+   
+    // if (searchInput != null) {
+    //   setLocalStorage("recentSearch", [
+    //     searchInput,
+    //     ...getLocalStorage("recentSearch"),
+    //   ]);
+    //   console.log("por");
 
-  function renderCardApiSearch() {
-    const searchInput = document.getElementById("inputSearch").value;
-const cardsProduct = document.getElementById("cardsProduct")
-cardsProduct.innerHTML = ""
-    getProductsSearch(searchInput).then((data) => {
-      // console.log(data);
-      // console.log(searchInput);
-      // const dataFilter = data.filter((item) => item.brand == searchInput);
-      // const dataFilter = data.filter((item) => (item.name).includes(searchInput));
-      const cardsProduct = document.getElementById("cardsProduct");
-      // console.log(dataFilter);
-      // console.log(data);
-
-      data.map((product) => {
-        const cardSearch = cardForWishlistPage({ product });
-        return cardsProduct.append(cardSearch);
-      });
-      const parentTitle = document.getElementById("parentTitle");
-      const searchDataComment = document.getElementById("searchDataComment");
-        console.log(searchInput);
-
-      if (searchInput == "") {
-        console.log("searchInput");
-
-        searchDataComment.classList.remove("hidden");
-        parentTitle.classList.remove("hidden");
-      } else  {
-        searchDataComment.classList.add("hidden");
-        parentTitle.classList.add("hidden");
-      }
-    });
-  }
-
-  function test() {
-    const inputSearch = document.getElementById("inputSearch");
-    console.log(inputSearch?.value);
+    //   renderData();
+    //   renderCardApiSearch();
+    // } else {
+    //   console.log("khali");
+    //   renderCardApiSearch();
+    // }
   }
 
   return El({
@@ -79,7 +60,6 @@ cardsProduct.innerHTML = ""
               {
                 event: "input",
                 callback: debounce(searchInput, 1000),
-                // callback: debounce(test, 1000),
               },
             ],
           }),

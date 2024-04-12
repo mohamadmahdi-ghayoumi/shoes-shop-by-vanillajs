@@ -4,8 +4,7 @@ import { renderData } from "../renderData/renderData";
 
 export function titleSearch() {
   function clearData() {
-    // const data = getLocalStorage("recentSearch")
-    // console.log(data)
+
     setLocalStorage("recentSearch", []);
     const searchDataComment = document.getElementById("searchDataComment");
     searchDataComment.innerHTML = "";
