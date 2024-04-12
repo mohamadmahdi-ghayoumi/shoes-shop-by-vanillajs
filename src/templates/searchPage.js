@@ -1,5 +1,6 @@
 import { headerSearchApi } from "../components/search/headerSearchApi/headerSearchApi";
 import { inputSearch } from "../components/search/inputSearch/inputSearch";
+import { notFoundPage } from "../components/search/notFoundPage/notFoundPage";
 import { renderData } from "../components/search/renderData/renderData";
 // import { renderData } from "../components/search/renderData/renderData";
 // import { recentData } from "../components/search/recentData/recentData";
@@ -29,6 +30,7 @@ export function searchPage() {
         id: "cardsProduct",
         children: [],
       }),
+      notFoundPage()
     ],
   });
 }

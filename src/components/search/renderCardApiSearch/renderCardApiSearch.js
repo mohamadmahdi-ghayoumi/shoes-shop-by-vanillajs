@@ -4,6 +4,8 @@ import { cardForWishlistPage } from "../../wishlist/cardForWishlistPage/cardForW
 export function renderCardApiSearch() {
   const searchInput = document.getElementById("inputSearch").value;
   const cardsProduct = document.getElementById("cardsProduct");
+  const notfoundpage = document.getElementById("notfoundpage");
+
   cardsProduct.innerHTML = "";
   getProductsSearch(searchInput).then((data) => {
     // const dataFilter = data.filter((item) => item.brand == searchInput);
@@ -19,6 +21,16 @@ export function renderCardApiSearch() {
       console.log(data.length);
       const countData = document.getElementById("countData");
       countData.innerText = `${data.length} found`;
+      if (data.length == 0) {
+        notfoundpage.classList.remove("hidden");
+        console.log(data.length);
+
+        console.log("0");
+      } else if (data.length != 0) {
+        console.log(data.length);
+
+        notfoundpage.classList.add("hidden");
+      }
     }
     // console.log(data);
     const valueInput = document.getElementById("valueInput");
