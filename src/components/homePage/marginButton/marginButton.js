@@ -6,7 +6,7 @@ export function marginButton({ Brand }) {
   const button = El({
     element: "div",
     className:
-      "border-[2px] rounded-full font-semibold hover:bg-gray-700 hover:text-white border-black inline-block px-[20px] text-[16px] m-auto	py-[5px]",
+      "border-[2px] whitespace-nowrap rounded-full font-semibold hover:bg-gray-700 hover:text-white border-black inline-block px-[20px] text-[16px] m-auto	py-[5px]",
     innerText: Brand,
   });
   

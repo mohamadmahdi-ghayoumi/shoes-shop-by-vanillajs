@@ -50,7 +50,7 @@ export function inputSearch() {
           El({
             element: "input",
             className:
-              " w-[380px] m-auto ml-[30px] h-[40px] mt-[16px] pl-[28px] bg-gray-200 rounded-xl",
+              " w-[380px] m-auto ml-[30px] h-[40px] mt-[16px] pl-[28px] bg-gray-100 rounded-xl",
             placeholder: "Search",
             id: "inputSearch",
 
