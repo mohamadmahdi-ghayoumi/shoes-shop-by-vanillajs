@@ -2,27 +2,89 @@ import { El } from "../../../utils/create-element";
 import { Link } from "../../homePage/link/link";
 
 export function oneCartInMyCart({ product }) {
-  const { name, price, imageURL, id, colors, sizes } = product;
-  console.log(product);
+  const { name, price, imageURL, id, colors, sizes, quantity } = product;
   let color = "";
   switch (colors) {
     case "bg-red-500":
       color = "red";
       break;
+    case "bg-blue-500":
+      color = "blue";
+      break;
+    case "bg-[#1a1a1a]":
+      color = "black";
+      break;
+    case "bg-yellow-700":
+      color = "brown";
+      break;
+    case "bg-white-500":
+      color = "white";
+      break;
+  }
+
+  function subtractBtn(e) {
+    const countCart = +document.getElementById("span-countCart").innerText;
+    console.log(typeof countCart);
+    console.log(e.target.closest(".gap-4").children[1].innerText);
+
+    if (countCart > 0) {
+      console.log(countCart);
+      // countCart--;
+      document.getElementById("span-countCart").innerText = countCart - 1;
+    }
+  }
+
+  function sumBtn(e) {
+    console.log(`  e : ${e.target.closest(".gap-4").children[1].innerText}`);
+    const countCart = +document.querySelector(".countCart").innerText;
+    let meghdar = e.target.closest(".gap-4").children[1].innerText;
+    console.log(`  e : ${meghdar}`);
+    console.log(`  span : ${countCart}`);
+
+    console.log(countCart);
+    if (countCart < 3) {
+      // countCart++;
+      meghdar = "ghg";
+    }
+  }
+
+  function deleteCart(e) {
+    document.getElementById("footer").classList.add("hidden");
+    document.getElementById("modalDelete").classList.remove("hidden");
+
+    document.getElementById("imageModal").src =
+      e.target.closest(".cart").children[0].children[0].src;
+    document.getElementById("nameModal").innerText =
+      e.target.closest(".cart").children[1].children[0].innerText;
+    document.getElementById("colorModal").innerText =
+      e.target.closest(".cart").children[1].children[1].children[1].innerText;
+    document.getElementById("sizeModal").innerText =
+      e.target.closest(".cart").children[1].children[1].children[4].innerText;
+    document.getElementById("priceModal").innerText =
+      e.target.closest(".cart").children[1].children[2].children[0].innerText;
+    document.getElementById("quantityModal").innerText =
+      e.target.closest(
+        ".cart"
+      ).children[1].children[2].children[1].children[1].innerText;
+    document.getElementById("bgColorModal").className =
+      e.target.closest(".cart").children[1].children[1].children[0].className;
   }
 
   return El({
     element: "div",
-    className: " h-[130px]  mt-[24px]  flex gap-3 w-full ",
+    className: " h-[130px]  mt-[24px]  flex gap-3 w-full cart",
     children: [
       Link({
         href: `/products/${id}`,
-        children: [  El({
-        element: "img",
-        className: "rounded-2xl  w-[130px]",
-        src: imageURL,
-      })]}),
-    
+        children: [
+          El({
+            element: "img",
+            className: "rounded-2xl  w-[130px]",
+            src: imageURL,
+          }),
+        ],
+      }),
+
       El({
         element: "div",
         className: "flex flex-col justify-between relative ",
@@ -82,21 +144,26 @@ export function oneCartInMyCart({ product }) {
                     element: "span",
                     className: "font-bold",
                     id: "span-subtract",
-                    // onclick: subtractButton,
+                    addEvenListener: [
+                      {
+                        event: "onclick",
+                        callback: (e) => subtractBtn(e),
+                      },
+                    ],
 
                     innerText: "-",
                   }),
                   El({
                     element: "span",
-                    className: "font-bold",
+                    className: "font-bold countCart",
                     id: "span-countCart",
-                    innerText: "0",
+                    innerText: quantity,
                   }),
                   El({
                     element: "span",
                     className: "font-bold",
                     id: "span-sum",
-                    // onclick: sumButton,
+                    onclick: sumBtn,
                     innerText: "+",
                   }),
                 ],
@@ -105,6 +172,7 @@ export function oneCartInMyCart({ product }) {
           }),
           El({
             element: "span",
+            onclick: deleteCart,
             className:
               "icon-[ant-design--delete-outlined] absolute top-2 end-2 w-5 h-5",
           }),

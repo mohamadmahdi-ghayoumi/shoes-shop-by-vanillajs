@@ -1,4 +1,6 @@
 import { borderBtnsMyCart } from "../components/myCart/borderBtnsMyCart/borderBtnsMyCart";
+import { modalDelete } from "../components/myCart/modalDelete/modalDelete";
+import { modalDeleteOverlay } from "../components/myCart/modalDelete/modalDeleteOverlay";
 import { renderMyCart } from "../components/myCart/renderMyCard/renderMyCart";
 import { borderBtns } from "../components/wishlist/borderBtns/borderBtns";
 import { footerHomePage } from "../layout/footer/footerHomePage";
@@ -8,8 +10,9 @@ import { El } from "../utils/create-element";
 export function myCartPageTemplate() {
   const Elemenet = El({
     element: "div",
-    className: "",
+    className: " h-[926px] ",
     children: [
+
       headerMyCart(),
       borderBtnsMyCart(),
       El({
@@ -17,7 +20,10 @@ export function myCartPageTemplate() {
         id: "home",
         children: [renderMyCart("all")],
       }),
-      footerHomePage(),
+      footerHomePage(), 
+           modalDeleteOverlay(),
+
+      modalDelete(),
     ],
   });
 

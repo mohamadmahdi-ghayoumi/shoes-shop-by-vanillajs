@@ -1,4 +1,3 @@
-
 // import { productcarts } from "../widget/productcarts";
 
 import { getCardProduct } from "../../../api/get/getProducts";
@@ -14,7 +13,7 @@ export function renderMyCart(filter) {
   const Element = El({
     element: "div",
     className:
-      "flex flex-wrap gap-[6px] m-[24px] mb-[80px]  items-center  justify-center",
+      "flex flex-wrap gap-[6px] m-[24px] mb-[80px]  items-center  justify-center pb-[100px]",
     id: "render",
   });
 

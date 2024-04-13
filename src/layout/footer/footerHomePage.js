@@ -3,7 +3,9 @@ import { El } from "../../utils/create-element";
 export function footerHomePage(classname) {
   return El({
     element: "div",
-    className: "flex flex-col fixed bottom-0 bg-white py-2 gap-4",
+    id : "footer",
+
+    className: "flex flex-col fixed bottom-0 bg-white py-2 gap-4  ",
     children: [
       El({
         element: "div",
