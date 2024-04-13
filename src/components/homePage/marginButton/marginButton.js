@@ -5,12 +5,13 @@ import { renderProducts } from "../renderProducts/renderProducts";
 export function marginButton({ Brand }) {
   const button = El({
     element: "div",
-    className:
-      "border-[2px] whitespace-nowrap rounded-full font-semibold hover:bg-gray-700 hover:text-white border-black inline-block px-[20px] text-[16px] m-auto	py-[5px]",
+    className: `border-[2px] whitespace-nowrap rounded-full font-semibold hover:bg-gray-700 hover:text-white border-black inline-block px-[20px] text-[16px] m-auto	py-[5px]`,
     innerText: Brand,
   });
-  
+
   button.addEventListener("click", (e) => {
+    console.log(e.ta);
+
     let filterBrand = e.target.innerText.toLowerCase();
     const render = document.getElementById("render");
 
@@ -19,7 +20,6 @@ export function marginButton({ Brand }) {
     }
     const main = document.getElementById("home");
     let productFilter = renderProducts(filterBrand);
-    let productFilterr = renderWishlist(filterBrand);
 
     console.log(productFilter);
 
