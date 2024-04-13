@@ -23,7 +23,7 @@ export function homePage() {
         id: "home",
         children: [renderProducts("all")],
       }),
-      footerHomePage(),
+      footerHomePage("hidden"),
     ],
   });
 }
