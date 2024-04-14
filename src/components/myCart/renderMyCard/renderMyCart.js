@@ -5,11 +5,7 @@ import { El } from "../../../utils/create-element";
 import { cardForWishlistPage } from "../../wishlist/cardForWishlistPage/cardForWishlistPage";
 import { oneCartInMyCart } from "../oneCartInMyCart.js/oneCartInMyCart";
 
-export function renderMyCart(filter) {
-  if (!filter) {
-    filter = "all";
-  }
-  // console.log(filter)
+export function renderMyCart() {
   const Element = El({
     element: "div",
     className:
@@ -17,12 +13,13 @@ export function renderMyCart(filter) {
     id: "render",
   });
 
-  getCardProduct(filter).then((carts) => {
+  getCardProduct().then((carts) => {
     carts.map((product) => {
       const productCard = oneCartInMyCart({ product });
       Element.append(productCard);
     });
   });
+  console.log(Element);
 
   return Element;
 }

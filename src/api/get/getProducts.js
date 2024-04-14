@@ -60,14 +60,22 @@ export async function getWishlistProduct(filter) {
   }
 }
 
-export async function getCardProduct(filter) {
-  const res = await axios.get(`${BASE_URL}/users`);
+export async function getCardProduct(id) {
+  if(!id){
+
+    const res = await axios.get(`${BASE_URL}/users`);
   const response = res.data[0].cart;
   console.log(res.data[0].cart);
-  if (filter != "all") {
-    const final = response.filter((item) => item.brand == filter);
-    return final;
-  } else {
+
     return response;
+  }else {
+    const res = await axios.get(`${BASE_URL}/users`);
+    const response = res.data[0].cart;
+    const dataDelete = response.filter((item) => item.id != id);
+    console.log(res.data[0].cart);
+    return response;
+
   }
+  
+  
 }

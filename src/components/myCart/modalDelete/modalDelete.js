@@ -1,17 +1,28 @@
-import { deleteCardProduct } from "../../../api/delete/deleteProducts";
 import { loginForm } from "../../../templates/login";
 import { El } from "../../../utils/create-element";
+import { oneCartInMyCart } from "../oneCartInMyCart.js/oneCartInMyCart";
+import { renderMyCart } from "../renderMyCard/renderMyCart";
+import { deleteCardProduct } from "../../../api/delete/deleteProducts";
 
 export function modalDelete() {
-  function cancelBtn(e) {
-    console.log(e.target.id);
-    const id = e.target.id
+  function removeBtn(e) {
+    document.getElementById("footer").classList.remove("hidden");
+    document.getElementById("modalDelete").classList.add("hidden");
+    document.getElementById("overlayModal").classList.add("hidden");
+    const id = e.target.id;
+    deleteCardProduct(id).then((data) => {
+      const main = document.getElementById("home");
+      main.innerText = "";
+      main.append(renderMyCart());
+      console.log(data);
+    });
+  }
 
-    // document.getElementById("modalDelete").classList.add("hidden");
-    // document.getElementById("overlayModal").classList.add("hidden");
-    deleteCardProduct(id).then((data)=>{
-      console.log(data)
-    })
+  function cancelBtn() {
+    document.getElementById("modalDelete").classList.add("hidden");
+    document.getElementById("overlayModal").classList.add("hidden");
+    document.getElementById("footer").classList.remove("hidden");
+
   }
 
   return El({
@@ -143,7 +154,7 @@ export function modalDelete() {
         children: [
           El({
             element: "button",
-            id: "fd",
+            id: "nbbvn",
             className:
               "hover:text-white hover:bg-black rounded-3xl bg-gray-200 w-[50%] text-[14px] h-[40px]",
             innerText: "cancel",
@@ -151,7 +162,8 @@ export function modalDelete() {
           }),
           El({
             element: "button",
-            id: "removeBtn",
+            id: "fd",
+            onclick: removeBtn,
 
             className:
               "hover:text-white hover:bg-black rounded-3xl bg-gray-200 w-[50%] text-[14px] h-[40px]",

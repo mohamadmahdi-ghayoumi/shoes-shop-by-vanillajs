@@ -13,11 +13,17 @@ export function myCartPageTemplate() {
     className: " h-[926px] ",
     children: [
       headerMyCart(),
-      borderBtnsMyCart(),
+      // borderBtnsMyCart(),
+      El({
+        element: "div",
+        id: "home1",
+        children: [],
+      }),
+
       El({
         element: "div",
         id: "home",
-        children: [renderMyCart("all")],
+        children: [renderMyCart()],
       }),
       footerHomePage(),
       modalDeleteOverlay(),
