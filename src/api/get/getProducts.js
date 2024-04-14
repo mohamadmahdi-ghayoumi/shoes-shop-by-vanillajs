@@ -63,9 +63,6 @@ export async function getCardProduct(id) {
 
   }
   
-
-
-  
 }
 
 
@@ -78,3 +75,15 @@ const response = res.data[0].cart;
 
   return response;
 }
+
+
+export async function getOrderProduct() {
+
+    const res = await axios.get(`${BASE_URL}/users`);
+  const response = res.data[0].orders;
+  // console.log(res.data[0].cart);
+
+    // console.log(res.data[0].cart);
+    return response;
+
+  }
