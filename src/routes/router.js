@@ -23,6 +23,8 @@ import { searchBox } from "../components/homePage/searchbox/searchBox.js";
 import { searchPage } from "../templates/searchPage.js";
 import { StartSlider } from "../templates/onboardingpage-three.js";
 import { checkoutPage } from "../templates/Orders/checkoutPage.js";
+import { shippingAddressPage } from "../templates/Orders/shippingAddressPage.js";
+
 
 // import { cardForWishlistPage } from "../components/wishlist/cardForWishlistPage/cardForWishlistPage.js";
 
@@ -82,6 +84,8 @@ router
   })
   .on("/checkout", () => {
     changePage(checkoutPage);
+  }).on("/shippingaddresspage", () => {
+    changePage(shippingAddressPage);
   })
   .on("/products/:id", ({ data }) => {
     // console.log(data);

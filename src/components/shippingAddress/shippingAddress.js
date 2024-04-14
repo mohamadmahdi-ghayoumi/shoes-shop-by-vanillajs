@@ -1,4 +1,4 @@
-import { El } from "../../../utils/create-element";
+import { El } from "../../utils/create-element";
 
 export function shippingAddress() {
   return El({
@@ -16,11 +16,13 @@ export function shippingAddress() {
         children: [
           El({
             element: "div",
-            className: "ml-7 bg-gray-300 rounded-full w-[80px] h-[80px] relative",
+            className:
+              "ml-7 bg-gray-300 rounded-full w-[80px] h-[80px] relative",
             children: [
               El({
                 element: "span",
-                className: "icon-[el--map-marker-alt] w-[60px] h-[60px] m-auto absolute bottom-[10px] end-[10px]",
+                className:
+                  "icon-[el--map-marker-alt] w-[60px] h-[60px] m-auto absolute bottom-[10px] end-[10px]",
               }),
             ],
           }),

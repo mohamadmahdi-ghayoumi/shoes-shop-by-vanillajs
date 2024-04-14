@@ -38,3 +38,9 @@
         scrollbar-width: none !important; /* Firefox */
         }
         }
+
+        @layer utilities {
+            .checked\\:bg-black:checked {
+                background-color: black;
+            }
+        }
