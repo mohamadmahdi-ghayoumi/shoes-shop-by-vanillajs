@@ -10,26 +10,10 @@ export function modalDelete() {
     document.getElementById("modalDelete").classList.add("hidden");
     document.getElementById("overlayModal").classList.add("hidden");
     const value = e.target.closest(".parent").value;
-
-    const imageULR = e.target.closest(".parent").children[1].children[0].src;
-    const name =
-      e.target.closest(".parent").children[1].children[1].children[1]
-        .children[1].innerText;
-    const size =
-      e.target.closest(".parent").children[1].children[1].children[1]
-        .children[4].innerText;
-    const price =
-      e.target.closest(".parent").children[1].children[1].children[2]
-        .children[1].innerText;
-    console.log(price);
     deleteCardProduct(value).then((data) => {
-      console.log(data);
-
       const main = document.getElementById("home");
       main.innerText = "";
       main.append(renderMyCart());
-      // const modalDelete = document.getElementById("modalDelete");
-      // modalDelete.innerText = "";
     });
   }
 
@@ -37,8 +21,6 @@ export function modalDelete() {
     document.getElementById("modalDelete").classList.add("hidden");
     document.getElementById("overlayModal").classList.add("hidden");
     document.getElementById("footer").classList.remove("hidden");
-    // const modalDelete = document.getElementById("modalDelete");
-    // modalDelete.innerText = "";
   }
 
   const Element = El({

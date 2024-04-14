@@ -1,9 +1,22 @@
+import {
+  getCardProductForOrder,
+} from "../../api/get/getProducts";
+import { addToOrder } from "../../api/post/postProduct";
 import { El } from "../../utils/create-element";
 
 export function footerHomePage(classname) {
+  function addToOrders() {
+    getCardProductForOrder().then((data) => {
+      {
+        addToOrder(data);
+        console.log(data);
+      }
+    });
+  }
+
   return El({
     element: "div",
-    id : "footer",
+    id: "footer",
 
     className: "flex flex-col fixed bottom-0 bg-white py-2 gap-4  ",
     children: [
@@ -34,7 +47,7 @@ export function footerHomePage(classname) {
               "bg-black text-white w-[65%] rounded-3xl relative text-[14px]",
             innerText: "Add to Card",
             id: "btnAddToCard",
-            // onclick: addToCard,
+            onclick: addToOrders,
             children: [
               El({
                 element: "img",

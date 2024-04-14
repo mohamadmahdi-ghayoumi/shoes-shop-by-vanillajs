@@ -32,21 +32,7 @@ export const getProductById = async (id) => {
   return response.data;
 };
 
-// export const getProductByBrand = async (brand) => {
-//   if (brand == "all") {
-//     const response = await axios.get(`${BASE_URL}/products`);
 
-//     return response.data;
-//   } else {
-//     const response = await axios.get(`${BASE_URL}/products?brand=${brand}`);
-//     // console.log(JSON.parse(JSON.stringify(response)).data);
-//     // console.log(`brand= ${response}`);
-
-//     // const brandData = JSON.parse(JSON.stringify(response)).data
-//     // setTimeout(console.log(`brand ++ ${response.data}`) , 0)
-//     return response;
-//   }
-// };
 
 export async function getWishlistProduct(filter) {
   const res = await axios.get(`${BASE_URL}/users`);
@@ -77,5 +63,18 @@ export async function getCardProduct(id) {
 
   }
   
+
+
   
+}
+
+
+
+
+export async function getCardProductForOrder() {
+  
+  const res = await axios.get(`${BASE_URL}/users`);
+const response = res.data[0].cart;
+
+  return response;
 }
