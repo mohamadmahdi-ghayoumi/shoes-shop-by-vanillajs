@@ -4,13 +4,6 @@ import { addToCart } from "../../../api/post/postProduct";
 import { El } from "../../../utils/create-element";
 
 export function priceCard({ product }) {
-  // function addToCard() {
-  //   const count = document.getElementById("span-count")
-  //   const color = document.getElementById
-  //   console.log(count.innerText);
-
-  // }
-
   function addToCard(e) {
     e.preventDefault();
     const color = document.querySelector("input[name='color']:checked");
@@ -33,6 +26,8 @@ export function priceCard({ product }) {
         sizes: sizeValue,
         quantity: quantity, //quantity
         price: product.price * quantity, //quantity
+        // id: Date.now(),
+        value: Date.now(),
       };
       console.log(data);
 

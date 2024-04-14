@@ -2,7 +2,7 @@ import { El } from "../../../utils/create-element";
 import { Link } from "../../homePage/link/link";
 
 export function oneCartInMyCart({ product }) {
-  const { name, price, imageURL, id, colors, sizes, quantity } = product;
+  const { name, price, imageURL, id, colors, sizes, quantity , value} = product;
   let color = "";
   switch (colors) {
     case "bg-red-500":
@@ -55,6 +55,7 @@ export function oneCartInMyCart({ product }) {
     // modalDelete.innerText = "";
     // console.log(product.id)
     // document.getElementById("fd").id = product.id;
+    document.getElementById("modalDelete").value = product.value
     document.getElementById("imageModal").src = product.imageURL;
     document.getElementById("nameModal").innerText =
       e.target.closest(".cart").children[1].children[0].innerText;
@@ -70,11 +71,13 @@ export function oneCartInMyCart({ product }) {
       ).children[1].children[2].children[1].children[1].innerText;
     document.getElementById("bgColorModal").className =
       e.target.closest(".cart").children[1].children[1].children[0].className;
-    // console.log(document.getElementById("parentcartt"));
+    console.log(document.getElementById("modalDelete").value);
   }
 
   const Element = El({
+
     element: "div",
+    value : value, 
     className: " h-[130px]  mt-[24px]  flex gap-3 w-full cart",
     id: "parentcartt",
     children: [

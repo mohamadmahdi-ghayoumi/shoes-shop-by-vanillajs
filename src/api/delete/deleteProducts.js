@@ -44,7 +44,7 @@ import { BASE_URL } from "../const";
 // //   return dataNew.data;
 // }
 
-export async function deleteCardProduct( imageURL , sizes , price , color) {
+export async function deleteCardProduct( value) {
   // console.log(`id = ${imageURL}`);
 
   const res = await axios.get(`${BASE_URL}/users`);
@@ -52,7 +52,7 @@ export async function deleteCardProduct( imageURL , sizes , price , color) {
 
   const response = res.data[0].cart;
 
-  const dataDelete = response.filter((item) => item.imageURL != imageURL  && item.sizes != sizes && item.price != price && item.color != color);
+  const dataDelete = response.filter((item) => item.value != value);
   console.log(dataDelete)
   const cart = [...dataDelete];
 

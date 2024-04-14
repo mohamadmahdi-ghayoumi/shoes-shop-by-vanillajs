@@ -7,8 +7,10 @@ import { deleteCardProduct } from "../../../api/delete/deleteProducts";
 export function modalDelete() {
   function removeBtn(e) {
     document.getElementById("footer").classList.remove("hidden");
-    // document.getElementById("modalDelete").classList.add("hidden");
-    // document.getElementById("overlayModal").classList.add("hidden");
+    document.getElementById("modalDelete").classList.add("hidden");
+    document.getElementById("overlayModal").classList.add("hidden");
+    const value = e.target.closest(".parent").value;
+
     const imageULR = e.target.closest(".parent").children[1].children[0].src;
     const name =
       e.target.closest(".parent").children[1].children[1].children[1]
@@ -20,13 +22,14 @@ export function modalDelete() {
       e.target.closest(".parent").children[1].children[1].children[2]
         .children[1].innerText;
     console.log(price);
-    deleteCardProduct(imageULR , name , size , price).then((data) => {
+    deleteCardProduct(value).then((data) => {
+      console.log(data);
+
       const main = document.getElementById("home");
       main.innerText = "";
       main.append(renderMyCart());
       // const modalDelete = document.getElementById("modalDelete");
       // modalDelete.innerText = "";
-      // console.log(data);
     });
   }
 
@@ -41,6 +44,7 @@ export function modalDelete() {
   const Element = El({
     element: "div",
     id: "modalDelete",
+    value: "valueparent",
     className:
       "absolute bottom-0 w-full h-[400px] bg-gray-200 rounded-t-[70px]  p-2 flex flex-col pt-[50px] gap-[60px] items-center hidden parent",
     children: [
