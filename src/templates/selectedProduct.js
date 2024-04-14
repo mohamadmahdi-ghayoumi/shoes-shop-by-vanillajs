@@ -8,15 +8,11 @@ export function Product(data) {
   const productId = data.id;
   console.log()
   getProductById(productId).then((product) => {
-    console.log(product)
+    // console.log(product)
     element
       .querySelector("#product-details")
       .append(cardFullDetail({ product }));
-    // getCommentsByProductId(productId).then((comments) => {
-    //   element
-    //     .querySelector("#comments-details")
-    //     .append(ProductComments({ comments }));
-    // });
+ 
   });
   const element = El({
     element: "div",

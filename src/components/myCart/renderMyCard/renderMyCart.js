@@ -13,12 +13,19 @@ export function renderMyCart() {
     id: "render",
   });
 
+  let arrayPrice = [];
   getCardProduct().then((carts) => {
     carts.map((product) => {
       const productCard = oneCartInMyCart({ product });
       Element.append(productCard);
     });
+
+    arrayPrice = carts.map((item) => item.price);
+    const sum = arrayPrice.reduce((acc, num) => acc + num, 0);
+    console.log(sum);
+     document.getElementById("priceMyCart").innerText = ` $ ${sum}` 
   });
+
   console.log(Element);
 
   return Element;

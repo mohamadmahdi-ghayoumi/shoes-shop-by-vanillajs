@@ -10,8 +10,8 @@ export const getUser = async (brand) => {
     return response.data;
   } else {
     const response = await axios.get(`${BASE_URL}/users/?brand=${brand}`);
-    console.log(response.data[0].wishlist)
-    console.log(brand)
+    // console.log(response.data[0].wishlist)
+    // console.log(brand)
 
     return response.data;
   }

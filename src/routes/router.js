@@ -81,7 +81,7 @@ router
   })
 
   .on("/products/:id", ({ data }) => {
-    console.log(data);
+    // console.log(data);
 
     changePage(Product, data);
   })

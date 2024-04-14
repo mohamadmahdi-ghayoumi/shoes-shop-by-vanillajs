@@ -24,11 +24,10 @@ export function oneCartInMyCart({ product }) {
 
   function subtractBtn(e) {
     const countCart = +document.getElementById("span-countCart").innerText;
-    console.log(typeof countCart);
-    console.log(e.target.closest(".gap-4").children[1].innerText);
+    // console.log(typeof countCart);
 
     if (countCart > 0) {
-      console.log(countCart);
+      // console.log(countCart);
       // countCart--;
       document.getElementById("span-countCart").innerText = countCart - 1;
     }
@@ -38,8 +37,8 @@ export function oneCartInMyCart({ product }) {
     console.log(`  e : ${e.target.closest(".gap-4").children[1].innerText}`);
     const countCart = +document.querySelector(".countCart").innerText;
     let meghdar = e.target.closest(".gap-4").children[1].innerText;
-    console.log(`  e : ${meghdar}`);
-    console.log(`  span : ${countCart}`);
+    // console.log(`  e : ${meghdar}`);
+    // console.log(`  span : ${countCart}`);
 
     console.log(countCart);
     if (countCart < 3) {

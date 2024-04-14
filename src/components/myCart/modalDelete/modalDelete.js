@@ -14,7 +14,7 @@ export function modalDelete() {
       const main = document.getElementById("home");
       main.innerText = "";
       main.append(renderMyCart());
-      console.log(data);
+      // console.log(data);
     });
   }
 

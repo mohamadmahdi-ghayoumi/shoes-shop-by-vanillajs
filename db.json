@@ -31,7 +31,50 @@
           "slug": "nike-react-miler"
         }
       ],
-      "cart": [],
+      "cart": [
+        {
+          "id": 1,
+          "name": "Nike React Infinity Run Flyknit",
+          "brand": "nike",
+          "gender": "MEN",
+          "category": "RUNNING",
+          "price": 160,
+          "sizes": "42",
+          "colors": "bg-red-500",
+          "items_left": 3,
+          "imageURL": "https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/i1-665455a5-45de-40fb-945f-c1852b82400d/react-infinity-run-flyknit-mens-running-shoe-zX42Nc.jpg",
+          "slug": "nike-react-infinity-run-flyknit",
+          "quantity": "1"
+        },
+        {
+          "id": 1,
+          "name": "Nike React Infinity Run Flyknit",
+          "brand": "nike",
+          "gender": "MEN",
+          "category": "RUNNING",
+          "price": 160,
+          "sizes": "42",
+          "colors": "bg-yellow-700",
+          "items_left": 3,
+          "imageURL": "https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/i1-665455a5-45de-40fb-945f-c1852b82400d/react-infinity-run-flyknit-mens-running-shoe-zX42Nc.jpg",
+          "slug": "nike-react-infinity-run-flyknit",
+          "quantity": "2"
+        },
+        {
+          "id": 6,
+          "name": "Converse Phantom Venom Academy FG",
+          "brand": "converse",
+          "gender": "WOMEN",
+          "category": "FOOTBALL",
+          "price": 150,
+          "sizes": "43",
+          "colors": "bg-[#1a1a1a]",
+          "items_left": 3,
+          "imageURL": "https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/s1amp7uosrn0nqpsxeue/phantom-vision-elite-dynamic-fit-fg-firm-ground-soccer-cleat-19Kv1V.jpg",
+          "slug": "nike-phantom-vision-elite-dynamic-fit-fg",
+          "quantity": "1"
+        }
+      ],
       "dataDelete": [
         {
           "id": 2,

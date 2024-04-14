@@ -21,7 +21,7 @@ export function marginButton({ Brand }) {
     const main = document.getElementById("home");
     let productFilter = renderProducts(filterBrand);
 
-    console.log(productFilter);
+    // console.log(productFilter);
 
     main.append(productFilter);
     // console.log(main);

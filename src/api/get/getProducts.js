@@ -65,14 +65,14 @@ export async function getCardProduct(id) {
 
     const res = await axios.get(`${BASE_URL}/users`);
   const response = res.data[0].cart;
-  console.log(res.data[0].cart);
+  // console.log(res.data[0].cart);
 
     return response;
   }else {
     const res = await axios.get(`${BASE_URL}/users`);
     const response = res.data[0].cart;
     const dataDelete = response.filter((item) => item.id != id);
-    console.log(res.data[0].cart);
+    // console.log(res.data[0].cart);
     return response;
 
   }

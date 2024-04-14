@@ -51,10 +51,8 @@ export async function deleteCardProduct(id) {
   // console.log(res.data[0].cart);
 
   const response = res.data[0].cart;
-  console.log(response);
 
   const dataDelete = response.filter((item) => item.id != id);
-  console.log([...dataDelete]);
 const cart =  [...dataDelete]
 
 
@@ -63,7 +61,6 @@ const cart =  [...dataDelete]
   // const cart = userData.cart.concat(data);
   let responseNew = await axios.patch(`${BASE_URL}/users/1`, { cart });
 
-console.log(responseNew)
 
   return  responseNew;
 }
