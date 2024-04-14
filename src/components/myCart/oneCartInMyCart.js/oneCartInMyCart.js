@@ -51,10 +51,11 @@ export function oneCartInMyCart({ product }) {
     document.getElementById("footer").classList.add("hidden");
     document.getElementById("modalDelete").classList.remove("hidden");
     document.getElementById("overlayModal").classList.remove("hidden");
-    document.getElementById("fd").id =
-      e.target.closest(".cart").children[1].children[0].id;
-    document.getElementById("imageModal").src =
-      e.target.closest(".cart").children[0].children[0].src;
+    // const modalDelete = document.getElementById("modalDelete");
+    // modalDelete.innerText = "";
+    // console.log(product.id)
+    // document.getElementById("fd").id = product.id;
+    document.getElementById("imageModal").src = product.imageURL;
     document.getElementById("nameModal").innerText =
       e.target.closest(".cart").children[1].children[0].innerText;
     document.getElementById("colorModal").innerText =
@@ -69,11 +70,13 @@ export function oneCartInMyCart({ product }) {
       ).children[1].children[2].children[1].children[1].innerText;
     document.getElementById("bgColorModal").className =
       e.target.closest(".cart").children[1].children[1].children[0].className;
+    console.log(document.getElementById("parentcartt"));
   }
 
-  return El({
+  const Element = El({
     element: "div",
     className: " h-[130px]  mt-[24px]  flex gap-3 w-full cart",
+    id: "parentcartt",
     children: [
       Link({
         href: `/products/${id}`,
@@ -92,7 +95,7 @@ export function oneCartInMyCart({ product }) {
         children: [
           El({
             element: "p",
-            id:  id,
+            id: id,
             className:
               "font-semibold  text-[20px] whitespace-nowrap overflow-hidden overflow-ellipsis w-[150px] ",
             innerText: name,
@@ -182,4 +185,6 @@ export function oneCartInMyCart({ product }) {
       }),
     ],
   });
+
+  return Element;
 }

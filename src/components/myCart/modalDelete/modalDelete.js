@@ -9,11 +9,14 @@ export function modalDelete() {
     document.getElementById("footer").classList.remove("hidden");
     document.getElementById("modalDelete").classList.add("hidden");
     document.getElementById("overlayModal").classList.add("hidden");
-    const id = e.target.id;
-    deleteCardProduct(id).then((data) => {
+    const imageULR = e.target.closest(".parent").children[1].children[0].src;
+    console.log(imageULR)
+    deleteCardProduct(imageULR).then((data) => {
       const main = document.getElementById("home");
       main.innerText = "";
       main.append(renderMyCart());
+      // const modalDelete = document.getElementById("modalDelete");
+      // modalDelete.innerText = "";
       // console.log(data);
     });
   }
@@ -22,14 +25,15 @@ export function modalDelete() {
     document.getElementById("modalDelete").classList.add("hidden");
     document.getElementById("overlayModal").classList.add("hidden");
     document.getElementById("footer").classList.remove("hidden");
-
+    // const modalDelete = document.getElementById("modalDelete");
+    // modalDelete.innerText = "";
   }
 
-  return El({
+  const Element = El({
     element: "div",
     id: "modalDelete",
     className:
-      "absolute bottom-0 w-full h-[400px] bg-gray-200 rounded-t-[70px]  p-2 flex flex-col pt-[50px] gap-[60px] items-center hidden",
+      "absolute bottom-0 w-full h-[400px] bg-gray-200 rounded-t-[70px]  p-2 flex flex-col pt-[50px] gap-[60px] items-center hidden parent",
     children: [
       El({
         element: "div",
@@ -173,4 +177,6 @@ export function modalDelete() {
       }),
     ],
   });
+
+  return Element;
 }

@@ -15,20 +15,27 @@ export function priceCard({ product }) {
     e.preventDefault();
     const color = document.querySelector("input[name='color']:checked");
     const size = document.querySelector("input[name='size']:checked");
+    const price = document.getElementById("totalPrice").innerText;
 
     const quantity = document.querySelector("#span-count").innerText;
+    console.log(product.price * quantity);
+
     if (color !== null && size !== null && quantity != "0") {
       // console.log(size.value);
       // console.log(quantity);
       const colorValue = color.value;
       const sizeValue = size.value;
+      console.log(quantity);
+
       const data = {
         ...product,
         colors: colorValue,
         sizes: sizeValue,
         quantity: quantity, //quantity
+        price: product.price * quantity, //quantity
       };
-      // console.log(data);
+      console.log(data);
+
       // getUser().
       // postProductCard(data)
       addToCart(data);
