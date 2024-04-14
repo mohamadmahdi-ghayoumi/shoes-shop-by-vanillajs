@@ -10,7 +10,7 @@ export function marginButton({ Brand }) {
   });
 
   button.addEventListener("click", (e) => {
-    console.log(e.ta);
+    // console.log(e.ta);
 
     let filterBrand = e.target.innerText.toLowerCase();
     const render = document.getElementById("render");

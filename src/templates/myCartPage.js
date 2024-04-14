@@ -12,7 +12,6 @@ export function myCartPageTemplate() {
     element: "div",
     className: " h-[926px] ",
     children: [
-
       headerMyCart(),
       borderBtnsMyCart(),
       El({
@@ -20,9 +19,8 @@ export function myCartPageTemplate() {
         id: "home",
         children: [renderMyCart("all")],
       }),
-      footerHomePage(), 
-           modalDeleteOverlay(),
-
+      footerHomePage(),
+      modalDeleteOverlay(),
       modalDelete(),
     ],
   });

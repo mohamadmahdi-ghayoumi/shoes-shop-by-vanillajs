@@ -51,7 +51,9 @@ export function oneCartInMyCart({ product }) {
   function deleteCart(e) {
     document.getElementById("footer").classList.add("hidden");
     document.getElementById("modalDelete").classList.remove("hidden");
-
+    document.getElementById("overlayModal").classList.remove("hidden");
+    document.getElementById("fd").id =
+      e.target.closest(".cart").children[1].children[0].id;
     document.getElementById("imageModal").src =
       e.target.closest(".cart").children[0].children[0].src;
     document.getElementById("nameModal").innerText =
@@ -91,6 +93,7 @@ export function oneCartInMyCart({ product }) {
         children: [
           El({
             element: "p",
+            id:  id,
             className:
               "font-semibold  text-[20px] whitespace-nowrap overflow-hidden overflow-ellipsis w-[150px] ",
             innerText: name,

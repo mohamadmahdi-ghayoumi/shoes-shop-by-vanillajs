@@ -1,11 +1,24 @@
+import { deleteCardProduct } from "../../../api/delete/deleteProducts";
+import { loginForm } from "../../../templates/login";
 import { El } from "../../../utils/create-element";
 
 export function modalDelete() {
+  function cancelBtn(e) {
+    console.log(e.target.id);
+    const id = e.target.id
+
+    // document.getElementById("modalDelete").classList.add("hidden");
+    // document.getElementById("overlayModal").classList.add("hidden");
+    deleteCardProduct(id).then((data)=>{
+      console.log(data)
+    })
+  }
+
   return El({
     element: "div",
     id: "modalDelete",
     className:
-      "absolute bottom-0 w-full h-[400px] bg-gray-400 rounded-t-[70px]  p-2 flex flex-col pt-[50px] gap-[60px] items-center hidden",
+      "absolute bottom-0 w-full h-[400px] bg-gray-200 rounded-t-[70px]  p-2 flex flex-col pt-[50px] gap-[60px] items-center hidden",
     children: [
       El({
         element: "div",
@@ -130,12 +143,16 @@ export function modalDelete() {
         children: [
           El({
             element: "button",
+            id: "fd",
             className:
               "hover:text-white hover:bg-black rounded-3xl bg-gray-200 w-[50%] text-[14px] h-[40px]",
             innerText: "cancel",
+            onclick: cancelBtn,
           }),
           El({
             element: "button",
+            id: "removeBtn",
+
             className:
               "hover:text-white hover:bg-black rounded-3xl bg-gray-200 w-[50%] text-[14px] h-[40px]",
             innerText: "Yes, Remove",
