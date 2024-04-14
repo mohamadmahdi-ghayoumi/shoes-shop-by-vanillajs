@@ -1,6 +1,5 @@
-import {
-  getCardProductForOrder,
-} from "../../api/get/getProducts";
+import { round } from "lodash";
+import { getCardProductForOrder } from "../../api/get/getProducts";
 import { addToOrder } from "../../api/post/postProduct";
 import { El } from "../../utils/create-element";
 
@@ -9,6 +8,8 @@ export function footerHomePage(classname) {
     getCardProductForOrder().then((data) => {
       {
         addToOrder(data);
+        window.location.href = "/checkout";
+
         console.log(data);
       }
     });
