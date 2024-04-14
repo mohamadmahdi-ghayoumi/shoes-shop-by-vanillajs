@@ -7,11 +7,20 @@ import { deleteCardProduct } from "../../../api/delete/deleteProducts";
 export function modalDelete() {
   function removeBtn(e) {
     document.getElementById("footer").classList.remove("hidden");
-    document.getElementById("modalDelete").classList.add("hidden");
-    document.getElementById("overlayModal").classList.add("hidden");
+    // document.getElementById("modalDelete").classList.add("hidden");
+    // document.getElementById("overlayModal").classList.add("hidden");
     const imageULR = e.target.closest(".parent").children[1].children[0].src;
-    console.log(imageULR)
-    deleteCardProduct(imageULR).then((data) => {
+    const name =
+      e.target.closest(".parent").children[1].children[1].children[1]
+        .children[1].innerText;
+    const size =
+      e.target.closest(".parent").children[1].children[1].children[1]
+        .children[4].innerText;
+    const price =
+      e.target.closest(".parent").children[1].children[1].children[2]
+        .children[1].innerText;
+    console.log(price);
+    deleteCardProduct(imageULR , name , size , price).then((data) => {
       const main = document.getElementById("home");
       main.innerText = "";
       main.append(renderMyCart());
@@ -106,10 +115,16 @@ export function modalDelete() {
                 children: [
                   El({
                     element: "p",
+                    className: "font-semibold text-[25px] mr-2",
+                    innerText: "$",
+                  }),
+
+                  El({
+                    element: "p",
                     className: "font-semibold text-[25px]",
                     id: "priceModal",
 
-                    innerText: `$ ${"price"}`,
+                    innerText: `price`,
                   }),
                   El({
                     element: "div",

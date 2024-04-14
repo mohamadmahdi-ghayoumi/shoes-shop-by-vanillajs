@@ -62,15 +62,15 @@ export function oneCartInMyCart({ product }) {
       e.target.closest(".cart").children[1].children[1].children[1].innerText;
     document.getElementById("sizeModal").innerText =
       e.target.closest(".cart").children[1].children[1].children[4].innerText;
-    document.getElementById("priceModal").innerText =
-      e.target.closest(".cart").children[1].children[2].children[0].innerText;
+    document.getElementById("priceModal").innerText = product.price;
+    // e.target.closest(".cart").children[1].children[2].children[0].innerText;
     document.getElementById("quantityModal").innerText =
       e.target.closest(
         ".cart"
       ).children[1].children[2].children[1].children[1].innerText;
     document.getElementById("bgColorModal").className =
       e.target.closest(".cart").children[1].children[1].children[0].className;
-    console.log(document.getElementById("parentcartt"));
+    // console.log(document.getElementById("parentcartt"));
   }
 
   const Element = El({

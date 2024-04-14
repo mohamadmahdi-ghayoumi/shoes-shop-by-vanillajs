@@ -22,11 +22,11 @@ export function renderMyCart() {
 
     arrayPrice = carts.map((item) => item.price);
     const sum = arrayPrice.reduce((acc, num) => acc + num, 0);
-    console.log(sum);
+    // console.log(sum);
      document.getElementById("priceMyCart").innerText = ` $ ${sum}` 
   });
 
-  console.log(Element);
+  // console.log(Element);
 
   return Element;
 }

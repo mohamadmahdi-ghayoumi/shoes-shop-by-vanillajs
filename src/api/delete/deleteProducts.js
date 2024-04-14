@@ -44,18 +44,19 @@ import { BASE_URL } from "../const";
 // //   return dataNew.data;
 // }
 
-export async function deleteCardProduct(imageURL) {
-  console.log(`id = ${imageURL}`);
+export async function deleteCardProduct( imageURL , sizes , price , color) {
+  // console.log(`id = ${imageURL}`);
 
   const res = await axios.get(`${BASE_URL}/users`);
   // console.log(res.data[0].cart);
 
   const response = res.data[0].cart;
 
-  const dataDelete = response.filter((item) => item.imageURL != imageURL);
+  const dataDelete = response.filter((item) => item.imageURL != imageURL  && item.sizes != sizes && item.price != price && item.color != color);
+  console.log(dataDelete)
   const cart = [...dataDelete];
 
-  console.log(cart);
+  // console.log(cart);
   // const { data: userData } = await axios.get(`${BASE_URL}/users/1`);
 
   // const cart = userData.cart.concat(data);
