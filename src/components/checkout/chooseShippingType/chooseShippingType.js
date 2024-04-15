@@ -1,6 +1,10 @@
 import { El } from "../../../utils/create-element";
 
 export function chooseShippingType() {
+  function goToShipping(){
+    window.location.href = "/chooseshipping"
+  }           
+
   return El({
     element: "div",
     id: "",
@@ -31,6 +35,7 @@ export function chooseShippingType() {
             ],
           }),
           El({
+            onclick : goToShipping,
             element: "span",
             className: "icon-[ooui--next-ltr] w-7 h-7",
           }),

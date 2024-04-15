@@ -1,6 +1,12 @@
 import { El } from "../../../utils/create-element";
 
 export function amountAndPayment() {
+function addToPayment(){
+  window.location.href = "/paymentmethods"
+}
+
+
+
   return El({
     element: "div",
     className: "mx-[24px] mt-[50px] text-[20px] flex flex-col justify-center ",
@@ -59,7 +65,7 @@ export function amountAndPayment() {
           "bg-black text-white w-[90%] rounded-[60px] relative text-[14px] m-auto h-[60px]",
         innerText: "Checkout",
         id: "btnAddToCard",
-        // onclick: addToOrders,
+        onclick: addToPayment,
         children: [
           El({
             element: "img",

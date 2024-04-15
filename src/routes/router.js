@@ -19,13 +19,12 @@ import { WishlistPage } from "../pages/whishlist-page.js";
 import { myCartPageTemplate } from "../templates/myCartPage.js";
 import { brandPage } from "../templates/brandPage.js";
 import { cardForWishlistPage } from "../components/wishlist/cardForWishlistPage/cardForWishlistPage.js";
-import { searchBox } from "../components/homePage/searchbox/searchBox.js";
 import { searchPage } from "../templates/searchPage.js";
 import { StartSlider } from "../templates/onboardingpage-three.js";
 import { checkoutPage } from "../templates/Orders/checkoutPage.js";
 import { shippingAddressPage } from "../templates/Orders/shippingAddressPage.js";
 import { chooseShipping } from "../templates/Orders/chooseShipping.js";
-
+import {  paymentMethodsPage } from "../templates/Orders/paymentMethodsPage.js";
 
 // import { cardForWishlistPage } from "../components/wishlist/cardForWishlistPage/cardForWishlistPage.js";
 
@@ -85,10 +84,14 @@ router
   })
   .on("/checkout", () => {
     changePage(checkoutPage);
-  }).on("/shippingaddresspage", () => {
+  })
+  .on("/shippingaddresspage", () => {
     changePage(shippingAddressPage);
-  })  .on("/chooseshipping", () => {
+  })
+  .on("/chooseshipping", () => {
     changePage(chooseShipping);
+  }).on("/paymentmethods", () => {
+    changePage(paymentMethodsPage);
   })
   .on("/products/:id", ({ data }) => {
     // console.log(data);
