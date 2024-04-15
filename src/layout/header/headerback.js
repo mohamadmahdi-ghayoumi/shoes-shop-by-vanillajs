@@ -14,7 +14,7 @@ export function headerBack(name, icon) {
           El({
             element: "span",
             className:
-              "w-[32px] h-[32px] mx-[24px] icon-[ic--sharp-arrow-back] mt-[21px]",
+              "w-[32px] h-[32px] mx-[24px] icon-[ic--sharp-arrow-back] mt-[21px] cursor-pointer",
             eventListener: [
               {
                 event: "click",
@@ -36,12 +36,12 @@ export function headerBack(name, icon) {
 
       El({
         element: "a",
-        href: "/homepage",
+        // href: "/homepage",
         className: "",
         children: [
           El({
             element: "span",
-            className: `w-[32px] h-[32px] ${icon} mt-[21px] `,
+            className: `w-[32px] h-[32px] ${icon} mt-[21px] cursor-pointer `,
           }),
         ],
       }),

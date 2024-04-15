@@ -26,7 +26,7 @@ export function oneShipping
 
   return El({
     element: "div",
-    className: "flex gap-3 items-center justify-between ",
+    className: "flex gap-3 items-center justify-between pl-5 ",
     id: "parentlocation",
     children: [
       El({

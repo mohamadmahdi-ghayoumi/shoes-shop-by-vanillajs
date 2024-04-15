@@ -10,7 +10,7 @@ export function shippingAddress(namee, Addresss) {
   setTimeout(oneLocation, 0)
   return El({
     element: "div",
-    className: "mx-[24px]",
+    className: "mx-[24px] pl-5",
     children: [
       El({
         element: "div",

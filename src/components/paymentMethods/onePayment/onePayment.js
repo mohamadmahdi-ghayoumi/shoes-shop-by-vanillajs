@@ -24,22 +24,16 @@ export function onePayment(name, classIcon, price, value) {
 
   return El({
     element: "div",
-    className: "flex gap-3 items-center justify-between ",
+    className: "flex gap-3 items-center justify-between pl-5",
     id: "parentlocation",
     children: [
       El({
         element: "div",
-        className: "flex gap-2",
+        className: "flex gap-6",
         children: [
           El({
-            element: "div",
-            className: "ml-7 bg-black rounded-full w-[60px] h-[60px] relative",
-            children: [
-              El({
-                element: "span",
-                className: `${classIcon} w-[25px] h-[25px] m-auto absolute bottom-[17px] end-[17px]`,
-              }),
-            ],
+            element: "span",
+            className: `${classIcon} w-[40px] h-[40px] m-auto   `,
           }),
 
           El({
@@ -57,17 +51,23 @@ export function onePayment(name, classIcon, price, value) {
       }),
 
       El({
-        element: "span",
-        innerText: `${price}`,
-        className: "font-bold text-[20px] whitespace-nowrap",
-      }),
-      El({
-        element: "input",
-        type: "radio",
-        name: "option",
-        value: value,
-        className: "checked:bg-black w-5 h-5",
-        onclick: radioLocation,
+        element: "div",
+        className: "flex items-center justify-center gap-5",
+        children: [
+          El({
+            element: "span",
+            innerText: `${price}`,
+            className: "font-bold text-[20px] whitespace-nowrap",
+          }),
+          El({
+            element: "input",
+            type: "radio",
+            name: "option",
+            value: value,
+            className: "checked:bg-black w-5 h-5",
+            onclick: radioLocation,
+          }),
+        ],
       }),
     ],
   });
