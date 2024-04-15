@@ -3,7 +3,7 @@ import { onePayment } from "../onePayment/onePayment";
 
 export function payments() {
   function finishOrder() {
-    window.location.href = "/checkout";
+    window.location.href = "/successfulpage";
   }
 
   return El({

@@ -2,7 +2,7 @@ import { El } from "../../../utils/create-element";
 import { Link } from "../../homePage/link/link";
 
 export function oneCartInMyCart({ product }) {
-  const { name, price, imageURL, id, colors, sizes, quantity , value} = product;
+  const { name, price, imageURL, id, colors, sizes, quantity, value } = product;
   let color = "";
   switch (colors) {
     case "bg-red-500":
@@ -22,33 +22,31 @@ export function oneCartInMyCart({ product }) {
       break;
   }
 
-  function subtractBtn(e) {
-    const countCart = +document.getElementById("span-countCart").innerText;
-    // console.log(typeof countCart);
+  let counter = quantity;
 
-    if (countCart > 0) {
+  function subtractBtn(e) {
+    const countCart = document.getElementById(`spanCounter${value}`);
+    console.log(countCart);
+
+    if (counter > 1) {
       // console.log(countCart);
-      // countCart--;
-      document.getElementById("span-countCart").innerText = countCart - 1;
+      counter--;
+      countCart.innerText = counter;
     }
   }
 
   function sumBtn(e) {
-    console.log(`  e : ${e.target.closest(".gap-4").children[1].innerText}`);
-    const countCart = +document.querySelector(".countCart").innerText;
-    let meghdar = e.target.closest(".gap-4").children[1].innerText;
-    // console.log(`  e : ${meghdar}`);
-    // console.log(`  span : ${countCart}`);
+    // console.log(`  e : ${e.target.closest(".moz").children[1].id}`);
 
-    console.log(countCart);
-    if (countCart < 3) {
-      // countCart++;
-      meghdar = "ghg";
+    // const moz2 = e.target.closest("").children[1].id;
+    const countCart = document.getElementById(`spanCounter${value}`);
+
+    // console.log(countCart);
+    if (counter < 3) {
+      counter++;
+      countCart.innerText = counter;
     }
   }
-
-
-  
 
   function deleteCart(e) {
     document.getElementById("footer").classList.add("hidden");
@@ -58,7 +56,7 @@ export function oneCartInMyCart({ product }) {
     // modalDelete.innerText = "";
     // console.log(product.id)
     // document.getElementById("fd").id = product.id;
-    document.getElementById("modalDelete").value = product.value
+    document.getElementById("modalDelete").value = product.value;
     document.getElementById("imageModal").src = product.imageURL;
     document.getElementById("nameModal").innerText =
       e.target.closest(".cart").children[1].children[0].innerText;
@@ -78,9 +76,8 @@ export function oneCartInMyCart({ product }) {
   }
 
   const Element = El({
-
     element: "div",
-    value : value, 
+    value: value,
     className: " h-[130px]  mt-[24px]  flex gap-3 w-full cart",
     id: "parentcartt",
     children: [
@@ -153,26 +150,21 @@ export function oneCartInMyCart({ product }) {
                 children: [
                   El({
                     element: "span",
-                    className: "font-bold",
+                    className: "font-bold cursor-pointer",
                     id: "span-subtract",
-                    addEvenListener: [
-                      {
-                        event: "onclick",
-                        callback: (e) => subtractBtn(e),
-                      },
-                    ],
+                    onclick: subtractBtn,
 
                     innerText: "-",
                   }),
                   El({
                     element: "span",
                     className: "font-bold countCart",
-                    id: "span-countCart",
+                    id: `spanCounter${value}`,
                     innerText: quantity,
                   }),
                   El({
                     element: "span",
-                    className: "font-bold",
+                    className: "font-bold cursor-pointer",
                     id: "span-sum",
                     onclick: sumBtn,
                     innerText: "+",

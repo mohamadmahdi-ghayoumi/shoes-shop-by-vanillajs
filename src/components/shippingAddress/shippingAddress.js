@@ -1,13 +1,13 @@
 import { El } from "../../utils/create-element";
 import { oneLocation } from "./oneLocation/oneLocation";
 
-export function shippingAddress(namee, Addresss) {
-  function goToAddress(){
-    window.location.href = "/shippingaddresspage"
+export function shippingAddress() {
+  function goToAddress() {
+    window.location.href = "/shippingaddresspage";
   }
- 
-  console.log(namee)
-  setTimeout(oneLocation, 0)
+
+  console.log();
+  setTimeout(oneLocation, 0);
   return El({
     element: "div",
     className: "mx-[24px] pl-5",
@@ -24,7 +24,7 @@ export function shippingAddress(namee, Addresss) {
           El({
             element: "div",
             className:
-              "ml-7 bg-gray-300 rounded-full w-[80px] h-[80px] relative",
+              "ml-2 bg-gray-300 rounded-full w-[80px] h-[80px] relative",
             children: [
               El({
                 element: "span",

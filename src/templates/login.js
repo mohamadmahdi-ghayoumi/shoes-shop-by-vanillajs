@@ -52,7 +52,6 @@ export function loginForm() {
             className: "text-[14px] px-[32px] w-full mx-[24px] ",
             placeholder: "Email",
             id: "input-Email",
-
             onkeyup: inputEmail,
           }),
         ],
@@ -77,6 +76,7 @@ export function loginForm() {
           }),
           El({
             element: "span",
+            onclick: showPassword,
             className:
               "icon-[ion--eye-off]  w-[16px] h-[16px] my-auto absolute top-[11px] end-[36px] text-gray-500 ",
             id: "span-eye",
@@ -113,23 +113,52 @@ export function loginForm() {
   });
 
   function inputPassword() {
-    document.getElementById("span-lock").classList.add("text-black");
-    document.getElementById("span-eye").classList.add("text-black");
+    const inputPass = document.getElementById("input-password");
+    const inputEmail = document.getElementById("input-Email");
+    if (inputPass.value != "") {
+      document.getElementById("span-lock").classList.remove("text-gray-500");
+      document.getElementById("span-lock").classList.add("text-black");
+      document.getElementById("span-eye").classList.remove("text-gray-500");
+      document.getElementById("span-eye").classList.add("text-black");
+    } else if (inputPass.value == "") {
+      document.getElementById("span-lock").classList.remove("text-black");
+      document.getElementById("span-lock").classList.add("text-gray-500");
+      document.getElementById("span-eye").classList.remove("text-black");
+      document.getElementById("span-eye").classList.add("text-gray-500");
+    }
   }
 
   function inputEmail() {
-    document.getElementById("span-envelope").classList.add("text-blue");
+    const inputEmail = document.getElementById("input-Email");
+    if (inputEmail.value != "") {
+      document
+        .getElementById("span-envelope")
+        .classList.remove("text-gray-500");
+      document.getElementById("span-envelope").classList.add("text-black");
+    } else if (inputEmail.value == "") {
+      document.getElementById("span-envelope").classList.remove("text-black");
+      document.getElementById("span-envelope").classList.add("text-gray-500");
+    }
+
+    // if(){
+
+    // }
   }
 
-  document.addEventListener("DOMContentLoaded", function () {
-    const passIn = document.getElementById("input-password");
+  function showPassword() {
+    const passInput = document.getElementById("input-password");
     const showPass = document.getElementById("span-eye");
-    showPass.addEventListener("click", function () {
-      const type =
-        passIn.getAttribute("type") === "password" ? "text" : "password";
-      passIn.setAttribute("type", type);
-    });
-  });
+
+    if (passInput.hasAttribute("type")) {
+      passInput.removeAttribute("type");
+      showPass.classList.remove("icon-[mdi--eye-off]");
+      showPass.classList.add("icon-[heroicons-solid--eye]");
+    } else {
+      passInput.setAttribute("type", "password");
+      showPass.classList.remove("icon-[heroicons-solid--eye]");
+      showPass.classList.add("icon-[mdi--eye-off]");
+    }
+  }
 
   function btnSingIn() {
     getUser().then((data) => {

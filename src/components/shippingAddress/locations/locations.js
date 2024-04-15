@@ -9,14 +9,12 @@ function addAddress(){
 
 
   return El({
-    element: "div",
+    element: "form",
     className: "mx-[24px] flex flex-col  gap-10 mt-[50px]",
     children: [
       oneLocation("Home", "61480 Sunbrook Park PC 5679", "home"),
       oneLocation("Office", "6993 Meadow Valley Terra. PC 3637", "office"),
-
       oneLocation("Apartment", "21833 Clyde Gallagher. PC 4662", "apartment"),
-
       oneLocation("Parent's House", "5259 Blue Bill Park. PC 4627", "parent"),
 
       El({

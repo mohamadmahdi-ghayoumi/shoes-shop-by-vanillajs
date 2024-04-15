@@ -23,11 +23,7 @@ export async function addToWishlist(data) {
 
 export async function addToOrder(orders) {
 
-    const res = await axios.get(`${BASE_URL}/users`);
-    const response = res.data[0].orders;
-  
-    // const dataDelete = response.filter((item) => item.value != value);
-    // const cart = [...dataDelete];
+
     let responseOrder = await axios.patch(`${BASE_URL}/users/1`, { orders });
   
     return responseOrder;

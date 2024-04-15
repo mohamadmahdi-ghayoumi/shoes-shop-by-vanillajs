@@ -7,21 +7,6 @@
       "password": "mohamad",
       "orders": [
         {
-          "id": 1,
-          "name": "Nike React Infinity Run Flyknit",
-          "brand": "nike",
-          "gender": "MEN",
-          "category": "RUNNING",
-          "price": 320,
-          "sizes": "43",
-          "colors": "bg-blue-500",
-          "items_left": 3,
-          "imageURL": "https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/i1-665455a5-45de-40fb-945f-c1852b82400d/react-infinity-run-flyknit-mens-running-shoe-zX42Nc.jpg",
-          "slug": "nike-react-infinity-run-flyknit",
-          "quantity": "2",
-          "value": 1713157937656
-        },
-        {
           "id": 6,
           "name": "Converse Phantom Venom Academy FG",
           "brand": "converse",
@@ -35,6 +20,21 @@
           "slug": "nike-phantom-vision-elite-dynamic-fit-fg",
           "quantity": "2",
           "value": 1713157953399
+        },
+        {
+          "id": 4,
+          "name": "Nike Joyride Run Flyknit",
+          "brand": "nike",
+          "gender": "WOMEN",
+          "category": "RUNNING",
+          "price": 180,
+          "sizes": "42",
+          "colors": "bg-blue-500",
+          "items_left": 3,
+          "imageURL": "https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/99a7d3cb-e40c-4474-91c2-0f2e6d231fd2/joyride-run-flyknit-womens-running-shoe-HcfnJd.jpg",
+          "slug": "nike-joyride-run-flyknit",
+          "quantity": "1",
+          "value": 1713182104914
         }
       ],
       "wishlist": [
@@ -64,21 +64,6 @@
       ],
       "cart": [
         {
-          "id": 1,
-          "name": "Nike React Infinity Run Flyknit",
-          "brand": "nike",
-          "gender": "MEN",
-          "category": "RUNNING",
-          "price": 320,
-          "sizes": "43",
-          "colors": "bg-blue-500",
-          "items_left": 3,
-          "imageURL": "https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/i1-665455a5-45de-40fb-945f-c1852b82400d/react-infinity-run-flyknit-mens-running-shoe-zX42Nc.jpg",
-          "slug": "nike-react-infinity-run-flyknit",
-          "quantity": "2",
-          "value": 1713157937656
-        },
-        {
           "id": 6,
           "name": "Converse Phantom Venom Academy FG",
           "brand": "converse",
@@ -92,6 +77,21 @@
           "slug": "nike-phantom-vision-elite-dynamic-fit-fg",
           "quantity": "2",
           "value": 1713157953399
+        },
+        {
+          "id": 4,
+          "name": "Nike Joyride Run Flyknit",
+          "brand": "nike",
+          "gender": "WOMEN",
+          "category": "RUNNING",
+          "price": 180,
+          "sizes": "42",
+          "colors": "bg-blue-500",
+          "items_left": 3,
+          "imageURL": "https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/99a7d3cb-e40c-4474-91c2-0f2e6d231fd2/joyride-run-flyknit-womens-running-shoe-HcfnJd.jpg",
+          "slug": "nike-joyride-run-flyknit",
+          "quantity": "1",
+          "value": 1713182104914
         }
       ]
     }

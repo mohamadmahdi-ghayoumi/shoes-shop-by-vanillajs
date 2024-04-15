@@ -8,7 +8,7 @@ export function borderBtns() {
     element: "div",
     className: "flex overflow-y-auto  gap-[12px] pl-[24px] hideScroll	 ",
     children: [
-      borderBtn({ Brand: "All" }),
+      borderBtn({ Brand: "All" , classname : "bg-[#343A40] text-white" }),
       borderBtn({ Brand: "Nike" }),
       borderBtn({ Brand: "Adidas" }),
       borderBtn({ Brand: "Puma" }),

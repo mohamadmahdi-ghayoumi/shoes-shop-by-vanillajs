@@ -22,6 +22,8 @@
     "@iconify-json/fa-solid": "^1.1.8",
     "@iconify-json/fluent": "^1.1.52",
     "@iconify-json/gg": "^1.1.9",
+    "@iconify-json/heroicons": "^1.1.20",
+    "@iconify-json/heroicons-solid": "^1.1.11",
     "@iconify-json/ic": "^1.1.17",
     "@iconify-json/icon-park-outline": "^1.1.15",
     "@iconify-json/icon-park-solid": "^1.1.14",
