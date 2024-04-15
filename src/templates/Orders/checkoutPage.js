@@ -2,6 +2,7 @@ import { amountAndPayment } from "../../components/checkout/amountAndPayment/amo
 import { chooseShippingType } from "../../components/checkout/chooseShippingType/chooseShippingType";
 import { orderList } from "../../components/checkout/orderList/orderList";
 import { promoCode } from "../../components/checkout/promoCode/promoCode";
+import { oneLocation } from "../../components/shippingAddress/oneLocation/oneLocation";
 import { shippingAddress } from "../../components/shippingAddress/shippingAddress";
 import { headerBack } from "../../layout/header/headerback";
 import { El } from "../../utils/create-element";

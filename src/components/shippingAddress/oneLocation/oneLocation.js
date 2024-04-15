@@ -1,4 +1,5 @@
 import { El } from "../../../utils/create-element";
+import { shippingAddress } from "../shippingAddress";
 
 export function oneLocation(name, address, value) {
   function radioLocation(e) {
@@ -10,15 +11,22 @@ export function oneLocation(name, address, value) {
       e.target.closest("#parentlocation").children[0].children[1].children[1]
         .innerText;
     console.log(namee, Addresss);
-    console.log(document.getElementById("nameLocation"));
+    // setTimeout(shippingAddress(), 0);
+    // console.log(document.getElementById("addressLocation"));
 
     // document.getElementById("addressLocation").innerText = Addresss;
     // document.getElementById("nameLocation").innerText = namee;  document.getElementById("addressLocation").innerText = Addresss;
+    sendToAnotherFunction(namee, Addresss);
+  }
+  function sendToAnotherFunction(namee, Addresss) {
+    // Call the other function here with namee and Addresss as parameters
+    // For example:
+    shippingAddress(namee, Addresss);
   }
 
   return El({
     element: "div",
-    className: "flex gap-3 items-center justify-between",
+    className: "flex gap-3 items-center justify-between ",
     id: "parentlocation",
     children: [
       El({

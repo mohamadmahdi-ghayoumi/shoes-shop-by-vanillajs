@@ -2,6 +2,12 @@ import { El } from "../../../utils/create-element";
 import { oneLocation } from "../oneLocation/oneLocation";
 
 export function locations() {
+function addAddress(){
+  window.location.href = "/checkout"
+}
+
+
+
   return El({
     element: "div",
     className: "mx-[24px] flex flex-col  gap-10 mt-[50px]",
@@ -26,6 +32,8 @@ export function locations() {
         className:
           "bg-black text-white w-[90%] rounded-[60px] mt-[210px]  text-[20px] m-auto h-[60px]",
         innerText: "Apply",
+        onclick : addAddress
+
       }),
     ],
   });

@@ -24,6 +24,7 @@ import { searchPage } from "../templates/searchPage.js";
 import { StartSlider } from "../templates/onboardingpage-three.js";
 import { checkoutPage } from "../templates/Orders/checkoutPage.js";
 import { shippingAddressPage } from "../templates/Orders/shippingAddressPage.js";
+import { chooseShipping } from "../templates/Orders/chooseShipping.js";
 
 
 // import { cardForWishlistPage } from "../components/wishlist/cardForWishlistPage/cardForWishlistPage.js";
@@ -86,6 +87,8 @@ router
     changePage(checkoutPage);
   }).on("/shippingaddresspage", () => {
     changePage(shippingAddressPage);
+  })  .on("/chooseshipping", () => {
+    changePage(chooseShipping);
   })
   .on("/products/:id", ({ data }) => {
     // console.log(data);

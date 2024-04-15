@@ -1,6 +1,9 @@
 import { El } from "../../../utils/create-element";
 
 export function promoCode() {
+  function goToShipping(){
+    window.location.href = "/chooseshipping"
+  }
   return El({
     element: "div",
     className: "mx-[24px] mt-[60px]",
@@ -21,6 +24,7 @@ export function promoCode() {
           }),
           El({
             element: "div",
+            onclick : goToShipping,
             className:
               "bg-black rounded-full   w-[50px] h-[50px] flex items-center items-center",
             children: [

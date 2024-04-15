@@ -1,6 +1,13 @@
 import { El } from "../../utils/create-element";
+import { oneLocation } from "./oneLocation/oneLocation";
 
-export function shippingAddress() {
+export function shippingAddress(namee, Addresss) {
+  function goToAddress(){
+    window.location.href = "/shippingaddresspage"
+  }
+ 
+  console.log(namee)
+  setTimeout(oneLocation, 0)
   return El({
     element: "div",
     className: "mx-[24px]",
@@ -47,6 +54,8 @@ export function shippingAddress() {
           }),
           El({
             element: "span",
+            onclick: goToAddress,
+
             className: "icon-[eva--edit-2-fill] w-8 h-8",
           }),
         ],
