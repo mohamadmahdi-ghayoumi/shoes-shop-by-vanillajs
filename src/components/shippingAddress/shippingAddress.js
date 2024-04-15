@@ -34,11 +34,13 @@ export function shippingAddress() {
               El({
                 element: "div",
                 className: "font-bold text-[20px]",
+                id: "nameLocation",
                 innerText: "Home",
               }),
               El({
                 element: "div",
                 className: "text-[14px] whitespace-nowrap",
+                id: "addressLocation",
                 innerText: "61480 Sunbrook Park PC 5679",
               }),
             ],
