@@ -5,6 +5,7 @@ import { renderMyCart } from "../renderMyCard/renderMyCart";
 import { deleteCardProduct } from "../../../api/delete/deleteProducts";
 
 export function modalDelete() {
+  
   function removeBtn(e) {
     document.getElementById("footer").classList.remove("hidden");
     document.getElementById("modalDelete").classList.add("hidden");

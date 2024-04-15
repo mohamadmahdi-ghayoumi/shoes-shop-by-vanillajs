@@ -47,6 +47,9 @@ export function oneCartInMyCart({ product }) {
     }
   }
 
+
+  
+
   function deleteCart(e) {
     document.getElementById("footer").classList.add("hidden");
     document.getElementById("modalDelete").classList.remove("hidden");

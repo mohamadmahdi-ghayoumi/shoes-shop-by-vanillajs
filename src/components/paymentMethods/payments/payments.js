@@ -10,26 +10,24 @@ export function payments() {
     element: "div",
     className: "mx-[24px] flex flex-col gap-[80px] mt-[50px]",
     children: [
-        El({
-element : "p",
-className : "text-gray-700",
-innerText : "Select the payment method you want to use"
-        }),
-      onePayment("Economy", "icon-[solar--wallet-bold]", "$9.379", "economy"),
-      onePayment("REgular", "icon-[logos--paypal]", "", "regular"),
+      El({
+        element: "p",
+        className: "text-gray-700",
+        innerText: "Select the payment method you want to use",
+      }),
+      onePayment("My wallet", "icon-[solar--wallet-bold]", "$9.379", "economy"),
+      onePayment("PayPal", "icon-[logos--paypal]", "", "regular"),
 
-      onePayment("Cargo", "icon-[devicon--google]", "", "cargo"),
+      onePayment("Google Pay", "icon-[devicon--google]", "", "cargo"),
 
-      onePayment("Express", "icon-[ic--twotone-apple]", "", "express"),
+      onePayment("Apple", "icon-[ic--twotone-apple]", "", "express"),
+      onePayment(
+        ".... .... .... ....4679",
+        "icon-[logos--mastercard]",
+        "",
+        "express"
+      ),
 
-      //   El({
-      //     element: "button",
-      //     className:
-      //       "bg-gray-200  w-[90%] rounded-[60px] text-[20px] m-auto w-[60px] h-[60px] font-semibold",
-      //     innerText: "Add New Address",
-      //     id: "btnAddToCard",
-      //     // onclick: addToOrders,
-      //   }),
       El({
         element: "button",
         className:

@@ -7,21 +7,6 @@
       "password": "mohamad",
       "orders": [
         {
-          "id": 2,
-          "name": "Nike React Miler",
-          "brand": "nike",
-          "gender": "MEN",
-          "category": "RUNNING",
-          "price": 130,
-          "sizes": "43",
-          "colors": "bg-blue-500",
-          "items_left": 3,
-          "imageURL": "https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/i1-5cc7de3b-2afc-49c2-a1e4-0508997d09e6/react-miler-mens-running-shoe-DgF6nr.jpg",
-          "slug": "nike-react-miler",
-          "quantity": "1",
-          "value": 1713105581582
-        },
-        {
           "id": 1,
           "name": "Nike React Infinity Run Flyknit",
           "brand": "nike",
@@ -78,21 +63,6 @@
         }
       ],
       "cart": [
-        {
-          "id": 2,
-          "name": "Nike React Miler",
-          "brand": "nike",
-          "gender": "MEN",
-          "category": "RUNNING",
-          "price": 130,
-          "sizes": "43",
-          "colors": "bg-blue-500",
-          "items_left": 3,
-          "imageURL": "https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/i1-5cc7de3b-2afc-49c2-a1e4-0508997d09e6/react-miler-mens-running-shoe-DgF6nr.jpg",
-          "slug": "nike-react-miler",
-          "quantity": "1",
-          "value": 1713105581582
-        },
         {
           "id": 1,
           "name": "Nike React Infinity Run Flyknit",

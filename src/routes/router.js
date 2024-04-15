@@ -94,8 +94,6 @@ router
     changePage(paymentMethodsPage);
   })
   .on("/products/:id", ({ data }) => {
-    // console.log(data);
-
     changePage(Product, data);
   })
   .on("/brand/:brand", ({ data }) => {

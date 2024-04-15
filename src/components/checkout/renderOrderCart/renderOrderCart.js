@@ -1,6 +1,5 @@
 import { getOrderProduct } from "../../../api/get/getProducts";
 import { El } from "../../../utils/create-element";
-import { oneCartInMyCart } from "../../myCart/oneCartInMyCart.js/oneCartInMyCart";
 import { oneCartInCheckout } from "../oneCartInCheckout/oneCartInCheckout";
 
 export function renderOrderCart() {
