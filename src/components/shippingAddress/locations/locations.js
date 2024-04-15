@@ -2,7 +2,9 @@ import { El } from "../../../utils/create-element";
 import { oneLocation } from "../oneLocation/oneLocation";
 
 export function locations() {
-function addAddress(){
+
+function addAddress(e){
+  e.preventdefault()
   window.location.href = "/checkout"
 }
 

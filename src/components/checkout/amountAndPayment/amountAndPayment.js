@@ -23,6 +23,7 @@ function addToPayment(){
           El({
             element: "span",
             className: "text-gray-700",
+            id: "amount",
             innerText: "$585.00",
           }),
         ],

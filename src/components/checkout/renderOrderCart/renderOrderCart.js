@@ -15,6 +15,9 @@ export function renderOrderCart() {
       const productCard = oneCartInCheckout({ product });
       Element.append(productCard);
     });
+    const arrayAmount = carts.map((item) => item.price);
+    const sum = arrayAmount.reduce((acc, num) => acc + num, 0);
+    document.getElementById("amount").innerText = `$ ${sum}`;
   });
 
   return Element;
