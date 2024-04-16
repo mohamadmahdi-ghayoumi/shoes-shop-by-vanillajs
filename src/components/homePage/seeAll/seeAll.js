@@ -7,7 +7,7 @@ export function seeAll() {
 
   return El({
     element: "div",
-    className: "mb-3",
+    className: "mb-5",
     children: [
       El({
         element: "div",
@@ -15,12 +15,12 @@ export function seeAll() {
         children: [
           El({
             element: "span",
-            className: "font-bold",
+            className: "text-[20px] font-semibold",
             innerText: "Most Popular",
           }),
           El({
             element: "span",
-            className: "font-bold",
+            className: "font-semibold text-gl",
             onclick: goPageSeeAll,
             innerText: "See All",
           }),

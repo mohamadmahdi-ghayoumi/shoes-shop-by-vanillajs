@@ -11,7 +11,7 @@ export function headerHomePage() {
         children: [
           El({
             element: "img",
-            className: "w-[48px] h-[48px] rounded-full",
+            className: "w-[50px] h-[50px] rounded-full",
 
             src: "./src/assets/image/profile.jpg",
           }),
@@ -36,13 +36,11 @@ export function headerHomePage() {
 
       El({
         element: "div",
-        className:
-          "flex gap-[15px] items-center mr-[24px] justify-center text-center m-auto ",
+        className: "flex gap-3 items-center mr-[24px]  ",
         children: [
           El({
             element: "span",
-            className:
-              "icon-[fluent-mdl2--ringer] w-[24px] h-[22px] m-auto mb-[6px]",
+            className: "icon-[fluent-mdl2--ringer] w-5 h-5 mb-[6px]",
           }),
           El({
             element: "a",
@@ -51,7 +49,7 @@ export function headerHomePage() {
             children: [
               El({
                 element: "span",
-                className: "icon-[ph--heart-light] w-[24px] h-[24px] m-auto",
+                className: "icon-[ph--heart-light] w-6 h-6",
               }),
             ],
           }),

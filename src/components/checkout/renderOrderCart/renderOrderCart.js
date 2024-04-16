@@ -1,4 +1,4 @@
-import { getOrderProduct } from "../../../api/get/getProducts";
+import { getCardProduct } from "../../../api/get/getProducts";
 import { El } from "../../../utils/create-element";
 import { setLocalStorage } from "../../../utils/localStorage";
 import { oneCartInCheckout } from "../oneCartInCheckout/oneCartInCheckout";
@@ -13,7 +13,7 @@ export function renderOrderCart() {
     id: "render",
   });
 
-  getOrderProduct().then((carts) => {
+  getCardProduct().then((carts) => {
     carts.map((product) => {
       const productCard = oneCartInCheckout({ product });
       Element.append(productCard);

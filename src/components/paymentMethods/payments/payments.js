@@ -1,9 +1,20 @@
+import { getCardProductForOrder } from "../../../api/get/getProducts";
+import { addToOrder } from "../../../api/post/postProduct";
 import { El } from "../../../utils/create-element";
 import { onePayment } from "../onePayment/onePayment";
 
 export function payments() {
   function finishOrder() {
-    window.location.href = "/successfulpage";
+    
+      getCardProductForOrder().then((data) => {
+        {
+          addToOrder(data);
+      window.location.href = "/successfulpage";
+
+          console.log(data);
+        }
+      });
+    
   }
 
   return El({

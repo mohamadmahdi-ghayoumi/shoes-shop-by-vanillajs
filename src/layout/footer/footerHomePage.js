@@ -1,20 +1,12 @@
 import { round } from "lodash";
 import { getCardProductForOrder } from "../../api/get/getProducts";
-import { addToOrder } from "../../api/post/postProduct";
 import { El } from "../../utils/create-element";
 
 export function footerHomePage(classname) {
-  function addToOrders() {
-    getCardProductForOrder().then((data) => {
-      {
-        addToOrder(data);
-        window.location.href = "/checkout";
+function goToCheckout(){
+  window.location.href = "/checkout";
 
-        console.log(data);
-      }
-    });
-  }
-
+}
   return El({
     element: "div",
     id: "footer",
@@ -37,19 +29,20 @@ export function footerHomePage(classname) {
               El({
                 element: "div",
                 className: "flex",
-children:[El({
-  element: "p",
-  className: "font-bold text-[20px] ",
-  innerText: "$",
-}),
-   El({
-                element: "p",
-                className: "font-bold text-[20px] ",
-                id: "priceMyCart",
-                innerText: "$ 22.000",
+                children: [
+                  El({
+                    element: "p",
+                    className: "font-bold text-[20px] ",
+                    innerText: "$",
+                  }),
+                  El({
+                    element: "p",
+                    className: "font-bold text-[20px] ",
+                    id: "priceMyCart",
+                    innerText: "$ 22.000",
+                  }),
+                ],
               }),
-]              }),
-             
             ],
           }),
           El({
@@ -58,7 +51,7 @@ children:[El({
               "bg-black text-white w-[65%] rounded-3xl relative text-[14px]",
             innerText: "Add to Card",
             id: "btnAddToCard",
-            onclick: addToOrders,
+            onclick: goToCheckout,
             children: [
               El({
                 element: "img",
