@@ -25,22 +25,19 @@ export function priceCard({ product }) {
         colors: colorValue,
         sizes: sizeValue,
         quantity: quantity, //quantity
-        totalPrice : product.price * quantity,
+        totalPrice: product.price * quantity,
         value: Date.now(),
       };
       console.log(data);
 
-      // getUser().
-      // postProductCard(data)
       addToCart(data);
     } else {
-      // alert("all item shoul be selected");
     }
   }
 
   return El({
     element: "div",
-    className: "flex gap-[40px] ml-[24px] ",
+    className: "flex gap-[40px] ml-[24px] mx-[24px]  ",
     children: [
       El({
         element: "div",
@@ -54,7 +51,7 @@ export function priceCard({ product }) {
           El({
             element: "div",
             className: "font-bold text-[20px]",
-            innerText: "$ 0",
+            innerText: `$ ${product.price}`,
             id: "totalPrice",
           }),
         ],

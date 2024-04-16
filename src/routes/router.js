@@ -11,7 +11,6 @@ import { homePuma } from "../templates/page-brand/homePuma.js";
 import { homeConverse } from "../templates/page-brand/homeConverse.js";
 import { homeAllBrands } from "../templates/page-brand/homeAllBrands.js";
 import { mostPopular } from "../templates/mostPopular.js";
-import { cardFullDetail } from "../templates/cardFull.js";
 import { Product } from "../templates/selectedProduct.js";
 import { WishlistPage } from "../pages/whishlist-page.js";
 import { myCartPageTemplate } from "../templates/myCartPage.js";
@@ -27,6 +26,7 @@ import { onboardingOnePage } from "../pages/onboarding-page/onboardingOne-page.j
 import { onboardingTwoPage } from "../pages/onboarding-page/onboradingTwo-page.js";
 import { onboardingThreePage } from "../pages/onboarding-page/onboardingThree-page.js";
 import { loginPage } from "../pages/login-page/login-page.js";
+import { cardFullDetailPage } from "../pages/cardFullDetail-page/cardFullDetail-page.js";
 
 export const router = new Navigo("/");
 
@@ -85,7 +85,7 @@ router
     changePage(mostPopular);
   })
   .on("/cardfulldetail", () => {
-    changePage(cardFullDetail);
+    changePage(cardFullDetailPage);
   })
   .on("/checkout", () => {
     changePage(checkoutPage);

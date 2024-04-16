@@ -1,6 +1,6 @@
 import { getProductById } from "../api/get/getProducts";
 import { El } from "../utils/create-element";
-import { cardFullDetail } from "./cardFull";
+import { cardFullDetail } from "./cardFullDetail/cardFullDetail";
 
 export function Product(data) {
   const productId = data.id;

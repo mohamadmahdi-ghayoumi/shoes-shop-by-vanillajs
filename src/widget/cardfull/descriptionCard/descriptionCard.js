@@ -7,7 +7,7 @@ export function descriptionCard() {
     children: [
       El({
         element: "div",
-        className: "flex items-center mt-3 mb-6",
+        className: "flex items-center mt-2 mb-6",
         children: [
           El({
             element: "div",
@@ -32,7 +32,7 @@ export function descriptionCard() {
       }),
       El({
         element: "p",
-        className: "text-[15px] font-bold mt-4 mb-2",
+        className: "text-[15px] font-bold mt-2 mb-2",
         innerText: "Description",
       }),
       El({
