@@ -1,8 +1,5 @@
 import { getWishlistProduct } from "../../../api/get/getProducts";
-import { getUser } from "../../../api/get/getUser";
-import { addToWishlist } from "../../../api/post/postProduct";
 import { El } from "../../../utils/create-element";
-import { cartproduct } from "../../homePage/cartproduct/cartproduct";
 import { cardForWishlistPage } from "../cardForWishlistPage/cardForWishlistPage";
 // import { productcarts } from "../widget/productcarts";
 

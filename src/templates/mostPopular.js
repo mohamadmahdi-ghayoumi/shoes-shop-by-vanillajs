@@ -1,7 +1,7 @@
-import { renderProducts } from "../components/homePage/renderProducts/renderProducts";
+import { RenderProducts } from "../components/homePage/RenderProducts/RenderProducts";
 import { headerBack } from "../layout/header/headerback";
 import { El } from "../utils/create-element";
-import { marginButtons } from "../widget/marginButtons";
+import { MarginButtons } from "../components/homePage/MarginButtons/MarginButtons";
 
 export function mostPopular() {
   const elemenet = El({
@@ -9,11 +9,11 @@ export function mostPopular() {
     className: "",
     children: [
       headerBack("Most Popular"),
-      marginButtons(),
+      MarginButtons(),
       El({
         element: "div",
         id: "home",
-        children: [renderProducts("all")],
+        children: [RenderProducts("all")],
       }),
     ],
   });

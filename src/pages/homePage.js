@@ -1,11 +1,12 @@
 import { headerHomePage } from "../layout/header/header-homepage";
 import { footerHomePage } from "../layout/footer/footerHomePage";
 import { El } from "../utils/create-element";
-import { buttonsBrand } from "../widget/buttonsBrand";
-import { marginButtons } from "../widget/marginButtons";
-import { searchBox } from "../components/homePage/searchbox/searchBox";
-import { seeAll } from "../components/homePage/seeAll/seeAll";
-import { renderProducts } from "../components/homePage/renderProducts/renderProducts";
+import { SearchBox } from "../components/homePage/SearchBox/SearchBox";
+import { SeeAll } from "../components/homePage/SeeAll/SeeAll";
+import { RenderProducts} from "../components/homePage/RenderProducts/RenderProducts";
+import { ButtonsBrand } from "../components/homePage/ButtonsBrand/ButtonsBrand";
+import { MarginButtons } from "../components/homePage/MarginButtons/MarginButtons";
+
 document.title = "home page";
 
 export function homePage() {
@@ -14,14 +15,14 @@ export function homePage() {
     className: "",
     children: [
       headerHomePage(),
-      searchBox(),
-      buttonsBrand(),
-      seeAll(),
-      marginButtons(),
+      SearchBox(),
+      ButtonsBrand(),
+      SeeAll(),
+      MarginButtons(),
       El({
         element: "div",
         id: "home",
-        children: [renderProducts("all")],
+        children: [RenderProducts("all")],
       }),
       footerHomePage("hidden"),
     ],

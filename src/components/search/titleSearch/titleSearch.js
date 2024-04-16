@@ -5,7 +5,7 @@ import { renderData } from "../renderData/renderData";
 export function titleSearch() {
   function clearData() {
 
-    setLocalStorage("recentSearch", []);
+    setLocalStorage("recentSearch", [] );
     const searchDataComment = document.getElementById("searchDataComment");
     searchDataComment.innerHTML = "";
     searchDataComment.append(...renderData());

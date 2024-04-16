@@ -18,6 +18,10 @@ export function inputSearch() {
         searchInput,
         ...getLocalStorage("recentSearch"),
       ]);
+
+
+
+      // ...["Dfsdf" , "edfew"] => "Dfsdf" , "edfew" + "123" => ["Dfsdf" , "edfew" + "123"]
       renderData();
       renderCardApiSearch();
     }

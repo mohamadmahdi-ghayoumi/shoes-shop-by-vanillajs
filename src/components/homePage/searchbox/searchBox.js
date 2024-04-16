@@ -1,7 +1,7 @@
 import { router } from "../../../routes/router";
 import { El } from "../../../utils/create-element";
 
-export function searchBox() {
+export function SearchBox() {
   function goPageSearch() {
     window.location.href = "/searchpage";
   }

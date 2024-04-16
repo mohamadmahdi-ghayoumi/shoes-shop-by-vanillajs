@@ -3,6 +3,7 @@ import { getLocalStorage, setLocalStorage } from "../../../utils/localStorage";
 import { renderData } from "../renderData/renderData";
 
 export function oneData(name) {
+  
   function deleteData(e) {
     const nameData = e.target.closest("#parent-data").children[0].innerText;
     const datas = getLocalStorage("recentSearch");

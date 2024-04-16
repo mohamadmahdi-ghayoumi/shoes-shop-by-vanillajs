@@ -1,7 +1,7 @@
 import { El } from "../../../utils/create-element";
 import { Link } from "../link/link";
 
-export function buttonBrand({ logo, brand, className }) {
+export function ButtonBrand({ logo, brand, className }) {
   function btnBrand(e) {
     const brand = e.target.closest("#btn").children[1].innerText;
     const dogFound = new CustomEvent("animalfound", {

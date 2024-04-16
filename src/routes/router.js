@@ -85,7 +85,7 @@ router
     changePage(mostPopular);
   })
   .on("/cardfulldetail", () => {
-    changePage(cardFullDetailPage);
+    changePage();
   })
   .on("/checkout", () => {
     changePage(checkoutPage);

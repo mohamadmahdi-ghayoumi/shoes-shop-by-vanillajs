@@ -10,6 +10,7 @@ import { El } from "../utils/create-element";
 
 export function searchPage() {
   // const localRecentSearch = getLocalStorage("recentSearch")
+
   return El({
     element: "div",
     className: "",
@@ -30,7 +31,7 @@ export function searchPage() {
         id: "cardsProduct",
         children: [],
       }),
-      notFoundPage()
+      notFoundPage(),
     ],
   });
 }

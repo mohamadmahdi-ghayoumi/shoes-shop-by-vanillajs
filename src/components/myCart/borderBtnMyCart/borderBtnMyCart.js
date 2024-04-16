@@ -18,7 +18,6 @@ export function borderBtnMyCart({ Brand }) {
       render.remove();
     }
     const main = document.getElementById("home");
-    // let productFilter = renderProducts(filterBrand);
     let productFilter = renderMyCart(filterBrand);
 
     // console.log(productFilter);

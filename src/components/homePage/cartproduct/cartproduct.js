@@ -1,7 +1,7 @@
 import { El } from "../../../utils/create-element";
 import { Link } from "../link/link";
 
-export function cartproduct({ product }) {
+export function CartProduct({ product }) {
   const { name, price, imageURL, id } = product;
 
   return Link({

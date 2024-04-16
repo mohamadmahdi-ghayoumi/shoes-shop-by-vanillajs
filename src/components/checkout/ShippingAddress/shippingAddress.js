@@ -1,15 +1,17 @@
 import { El } from "../../../utils/create-element";
-import { oneLocation } from "../../shippingAddress/oneLocation/oneLocation";
+import { getLocalStorage } from "../../../utils/localStorage";
 
 export function ShippingAddress() {
-  const location = JSON.parse(localStorage.getItem("location"));
+  const location = getLocalStorage("location");
+
+  // const location = JSON.parse(localStorage.getItem("location"));
   console.log(location);
   function goToAddress() {
     window.location.href = "/shippingaddresspage";
   }
 
-  console.log();
-  setTimeout(oneLocation, 0);
+  // console.log();
+  // setTimeout(oneLocation, 0);
   return El({
     element: "div",
     className: "mx-[24px] pl-5",

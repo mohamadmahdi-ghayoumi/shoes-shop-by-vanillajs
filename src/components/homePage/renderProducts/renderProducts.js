@@ -1,9 +1,9 @@
 import { getProducts } from "../../../api/get/getProducts";
 import { El } from "../../../utils/create-element";
-import { cartproduct } from "../cartproduct/cartproduct";
+import { CartProduct } from "../CartProduct/CartProduct";
 // import { productcarts } from "../widget/productcarts";
 
-export function renderProducts(filter) {
+export function RenderProducts(filter) {
   if (!filter) {
     filter = "all";
   }
@@ -16,7 +16,7 @@ export function renderProducts(filter) {
   });
   getProducts(filter).then((carts) => {
     carts.map((product) => {
-      const productCard = cartproduct({ product });
+      const productCard = CartProduct({ product });
       Element.append(productCard);
     });
   });

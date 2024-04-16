@@ -1,4 +1,4 @@
-import { btnColor } from "../../../components/cardFull/btnColor/btnColor";
+import { btnColor } from "../btnColor/btnColor";
 import { El } from "../../../utils/create-element";
 
 export function buttonsColor() {

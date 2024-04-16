@@ -24,7 +24,6 @@ export const getProductById = async (id) => {
 };
 
 
-
 export async function getWishlistProduct(filter) {
   const res = await axios.get(`${BASE_URL}/users`);
   const response = res.data[0].wishlist;
@@ -55,8 +54,6 @@ export async function getCardProduct(id) {
   }
   
 }
-
-
 
 
 export async function getCardProductForOrder() {

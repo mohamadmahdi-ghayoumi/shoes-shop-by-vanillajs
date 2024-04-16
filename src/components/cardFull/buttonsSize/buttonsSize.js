@@ -1,4 +1,4 @@
-import { btnSize } from "../../../components/cardFull/btnSize/btnSize";
+import { btnSize } from "../btnSize/btnSize";
 import { El } from "../../../utils/create-element";
 
 export function buttonsSize() {

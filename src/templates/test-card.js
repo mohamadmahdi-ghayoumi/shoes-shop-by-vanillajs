@@ -1,5 +1,5 @@
 // import { getProductByBrand } from "../api/get/getProducts";
-import { renderProducts } from "../components/homePage/renderProducts/renderProducts";
+import { RenderProducts } from "../components/homePage/RenderProducts/RenderProducts";
 import { El } from "../utils/create-element";
 import { brandPage } from "./brandPage";
 // import { ProductDetails } from "./test-card";
@@ -14,7 +14,7 @@ export function brandchange(brand) {
 
     element
       .querySelector("#product-details")
-      .append(renderProducts({ brand_data }));
+      .append(RenderProducts({ brand_data }));
     // getCommentsByProductId(productId).then((comments) => {
     //   element
     //     .querySelector("#comments-details")

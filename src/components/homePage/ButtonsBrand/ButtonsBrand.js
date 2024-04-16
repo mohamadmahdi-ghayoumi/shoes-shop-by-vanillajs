@@ -1,7 +1,7 @@
-import { buttonBrand } from "../components/homePage/button/button";
-import { El } from "../utils/create-element";
+import { El } from "../../../utils/create-element";
+import { ButtonBrand } from "../ButtonBrand/ButtonBrand";
 
-export function buttonsBrand() {
+export function ButtonsBrand() {
   return El({
     element: "div",
     className:
@@ -11,22 +11,22 @@ export function buttonsBrand() {
         element: "div",
         className: "flex gap-[41px] mt-[12px] mx[9px]",
         children: [
-          buttonBrand({
+          ButtonBrand({
             logo: "icon-[simple-icons--nike]",
             brand: "Nike",
             className: "items-center justify-center",
           }),
-          buttonBrand({
+          ButtonBrand({
             logo: "icon-[gg--adidas]",
             brand: "Adidas",
             className: "items-center justify-center",
           }),
-          buttonBrand({
+          ButtonBrand({
             logo: "icon-[simple-icons--puma]",
             brand: "Puma",
             className: "items-center justify-center",
           }),
-          buttonBrand({
+          ButtonBrand({
             logo: "icon-[simple-icons--reebok]",
             brand: "Asics",
             className: "items-center justify-center",
@@ -37,23 +37,23 @@ export function buttonsBrand() {
         element: "div",
         className: "flex gap-[41px] mt-3 mx[9px]",
         children: [
-          buttonBrand({
+          ButtonBrand({
             logo: "icon-[simple-icons--nike]",
             brand: "Reebok",
             className: "items-center justify-center",
           }),
-          buttonBrand({
+          ButtonBrand({
             logo: "icon-[simple-icons--newbalance]",
             brand: "New Balance",
             className: " justify-center",
           }),
-          buttonBrand({
+          ButtonBrand({
             logo: "icon-[gg--adidas]",
             brand: "Converse",
             className: "items-center justify-center",
           }),
 
-          buttonBrand({
+          ButtonBrand({
             logo: "icon-[icon-park-outline--more-two]",
             brand: "more",
             className: "items-center justify-center",

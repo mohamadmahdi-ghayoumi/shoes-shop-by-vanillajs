@@ -1,6 +1,6 @@
 import { El } from "../../../utils/create-element";
 
-export function seeAll() {
+export function SeeAll() {
   function goPageSeeAll() {
     window.location.href = "/shoes-mostpopular";
   }

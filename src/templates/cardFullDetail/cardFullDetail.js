@@ -1,13 +1,12 @@
+import { colorSizeBtn } from "../../components/cardFull/color-Size-btns/colorSizeBtn";
+import { descriptionCard } from "../../components/cardFull/descriptionCard/descriptionCard";
+import { favoriteCard } from "../../components/cardFull/favoriteCard/favoriteCard";
+import { priceCard } from "../../components/cardFull/price-card/priceCard";
+import { quantityCard } from "../../components/cardFull/quantityCard/quantityCard";
+import { swiperCard } from "../../components/cardFull/swiperCard/swiperCard";
 import { headerBack } from "../../layout/header/headerback";
 import { El } from "../../utils/create-element";
-import { buttonsColor } from "../../widget/cardfull/buttonsColor/buttonsColor";
-import { buttonsSize } from "../../widget/cardfull/buttonsSize/buttonsSize";
-import { colorSizeBtn } from "../../widget/cardfull/color-Size-btns/colorSizeBtn";
-import { descriptionCard } from "../../widget/cardfull/descriptionCard/descriptionCard";
-import { favoriteCard } from "../../widget/cardfull/favoriteCard/favoriteCard";
-import { priceCard } from "../../widget/cardfull/price-card/priceCard";
-import { quantityCard } from "../../widget/cardfull/quantityCard/quantityCard";
-import { swiperCard } from "../../widget/cardfull/swiperCard/swiperCard";
+
 
 export function cardFullDetail({ product }) {
  

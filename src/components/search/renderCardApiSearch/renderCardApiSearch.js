@@ -8,8 +8,7 @@ export function renderCardApiSearch() {
 
   cardsProduct.innerHTML = "";
   getProductsSearch(searchInput).then((data) => {
-    // const dataFilter = data.filter((item) => item.brand == searchInput);
-    // const dataFilter = data.filter((item) => (item.name).includes(searchInput));
+
     const cardsProduct = document.getElementById("cardsProduct");
 
     data.map((product) => {
@@ -17,6 +16,9 @@ export function renderCardApiSearch() {
       return cardsProduct.append(cardSearch);
     });
 
+
+
+    
     if (Object.prototype.hasOwnProperty.call(data, "length")) {
       console.log(data.length);
       const countData = document.getElementById("countData");
