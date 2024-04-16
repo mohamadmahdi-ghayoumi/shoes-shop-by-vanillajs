@@ -82,3 +82,13 @@ export async function getOrderProduct() {
     const final = response.filter((item) => item.value == value);
     return final[0];
     }
+
+
+    export async function getWishlist() {
+      const res = await axios.get(`${BASE_URL}/users`);
+      const response = res.data[0].wishlist;
+      console.log(response);
+  
+        return response;
+      }
+  

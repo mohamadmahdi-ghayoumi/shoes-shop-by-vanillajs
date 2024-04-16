@@ -15,11 +15,15 @@ export async function deleteCardProduct( value) {
   return responseNew;
 }
 
-export async function deleteCardProductForWishlist(obj) {
+export async function deleteCardProductForWishlist(idCard) {
+  console.log(idCard)
 
   const res = await axios.get(`${BASE_URL}/users`);
+
   const response = res.data[0].wishlist;
-  const dataDelete = response.filter((item) => item.id != obj);
+  console.log(response)
+
+  const dataDelete = response.filter((item) => item.id != idCard);
   console.log(dataDelete)
 
   const wishlist = [...dataDelete];

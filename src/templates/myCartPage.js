@@ -25,7 +25,11 @@ export function myCartPageTemplate() {
         id: "home",
         children: [renderMyCart()],
       }),
-      footerHomePage(),
+      footerHomePage(
+        "",
+        "icon-[clarity--home-line]",
+        "icon-[bi--bag-fill]"
+      ),
       modalDeleteOverlay(),
       modalDelete(),
     ],

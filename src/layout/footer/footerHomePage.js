@@ -2,11 +2,10 @@ import { round } from "lodash";
 import { getCardProductForOrder } from "../../api/get/getProducts";
 import { El } from "../../utils/create-element";
 
-export function footerHomePage(classname) {
-function goToCheckout(){
-  window.location.href = "/checkout";
-
-}
+export function footerHomePage(classname , iconHome ,iconCart ) {
+  function goToCheckout() {
+    window.location.href = "/checkout";
+  }
   return El({
     element: "div",
     id: "footer",
@@ -79,8 +78,13 @@ function goToCheckout(){
                 children: [
                   El({
                     element: "span",
-                    className: "icon-[ion--home-sharp] w-[24px] h-[24px]",
+                    className: `${iconHome} w-[24px] h-[24px]`,
                   }),
+//home sefiiiiid icon-[clarity--home-line]
+// meshki   icon-[ion--home-sharp]
+
+
+
                 ],
               }),
               El({
@@ -97,8 +101,12 @@ function goToCheckout(){
             children: [
               El({
                 element: "span",
-                className: "icon-[bi--bag] w-[24px] h-[24px]",
+                id: "iconCart",
+                className:
+                  ` ${iconCart} w-[24px] h-[24px]`,
               }),
+// sefid    icon-[bi--bag]
+              //meshkiii    icon-[bi--bag-fill]
               El({
                 element: "a",
                 href: "./mycartpage",

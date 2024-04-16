@@ -24,7 +24,7 @@ export function home() {
         id: "home",
         children: [RenderProducts("all")],
       }),
-      footerHomePage("hidden"),
+      footerHomePage("hidden" , "icon-[ion--home-sharp]" , "icon-[bi--bag]"),
     ],
   });
 }

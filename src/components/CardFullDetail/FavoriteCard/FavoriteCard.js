@@ -1,5 +1,5 @@
 import { deleteCardProductForWishlist } from "../../../api/delete/deleteProducts";
-import { getWishlistProduct } from "../../../api/get/getProducts";
+import { getWishlist, getWishlistProduct } from "../../../api/get/getProducts";
 import { addToWishlist } from "../../../api/post/postProduct";
 import { El } from "../../../utils/create-element";
 
@@ -11,27 +11,49 @@ export function FavoriteCard({ product }) {
       iconHeart.classList.add("icon-[icon-park-solid--like]");
       iconHeart.classList.add("text-red-500");
     }
-    console.log(product)
+    console.log(product);
   });
 
   function sendToWishlist() {
-    if (
-      iconHeart.classList.contains("text-red-500") &&
-      iconHeart.classList.contains("text-red-500")
-    ) {    console.log("gjhgf")
+    const iconHeart = document.getElementById("iconHeart");
 
+    if (iconHeart.classList.contains("text-red-500")) {
       iconHeart.classList.add("icon-[ph--heart-light]");
       iconHeart.classList.remove("icon-[icon-park-solid--like]");
       iconHeart.classList.remove("text-red-500");
+      console.log(product.id);
       deleteCardProductForWishlist(product.id);
     } else {
+      console.log(product.id);
+
       const iconHeart = document.getElementById("iconHeart");
       iconHeart.classList.remove("icon-[ph--heart-light]");
       iconHeart.classList.add("icon-[icon-park-solid--like]");
       iconHeart.classList.add("text-red-500");
-      addToWishlist(product);
+      getWishlist().then((data) => {
+        console.log(data);
+        console.log(product);
+
+        const containsProduct = data.some(
+          (item) => JSON.stringify(item) === JSON.stringify(product)
+        );
+
+        if (containsProduct) {
+          console.log("darim");
+        } else {
+          console.log("dkj.arim");
+
+          addToWishlist(product);
+        }
+        // if (product.indexOf(data) !== -1) {
+        //   console.log("dalrim");
+        // } else {
+        //   addToWishlist();
+        // }
+      });
     }
   }
+
   return El({
     element: "div",
     className: "flex justify-between items-center mt-[10px] mx-[24px]",
