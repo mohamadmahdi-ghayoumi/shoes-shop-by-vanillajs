@@ -1,7 +1,7 @@
 import { El } from "../../../utils/create-element";
 
 export function oneCartInCheckout({ product }) {
-  const { name, price, imageURL, id, colors, sizes, quantity, value } = product;
+  const { name, price, imageURL, id, colors, sizes, quantity, value , totalPrice} = product;
   let color = "";
   switch (colors) {
     case "bg-red-500":
@@ -83,7 +83,7 @@ export function oneCartInCheckout({ product }) {
               El({
                 element: "p",
                 className: "font-semibold text-[25px]",
-                innerText: `$ ${price}`,
+                innerText: `$ ${totalPrice}`,
               }),
               El({
                 element: "div",

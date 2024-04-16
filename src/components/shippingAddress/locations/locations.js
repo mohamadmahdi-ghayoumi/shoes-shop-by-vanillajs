@@ -13,7 +13,7 @@ function addAddress(){
     element: "div",
     className: "mx-[24px] flex flex-col  gap-10 mt-[50px]",
     children: [
-      oneLocation("Home", "61480 Sunbrook Park PC 5679", "home"),
+      oneLocation("Home", "61480 Sunbrook Park PC 5679", "home" , "checked"),
       oneLocation("Office", "6993 Meadow Valley Terra. PC 3637", "office"),
       oneLocation("Apartment", "21833 Clyde Gallagher. PC 4662", "apartment"),
       oneLocation("Parent's House", "5259 Blue Bill Park. PC 4627", "parent"),

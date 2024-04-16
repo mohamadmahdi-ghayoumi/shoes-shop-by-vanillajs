@@ -18,10 +18,11 @@ export function renderOrderCart() {
       const productCard = oneCartInCheckout({ product });
       Element.append(productCard);
     });
-    const arrayAmount = carts.map((item) => item.price);
+    const arrayAmount = carts.map((item) => item.totalPrice);
     const sum = arrayAmount.reduce((acc, num) => acc + num, 0);
     document.getElementById("amount").innerText = `$ ${sum}`;
     const data = { total: sum };
+    console.log(sum);
     setLocalStorage("totalPriceAmount", data);
   });
 

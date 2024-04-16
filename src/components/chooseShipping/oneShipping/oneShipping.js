@@ -1,7 +1,7 @@
 import { El } from "../../../utils/create-element";
 import { setLocalStorage } from "../../../utils/localStorage";
 
-export function oneShipping(name, address, classIcon, price, value) {
+export function oneShipping(name, address, classIcon, price, value, checked) {
   function radioLocation(e) {
     // localStorage.removeItem("shipping");
 
@@ -28,7 +28,7 @@ export function oneShipping(name, address, classIcon, price, value) {
 
   return El({
     element: "div",
-    className: "flex gap-3 items-center justify-between pl-5 ",
+    className: "flex gap-3 items-center justify-between pl-2 ",
     id: "parentlocation",
     children: [
       El({
@@ -89,7 +89,9 @@ export function oneShipping(name, address, classIcon, price, value) {
         type: "radio",
         name: "option",
         value: value,
-        className: "checked:bg-black w-5 h-5",
+        checked: checked,
+
+        className: "radio-button w-5 h-5",
         onclick: radioLocation,
       }),
     ],

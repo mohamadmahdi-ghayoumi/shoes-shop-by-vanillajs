@@ -1,6 +1,6 @@
 import { El } from "../../../utils/create-element";
 
-export function onePayment(name, classIcon, price, value) {
+export function onePayment(name, classIcon, price, value, checked) {
   function radioLocation(e) {
     // console.log("Clicked location: " + this.value);
     // const namee =
@@ -64,7 +64,8 @@ export function onePayment(name, classIcon, price, value) {
             type: "radio",
             name: "option",
             value: value,
-            className: "checked:bg-black w-5 h-5",
+            checked: checked,
+            className: " w-5 h-5 radio-button",
             onclick: radioLocation,
           }),
         ],

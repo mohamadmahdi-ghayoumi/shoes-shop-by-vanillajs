@@ -1,4 +1,3 @@
-
 import Swiper from "swiper/bundle";
 import "swiper/css/bundle";
 import { El } from "../utils/create-element";
@@ -88,14 +87,14 @@ export const StartSlider = () => {
       }),
       El({
         element: "div",
-        className: "w-full text-center mt-8 px-4",
+        className: "w-full text-center mt-10 px-4",
         children: [
           Link({
             className: "",
             children: [
               El({
                 element: "button",
-                className: "w-full bg-gray-300 p-4 text-white rounded-full",
+                className: "w-full bg-[#343A40] p-4 text-white rounded-full",
                 children: "Next",
                 eventListener: [
                   {

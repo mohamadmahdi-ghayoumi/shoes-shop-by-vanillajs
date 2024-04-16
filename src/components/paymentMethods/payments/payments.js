@@ -15,12 +15,18 @@ export function payments() {
         className: "text-gray-700",
         innerText: "Select the payment method you want to use",
       }),
-      onePayment("My wallet", "icon-[solar--wallet-bold]", "$9.379", "economy"),
-      onePayment("PayPal", "icon-[logos--paypal]", "", "regular"),
+      onePayment(
+        "My wallet",
+        "icon-[solar--wallet-bold] checked:bg-black",
+        "$9.379",
+        "economy",
+        "My walle"
+      ),
+      onePayment("PayPal", "icon-[logos--paypal]", "", "PayPal"),
 
-      onePayment("Google Pay", "icon-[devicon--google]", "", "cargo"),
+      onePayment("Google Pay", "icon-[devicon--google]", "", "Google Pay"),
 
-      onePayment("Apple", "icon-[ic--twotone-apple]", "", "express"),
+      onePayment("Apple", "icon-[ic--twotone-apple]", "", "Apple"),
       onePayment(
         ".... .... .... ....4679",
         "icon-[logos--mastercard]",
@@ -31,7 +37,7 @@ export function payments() {
       El({
         element: "button",
         className:
-          "bg-black text-white w-[90%] rounded-[60px] mt-[330px]  text-[20px] m-auto h-[60px]",
+          "bg-black text-white w-[90%] rounded-[60px] mt-50  text-[20px] m-auto h-[60px]",
         innerText: "Apply",
         onclick: finishOrder,
       }),

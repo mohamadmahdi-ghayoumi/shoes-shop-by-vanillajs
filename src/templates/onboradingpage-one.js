@@ -24,7 +24,7 @@ export function onBordingPageOne() {
       El({
         element: "div",
         className:
-          "m-auto items-center h-[60px] w-[60px] animate-spin rounded-full border-[7px]  mt-[295px] mb-[102px] border-solid border-current border-e-transparent text-surface motion-reduce:animate-[spin_1s_linear_infinite] dark:text-white",
+          "m-auto items-center h-[60px] w-[60px] animate-spin rounded-full border-[7px]  mt-60  border-solid border-current border-e-transparent text-surface motion-reduce:animate-[spin_1s_linear_infinite] dark:text-white",
         children: [
           El({
             element: "span",

@@ -26,7 +26,7 @@ export function amountAndPayment() {
             element: "span",
             className: "text-gray-700",
             id: "amount",
-            innerText: "$585.00",
+            innerText: "0",
           }),
         ],
       }),

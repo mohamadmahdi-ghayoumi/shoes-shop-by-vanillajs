@@ -26,7 +26,7 @@ export function ShippingAddress() {
           El({
             element: "div",
             className:
-              "ml-2 bg-gray-300 rounded-full w-[80px] h-[80px] relative",
+              "ml-2 bg-gray-300 rounded-full w-[100px] h-[80px] relative",
             children: [
               El({
                 element: "span",
