@@ -5,7 +5,7 @@ export function buttonsBrand() {
   return El({
     element: "div",
     className:
-      "flex gap-[28px] flex-col h-[234px] justify-center items-center p-[24px]",
+      "flex gap-1 flex-col h-[234px] justify-center items-center mx-[24px]",
     children: [
       El({
         element: "div",
@@ -35,7 +35,7 @@ export function buttonsBrand() {
       }),
       El({
         element: "div",
-        className: "flex gap-[41px] mb-[12px] mx[9px]",
+        className: "flex gap-[41px] mt-3 mx[9px]",
         children: [
           buttonBrand({
             logo: "icon-[simple-icons--nike]",

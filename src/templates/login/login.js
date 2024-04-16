@@ -1,8 +1,8 @@
-import { getUser } from "../api/get/getUser";
-import { headerBack } from "../layout/header/headerback";
-import { El } from "../utils/create-element";
+import { getUser } from "../../api/get/getUser";
+import { headerBack } from "../../layout/header/headerback";
+import { El } from "../../utils/create-element";
 
-export function loginForm() {
+export function login() {
   const element = El({
     element: "div",
     className: " flex flex-col  ",

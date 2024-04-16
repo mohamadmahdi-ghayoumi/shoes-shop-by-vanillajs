@@ -1,12 +1,13 @@
 import { El } from "../../../utils/create-element";
 
 export function seeAll() {
-function goPageSeeAll(){
+  function goPageSeeAll() {
     window.location.href = "/shoes-mostpopular";
-}
+  }
 
   return El({
     element: "div",
+    className: "mb-3",
     children: [
       El({
         element: "div",

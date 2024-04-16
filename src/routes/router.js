@@ -1,7 +1,6 @@
 import Navigo from "navigo";
 
 import { changePage } from "../utils/change-page";
-import { loginForm } from "../templates/login";
 import { homePage } from "../pages/homePage.js";
 import { homeAdidas } from "../templates/page-brand/homeAdidas.js";
 import { homeNike } from "../templates/page-brand/homeNike.js";
@@ -18,15 +17,16 @@ import { WishlistPage } from "../pages/whishlist-page.js";
 import { myCartPageTemplate } from "../templates/myCartPage.js";
 import { brandPage } from "../templates/brandPage.js";
 import { searchPage } from "../templates/searchPage.js";
-import { checkoutPage } from "../templates/Orders/checkoutPage.js";
-import { shippingAddressPage } from "../templates/Orders/shippingAddressPage.js";
-import { chooseShipping } from "../templates/Orders/chooseShipping.js";
-import { paymentMethodsPage } from "../templates/Orders/paymentMethodsPage.js";
-import { successfulPage } from "../templates/Orders/successfulPage.js";
+import { checkoutPage } from "../templates/checkout/checkoutPage.js";
+import { shippingAddressPage } from "../templates/checkout/shippingAddressPage.js";
+import { chooseShipping } from "../templates/checkout/chooseShipping.js";
+import { paymentMethodsPage } from "../templates/checkout/paymentMethodsPage.js";
+import { successfulPage } from "../templates/checkout/successfulPage.js";
 import { myOrdersPage } from "../templates/myOrders.js";
 import { onboardingOnePage } from "../pages/onboarding-page/onboardingOne-page.js";
 import { onboardingTwoPage } from "../pages/onboarding-page/onboradingTwo-page.js";
 import { onboardingThreePage } from "../pages/onboarding-page/onboardingThree-page.js";
+import { loginPage } from "../pages/login-page/login-page.js";
 
 export const router = new Navigo("/");
 
@@ -40,6 +40,9 @@ router
   .on("/onboardingpagethree", () => {
     changePage(onboardingThreePage);
   })
+  .on("/login", () => {
+    changePage(loginPage);
+  })
   .on("/", () => {
     changePage(WishlistPage);
   })
@@ -51,9 +54,6 @@ router
     changePage(myCartPageTemplate);
   })
 
-  .on("/login", () => {
-    changePage(loginForm);
-  })
   .on("/homepage", () => {
     changePage(homePage);
   })

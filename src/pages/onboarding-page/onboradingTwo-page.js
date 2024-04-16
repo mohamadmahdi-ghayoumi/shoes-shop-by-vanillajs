@@ -1,4 +1,4 @@
-import { OnboardingTwo } from "../../templates/onboarding/onborading-Two";
+import { OnboardingTwo } from "../../templates/onboarding/onboarding-Two";
 import { El } from "../../utils/create-element";
 
 export function onboardingTwoPage() {

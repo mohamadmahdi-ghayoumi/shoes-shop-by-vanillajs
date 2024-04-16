@@ -21,13 +21,13 @@ export function headerHomePage() {
             children: [
               El({
                 element: "span",
-                className: "",
+                className: "text-gray-400 font-semibold",
                 innerText: "Good Morning 👋",
               }),
               El({
                 element: "span",
-                className: "",
-                innerText: "Mohamadmahdi ghayoumi",
+                className: "font-bold text-xl",
+                innerText: "Mhmd ghayoumi",
               }),
             ],
           }),
@@ -36,11 +36,13 @@ export function headerHomePage() {
 
       El({
         element: "div",
-        className: "flex gap-[16px] items-center mx-[25px]",
+        className:
+          "flex gap-[15px] items-center mr-[24px] justify-center text-center m-auto ",
         children: [
           El({
             element: "span",
-            className: "icon-[iwwa--alarm] w-[22.5px] h-[24px]",
+            className:
+              "icon-[fluent-mdl2--ringer] w-[24px] h-[22px] m-auto mb-[6px]",
           }),
           El({
             element: "a",
@@ -49,7 +51,7 @@ export function headerHomePage() {
             children: [
               El({
                 element: "span",
-                className: "icon-[ph--heart-light] w-[24px] h-[24px]",
+                className: "icon-[ph--heart-light] w-[24px] h-[24px] m-auto",
               }),
             ],
           }),
