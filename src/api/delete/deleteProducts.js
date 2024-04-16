@@ -14,3 +14,16 @@ export async function deleteCardProduct( value) {
 
   return responseNew;
 }
+
+export async function deleteCardProductForWishlist(obj) {
+
+  const res = await axios.get(`${BASE_URL}/users`);
+  const response = res.data[0].wishlist;
+  const dataDelete = response.filter((item) => item.id != obj);
+  console.log(dataDelete)
+
+  const wishlist = [...dataDelete];
+  let responseNew = await axios.patch(`${BASE_URL}/users/1`, { wishlist });
+
+  return responseNew;
+}

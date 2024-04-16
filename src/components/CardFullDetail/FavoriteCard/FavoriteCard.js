@@ -1,3 +1,4 @@
+import { deleteCardProductForWishlist } from "../../../api/delete/deleteProducts";
 import { getWishlistProduct } from "../../../api/get/getProducts";
 import { addToWishlist } from "../../../api/post/postProduct";
 import { El } from "../../../utils/create-element";
@@ -10,14 +11,26 @@ export function FavoriteCard({ product }) {
       iconHeart.classList.add("icon-[icon-park-solid--like]");
       iconHeart.classList.add("text-red-500");
     }
+    console.log(product)
   });
 
   function sendToWishlist() {
-    const iconHeart = document.getElementById("iconHeart");
-    iconHeart.classList.remove("icon-[ph--heart-light]");
-    iconHeart.classList.add("icon-[icon-park-solid--like]");
-    iconHeart.classList.add("text-red-500");
-    addToWishlist(product);
+    if (
+      iconHeart.classList.contains("text-red-500") &&
+      iconHeart.classList.contains("text-red-500")
+    ) {    console.log("gjhgf")
+
+      iconHeart.classList.add("icon-[ph--heart-light]");
+      iconHeart.classList.remove("icon-[icon-park-solid--like]");
+      iconHeart.classList.remove("text-red-500");
+      deleteCardProductForWishlist(product.id);
+    } else {
+      const iconHeart = document.getElementById("iconHeart");
+      iconHeart.classList.remove("icon-[ph--heart-light]");
+      iconHeart.classList.add("icon-[icon-park-solid--like]");
+      iconHeart.classList.add("text-red-500");
+      addToWishlist(product);
+    }
   }
   return El({
     element: "div",
