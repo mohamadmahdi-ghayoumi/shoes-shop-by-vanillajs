@@ -16,7 +16,7 @@ import { El } from "../../../utils/create-element";
 // }
 
 
-export function btnColor({ colorCircle, colorCheck }) {
+export function ButtonColor({ colorCircle, colorCheck }) {
   const Element = El({
     element: "div",
     children: [

@@ -1,7 +1,6 @@
 import Navigo from "navigo";
 
 import { changePage } from "../utils/change-page";
-import { homePage } from "../pages/homePage.js";
 import { homeAdidas } from "../templates/page-brand/homeAdidas.js";
 import { homeNike } from "../templates/page-brand/homeNike.js";
 import { homeReebok } from "../templates/page-brand/homeReebok.js";
@@ -27,6 +26,7 @@ import { onboardingTwoPage } from "../pages/onboarding-page/onboradingTwo-page.j
 import { onboardingThreePage } from "../pages/onboarding-page/onboardingThree-page.js";
 import { loginPage } from "../pages/login-page/login-page.js";
 import { cardFullDetailPage } from "../pages/cardFullDetail-page/cardFullDetail-page.js";
+import { homePage } from "../pages/home-page/home-page.js";
 
 export const router = new Navigo("/");
 

@@ -2,7 +2,7 @@ import { getWishlistProduct } from "../../../api/get/getProducts";
 import { addToWishlist } from "../../../api/post/postProduct";
 import { El } from "../../../utils/create-element";
 
-export function favoriteCard({ product }) {
+export function FavoriteCard({ product }) {
   getWishlistProduct("all").then((data) => {
     const findItemCart = data.find((item) => item.id == product.id);
     if (findItemCart) {

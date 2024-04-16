@@ -1,6 +1,6 @@
 import { El } from "../../../utils/create-element";
 
-export function swiperCard({ product }) {
+export function ImageCard({ product }) {
   return El({
     element: "div",
     className: "",

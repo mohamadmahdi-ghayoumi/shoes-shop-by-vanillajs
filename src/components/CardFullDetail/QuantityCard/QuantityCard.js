@@ -1,6 +1,6 @@
 import { El } from "../../../utils/create-element";
 
-export function quantityCard({ product }) {
+export function QuantityCard({ product }) {
   let counter = 0;
 
   // function subtractButton() {

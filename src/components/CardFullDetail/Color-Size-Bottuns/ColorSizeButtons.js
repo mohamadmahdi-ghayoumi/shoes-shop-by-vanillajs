@@ -1,9 +1,8 @@
 import { El } from "../../../utils/create-element";
-import { buttonsColor } from "../buttonsColor/buttonsColor";
-import { buttonsSize } from "../buttonsSize/buttonsSize";
-import { quantityCard } from "../quantityCard/quantityCard";
+import { ButtonsColor } from "../ButtonsColor/ButtonsColor";
+import { ButtonsSize } from "../ButtonsSize/ButtonsSize";
 
-export function colorSizeBtn() {
+export function ColorSizeButtons() {
   return El({
     element: "form",
     className: "flex mb-3 mx-[24px]",
@@ -17,7 +16,7 @@ export function colorSizeBtn() {
             className: "font-bold mb-2",
             innerText: "Size",
           }),
-          buttonsSize(),
+          ButtonsSize(),
         ],
       }),
       El({
@@ -29,10 +28,9 @@ export function colorSizeBtn() {
             className: "font-bold mb-2",
             innerText: "Color",
           }),
-          buttonsColor(),
+          ButtonsColor(),
         ],
       }),
-      // quantityCard()
     ],
   });
 }

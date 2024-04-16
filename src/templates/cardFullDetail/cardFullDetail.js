@@ -1,26 +1,24 @@
-import { colorSizeBtn } from "../../components/cardFull/color-Size-btns/colorSizeBtn";
-import { descriptionCard } from "../../components/cardFull/descriptionCard/descriptionCard";
-import { favoriteCard } from "../../components/cardFull/favoriteCard/favoriteCard";
-import { priceCard } from "../../components/cardFull/price-card/priceCard";
-import { quantityCard } from "../../components/cardFull/quantityCard/quantityCard";
-import { swiperCard } from "../../components/cardFull/swiperCard/swiperCard";
+import { DescriptionCard } from "../../components/CardFullDetail/DescriptionCard/DescriptionCard";
+import { FavoriteCard } from "../../components/CardFullDetail/FavoriteCard/FavoriteCard";
+import { PriceCard } from "../../components/CardFullDetail/PriceCard/PriceCard";
+import { QuantityCard } from "../../components/CardFullDetail/QuantityCard/QuantityCard";
+import { ImageCard } from "../../components/CardFullDetail/ImageCard/ImageCard";
 import { headerBack } from "../../layout/header/headerback";
 import { El } from "../../utils/create-element";
-
+import { ColorSizeButtons } from "../../components/CardFullDetail/Color-Size-Bottuns/ColorSizeButtons";
 
 export function cardFullDetail({ product }) {
- 
   const Element = El({
     element: "div",
     className: "flex flex-col ",
     children: [
       headerBack(""),
-      swiperCard({ product }),
-      favoriteCard({ product }),
-      descriptionCard(),
-      colorSizeBtn(),
-      quantityCard({ product }),
-      priceCard({ product }),
+      ImageCard({ product }),
+      FavoriteCard({ product }),
+      DescriptionCard(),
+      ColorSizeButtons(),
+      QuantityCard({ product }),
+      PriceCard({ product }),
     ],
   });
 

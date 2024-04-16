@@ -1,9 +1,8 @@
-// import { addToCart, postProductCard } from "../../../api/post/postProduct";
 import { getUser } from "../../../api/get/getUser";
 import { addToCart } from "../../../api/post/postProduct";
 import { El } from "../../../utils/create-element";
 
-export function priceCard({ product }) {
+export function PriceCard({ product }) {
   function addToCard(e) {
     e.preventDefault();
     const color = document.querySelector("input[name='color']:checked");

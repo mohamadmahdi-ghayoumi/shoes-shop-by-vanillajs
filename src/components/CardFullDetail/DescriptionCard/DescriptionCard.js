@@ -1,6 +1,6 @@
 import { El } from "../../../utils/create-element";
 
-export function descriptionCard() {
+export function DescriptionCard() {
   return El({
     element: "div",
     className: "mx-[24px]",
