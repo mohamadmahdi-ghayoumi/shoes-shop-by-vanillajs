@@ -1,8 +1,20 @@
+import { getItemForEditCard } from "../../../api/get/getProducts";
+import { editCart } from "../../../api/post/postProduct";
 import { El } from "../../../utils/create-element";
 import { Link } from "../../homePage/link/link";
 
 export function oneCartInMyCart({ product }) {
-  const { name, price, imageURL, id, colors, sizes, quantity, value } = product;
+  const {
+    name,
+    price,
+    imageURL,
+    id,
+    colors,
+    sizes,
+    quantity,
+    value,
+    totalPrice,
+  } = product;
   let color = "";
   switch (colors) {
     case "bg-red-500":
@@ -25,26 +37,42 @@ export function oneCartInMyCart({ product }) {
   let counter = quantity;
 
   function subtractBtn(e) {
-    const countCart = document.getElementById(`spanCounter${value}`);
-    console.log(countCart);
+    const quantityCounter = document.getElementById(`spanCounter${value}`);
 
+    const totalPrice = document.getElementById(`totalPriceSpan${value}`);
+    const priceMyCart = document.getElementById("priceMyCart");
+    console.log(priceMyCart);
     if (counter > 1) {
-      // console.log(countCart);
+      editCart(value, "subtract");
+      getItemForEditCard(value).then((item) => {
+        totalPrice.innerText = item.totalPrice - item.price;
+        // totalOfAllItems.innerText -= item.price;
+        priceMyCart.innerText = +priceMyCart.innerText - item.price;
+      });
       counter--;
-      countCart.innerText = counter;
+      quantityCounter.innerText = counter;
     }
+
   }
 
   function sumBtn(e) {
-    // console.log(`  e : ${e.target.closest(".moz").children[1].id}`);
+    const quantityCounter = document.getElementById(`spanCounter${value}`);
 
-    // const moz2 = e.target.closest("").children[1].id;
-    const countCart = document.getElementById(`spanCounter${value}`);
+    const totalPrice = document.getElementById(`totalPriceSpan${value}`);
 
-    // console.log(countCart);
+    // const totalOfAllItems = document.getElementById('totalOfAllItems');
     if (counter < 3) {
+      editCart(value, "add");
+      getItemForEditCard(product.value).then((item) => {
+        totalPrice.innerText = item.totalPrice + item.price;
+        const priceMyCart = document.getElementById("priceMyCart");
+
+        priceMyCart.innerText = +priceMyCart.innerText + item.price;
+
+        // totalOfAllItems.innerText += item.price;
+      });
       counter++;
-      countCart.innerText = counter;
+      quantityCounter.innerText = counter;
     }
   }
 
@@ -52,10 +80,7 @@ export function oneCartInMyCart({ product }) {
     document.getElementById("footer").classList.add("hidden");
     document.getElementById("modalDelete").classList.remove("hidden");
     document.getElementById("overlayModal").classList.remove("hidden");
-    // const modalDelete = document.getElementById("modalDelete");
-    // modalDelete.innerText = "";
-    // console.log(product.id)
-    // document.getElementById("fd").id = product.id;
+
     document.getElementById("modalDelete").value = product.value;
     document.getElementById("imageModal").src = product.imageURL;
     document.getElementById("nameModal").innerText =
@@ -142,7 +167,8 @@ export function oneCartInMyCart({ product }) {
               El({
                 element: "p",
                 className: "font-semibold text-[25px]",
-                innerText: `$ ${price}`,
+                id: `totalPriceSpan${product.value}`,
+                innerText: totalPrice,
               }),
               El({
                 element: "div",

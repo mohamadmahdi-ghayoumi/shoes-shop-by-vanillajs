@@ -1,8 +1,11 @@
 import { getOrderProduct } from "../../../api/get/getProducts";
 import { El } from "../../../utils/create-element";
+import { setLocalStorage } from "../../../utils/localStorage";
 import { oneCartInCheckout } from "../oneCartInCheckout/oneCartInCheckout";
 
 export function renderOrderCart() {
+  // localStorage.removeItem("totalPriceAmount");
+
   const Element = El({
     element: "div",
     className:
@@ -18,6 +21,8 @@ export function renderOrderCart() {
     const arrayAmount = carts.map((item) => item.price);
     const sum = arrayAmount.reduce((acc, num) => acc + num, 0);
     document.getElementById("amount").innerText = `$ ${sum}`;
+    const data = { total: sum };
+    setLocalStorage("totalPriceAmount", data);
   });
 
   return Element;

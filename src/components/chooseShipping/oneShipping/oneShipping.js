@@ -1,28 +1,30 @@
 import { El } from "../../../utils/create-element";
+import { setLocalStorage } from "../../../utils/localStorage";
 
-export function oneShipping
-(name, address , classIcon, price, value) {
+export function oneShipping(name, address, classIcon, price, value) {
   function radioLocation(e) {
-    // console.log("Clicked location: " + this.value);
-    // const namee =
-    //   e.target.closest("#parentlocation").children[0].children[1].children[0]
-    //     .innerText;
-    // const Addresss =
-    //   e.target.closest("#parentlocation").children[0].children[1].children[1]
-    //     .innerText;
-    // console.log(namee, Addresss);
-    // setTimeout(shippingAddress(), 0);
-    // console.log(document.getElementById("addressLocation"));
+    // localStorage.removeItem("shipping");
 
-    // document.getElementById("addressLocation").innerText = Addresss;
-    // document.getElementById("nameLocation").innerText = namee;  document.getElementById("addressLocation").innerText = Addresss;
-    // sendToAnotherFunction(namee, Addresss);
+    console.log("Clicked location: " + this.value);
+    const namee =
+      e.target.closest("#parentlocation").children[0].children[1].children[0]
+        .innerText;
+    const datee =
+      e.target.closest("#parentlocation").children[0].children[1].children[1]
+        .innerText;
+
+    const pricee =
+      e.target.closest("#parentlocation").children[1].children[1].innerText;
+
+    const data = { name: namee, address: datee, price: pricee };
+    console.log(data);
+    setLocalStorage("shipping", data);
   }
-//   function sendToAnotherFunction(namee, Addresss) {
-//     // Call the other function here with namee and Addresss as parameters
-//     // For example:
-//     shippingAddress(namee, Addresss);
-//   }
+  //   function sendToAnotherFunction(namee, Addresss) {
+  //     // Call the other function here with namee and Addresss as parameters
+  //     // For example:
+  //     shippingAddress(namee, Addresss);
+  //   }
 
   return El({
     element: "div",
@@ -35,13 +37,11 @@ export function oneShipping
         children: [
           El({
             element: "div",
-            className:
-              "ml-7 bg-black rounded-full w-[60px] h-[60px] relative",
+            className: "ml-7 bg-black rounded-full w-[60px] h-[60px] relative",
             children: [
               El({
                 element: "span",
-                className:
-                  `${classIcon} w-[25px] h-[25px] m-auto absolute bottom-[17px] end-[17px]`,
+                className: `${classIcon} w-[25px] h-[25px] m-auto absolute bottom-[17px] end-[17px]`,
               }),
             ],
           }),
@@ -66,10 +66,24 @@ export function oneShipping
       }),
 
       El({
-        element: "span",
-    innerText : `$${price}`,
-        className: "font-bold text-[20px] whitespace-nowrap",
+        element: "div",
+        innerText: ``,
+        className: "flex",
+        children: [
+          El({
+            element: "span",
+            innerText: `$`,
+            className: "font-bold text-[20px] whitespace-nowrap",
+          }),
+
+          El({
+            element: "span",
+            innerText: `${price}`,
+            className: "font-bold text-[20px] whitespace-nowrap",
+          }),
+        ],
       }),
+
       El({
         element: "input",
         type: "radio",

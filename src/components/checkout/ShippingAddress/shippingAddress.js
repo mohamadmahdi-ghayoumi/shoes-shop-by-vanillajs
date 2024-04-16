@@ -1,7 +1,9 @@
-import { El } from "../../utils/create-element";
-import { oneLocation } from "./oneLocation/oneLocation";
+import { El } from "../../../utils/create-element";
+import { oneLocation } from "../../shippingAddress/oneLocation/oneLocation";
 
-export function shippingAddress() {
+export function ShippingAddress() {
+  const location = JSON.parse(localStorage.getItem("location"));
+  console.log(location);
   function goToAddress() {
     window.location.href = "/shippingaddresspage";
   }
@@ -42,13 +44,13 @@ export function shippingAddress() {
                 element: "div",
                 className: "font-bold text-[20px]",
                 id: "nameLocation",
-                innerText: "Home",
+                innerText: location.name,
               }),
               El({
                 element: "div",
                 className: "text-[14px] whitespace-nowrap",
                 id: "addressLocation",
-                innerText: "61480 Sunbrook Park PC 5679",
+                innerText: location.address,
               }),
             ],
           }),

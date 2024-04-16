@@ -25,8 +25,7 @@ export function priceCard({ product }) {
         colors: colorValue,
         sizes: sizeValue,
         quantity: quantity, //quantity
-        price: product.price * quantity, //quantity
-        // id: Date.now(),
+        totalPrice : product.price * quantity,
         value: Date.now(),
       };
       console.log(data);

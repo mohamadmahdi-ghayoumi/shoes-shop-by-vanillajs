@@ -1,11 +1,8 @@
 import { El } from "../../../utils/create-element";
-import { shippingAddress } from "../shippingAddress";
+import { setLocalStorage } from "../../../utils/localStorage";
+// import { setLocalStorage } from "../../../utils/localStorage";
 
 export function oneLocation(name, address, value) {
-  
-  
-  
-  
   function radioLocation(e) {
     console.log("Clicked location: " + this.value);
     const namee =
@@ -14,17 +11,16 @@ export function oneLocation(name, address, value) {
     const Addresss =
       e.target.closest("#parentlocation").children[0].children[1].children[1]
         .innerText;
-    console.log(namee, Addresss);
-    name = namee
-    setTimeout(shippingAddress, 0);
-    // console.log(document.getElementById("addressLocation"));
-    console.log( document.getElementById("addressLocation"))
+    name = namee;
+    console.log(document.getElementById("addressLocation"));
+    console.log(e.target);
 
-    document.getElementById("addressLocation").innerText = Addresss;
-    // document.getElementById("nameLocation").innerText = namee;  document.getElementById("addressLocation").innerText = Addresss;
-   
+    const data = { name: namee, address: Addresss };
+    console.log(data);
+    // localStorage.setItem("location", JSON.stringify(data));
+
+    setLocalStorage("location", data);
   }
-
 
   return El({
     element: "div",

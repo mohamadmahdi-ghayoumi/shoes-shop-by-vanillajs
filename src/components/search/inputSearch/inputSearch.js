@@ -2,8 +2,6 @@ import { debounce } from "lodash";
 import { El } from "../../../utils/create-element";
 import { getLocalStorage, setLocalStorage } from "../../../utils/localStorage";
 import { renderData } from "../renderData/renderData";
-import { getProductsSearch } from "../../../api/get/getProducts";
-import { cardForWishlistPage } from "../../wishlist/cardForWishlistPage/cardForWishlistPage";
 import { renderCardApiSearch } from "../renderCardApiSearch/renderCardApiSearch";
 
 export function inputSearch() {

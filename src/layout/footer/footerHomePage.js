@@ -35,11 +35,21 @@ export function footerHomePage(classname) {
                 innerText: "Total price",
               }),
               El({
+                element: "div",
+                className: "flex",
+children:[El({
+  element: "p",
+  className: "font-bold text-[20px] ",
+  innerText: "$",
+}),
+   El({
                 element: "p",
                 className: "font-bold text-[20px] ",
                 id: "priceMyCart",
                 innerText: "$ 22.000",
               }),
+]              }),
+             
             ],
           }),
           El({

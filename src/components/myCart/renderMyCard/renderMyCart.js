@@ -20,10 +20,10 @@ export function renderMyCart() {
       Element.append(productCard);
     });
 
-    arrayPrice = carts.map((item) => item.price);
+    arrayPrice = carts.map((item) => item.totalPrice);
     const sum = arrayPrice.reduce((acc, num) => acc + num, 0);
     // console.log(sum);
-     document.getElementById("priceMyCart").innerText = ` $ ${sum}` 
+    document.getElementById("priceMyCart").innerText = `${sum}`;
   });
 
   // console.log(Element);

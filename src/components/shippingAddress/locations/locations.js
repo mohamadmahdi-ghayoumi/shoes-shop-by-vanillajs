@@ -3,15 +3,14 @@ import { oneLocation } from "../oneLocation/oneLocation";
 
 export function locations() {
 
-function addAddress(e){
-  e.preventdefault()
+function addAddress(){
   window.location.href = "/checkout"
 }
 
 
 
   return El({
-    element: "form",
+    element: "div",
     className: "mx-[24px] flex flex-col  gap-10 mt-[50px]",
     children: [
       oneLocation("Home", "61480 Sunbrook Park PC 5679", "home"),

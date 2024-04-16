@@ -26,6 +26,7 @@ import { shippingAddressPage } from "../templates/Orders/shippingAddressPage.js"
 import { chooseShipping } from "../templates/Orders/chooseShipping.js";
 import { paymentMethodsPage } from "../templates/Orders/paymentMethodsPage.js";
 import { successfulPage } from "../templates/Orders/successfulPage.js";
+import { myOrdersPage } from "../templates/myOrders.js";
 
 
 // import { cardForWishlistPage } from "../components/wishlist/cardForWishlistPage/cardForWishlistPage.js";
@@ -98,6 +99,8 @@ router
   })
   .on("/successfulpage", () => {
     changePage(successfulPage);
+  }).on("/myorderspage", () => {
+    changePage(myOrdersPage);
   })
   .on("/products/:id", ({ data }) => {
     changePage(Product, data);

@@ -1,11 +1,13 @@
 import { El } from "../../../utils/create-element";
+import { getLocalStorage } from "../../../utils/localStorage";
 
 export function amountAndPayment() {
-function addToPayment(){
-  window.location.href = "/paymentmethods"
-}
+  const shipping = getLocalStorage("shipping");
+  const totalPrice = getLocalStorage("totalPriceAmount");
 
-
+  function addToPayment() {
+    window.location.href = "/paymentmethods";
+  }
 
   return El({
     element: "div",
@@ -40,7 +42,7 @@ function addToPayment(){
           El({
             element: "span",
             className: "text-gray-700",
-            innerText: "-",
+            innerText: `$${shipping.price}`,
           }),
         ],
       }),
@@ -54,9 +56,20 @@ function addToPayment(){
             innerText: "Total",
           }),
           El({
-            element: "span",
-            className: "text-gray-700",
-            innerText: "-",
+            element: "div",
+            className: "flex",
+            children: [
+              El({
+                element: "span",
+                className: "text-gray-700",
+                innerText: "$",
+              }),
+              El({
+                element: "span",
+                className: "text-gray-700",
+                innerText: +totalPrice.total + +shipping.price,
+              }),
+            ],
           }),
         ],
       }),

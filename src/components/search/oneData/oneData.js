@@ -10,7 +10,6 @@ export function oneData(name) {
     console.log(datanew);
 
     setLocalStorage("recentSearch", datanew);
-    // console.log(getLocalStorage("recentSearch"));
 
     const searchDataComment = document.getElementById("searchDataComment");
     searchDataComment.innerHTML = "";

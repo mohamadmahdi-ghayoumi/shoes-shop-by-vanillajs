@@ -1,9 +1,12 @@
 import { El } from "../../../utils/create-element";
+import { getLocalStorage } from "../../../utils/localStorage";
 
 export function chooseShippingType() {
-  function goToShipping(){
-    window.location.href = "/chooseshipping"
-  }           
+  const shipping = getLocalStorage("shipping");
+
+  function goToShipping() {
+    window.location.href = "/chooseshipping";
+  }
 
   return El({
     element: "div",
@@ -35,7 +38,7 @@ export function chooseShippingType() {
             ],
           }),
           El({
-            onclick : goToShipping,
+            onclick: goToShipping,
             element: "span",
             className: "icon-[ooui--next-ltr] w-7 h-7",
           }),

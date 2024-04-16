@@ -35,7 +35,7 @@ export function oneCartInCheckout({ product }) {
 
       El({
         element: "div",
-        className: "flex flex-col justify-between relative ",
+        className: "flex flex-col justify-between relative w-[60%] ",
         children: [
           El({
             element: "p",
@@ -78,7 +78,7 @@ export function oneCartInCheckout({ product }) {
           }),
           El({
             element: "div",
-            className: "flex justify-between items-center",
+            className: "flex justify-between items-center w-full",
             children: [
               El({
                 element: "p",
@@ -87,7 +87,7 @@ export function oneCartInCheckout({ product }) {
               }),
               El({
                 element: "div",
-                className: "bg-gray-200 ml-[60px] flex gap-4 px-4 rounded-2xl",
+                className: "bg-gray-200  flex gap-4 px-4 rounded-2xl",
                 children: [
                   El({
                     element: "span",
