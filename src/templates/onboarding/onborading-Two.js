@@ -1,6 +1,6 @@
-import { El } from "../utils/create-element";
+import { El } from "../../utils/create-element";
 
-export function onboradingPageTwo() {
+export function OnboardingTwo() {
   const Element = El({
     element: "div",
     className:
@@ -26,7 +26,7 @@ export function onboradingPageTwo() {
   });
 
   setTimeout(() => {
-    window.location.href = "/slider";
+    window.location.href = "/onboardingpagethree";
   }, "3000");
 
   return Element;

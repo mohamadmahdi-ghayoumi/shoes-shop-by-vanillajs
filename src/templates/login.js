@@ -1,55 +1,36 @@
 import { getUser } from "../api/get/getUser";
+import { headerBack } from "../layout/header/headerback";
 import { El } from "../utils/create-element";
-// import { home } from "./home";
 
 export function loginForm() {
-  // inputPassword.addEventListener()
   const element = El({
     element: "div",
-    className: "h-full flex flex-col  ",
+    className: " flex flex-col  ",
     children: [
-      El({
-        element: "div",
-        innerText: "",
-        className: "h-[56px] flex  items-center ",
-        children: [
-          El({
-            element: "a",
-            href: "/",
-            className: "",
-            children: [
-              El({
-                element: "span",
-                className:
-                  "w-[32px] h-[32px] mx-[24px] icon-[ic--sharp-arrow-back] mt-[21px]",
-              }),
-            ],
-          }),
-        ],
-      }),
+      headerBack(""),
       El({
         element: "img",
-        className: "m-auto w-[54px] h-[81px] mt-[76px] mb-[118px]",
+        className: "m-auto w-15 h-15 mt-20 mb-[118px]",
         src: "src/assets/image/logo-login.png ",
       }),
       El({
         element: "h1",
-        className: "text-[32px] font-bold h-[39px] w-[342px] m-auto",
+        className: "text-[32px] font-bold h-8 w-[342px] m-auto",
         innerText: "Login to Your Account",
       }),
       El({
         element: "div",
-        className: "flex mt-[48px]  w-full relative h-[37px] mb-[21px]",
+        className: "flex mt-10 w-full relative h-8 mb-5",
         children: [
           El({
             element: "span",
             className:
-              "icon-[bi--envelope-fill] w-[16px] h-[16px] my-auto absolute top-[11px] start-[36px] text-gray-500 ",
+              "icon-[bi--envelope-fill] w-4 h-4 my-auto absolute  text-gray-500 transform  start-10 inset-1/2 -translate-x-1/2 ",
             id: "span-envelope",
           }),
           El({
             element: "input",
-            className: "text-[14px] px-[32px] w-full mx-[24px] ",
+            className: "text-[14px] px-[32px] w-full mx-[24px]  bg-gray-100 ",
             placeholder: "Email",
             id: "input-Email",
             onkeyup: inputEmail,
@@ -64,11 +45,11 @@ export function loginForm() {
             element: "span",
             id: "span-lock",
             className:
-              "icon-[uis--lock] w-[16px] h-[16px] my-auto absolute top-[11px] start-[36px] text-gray-500",
+              "icon-[uis--lock] w-4 h-4 my-auto absolute  text-gray-500 transform  start-10 inset-1/2 -translate-x-1/2",
           }),
           El({
             element: "input",
-            className: "text-[14px] px-[32px] w-full mx-[24px] ",
+            className: "text-[14px] px-[32px] w-full mx-[24px] bg-gray-100 ",
             placeholder: "Password",
             id: "input-password",
             type: "password",
@@ -78,7 +59,7 @@ export function loginForm() {
             element: "span",
             onclick: showPassword,
             className:
-              "icon-[ion--eye-off]  w-[16px] h-[16px] my-auto absolute top-[11px] end-[36px] text-gray-500 ",
+              "icon-[ion--eye-off]  w-4 h-4 my-auto absolute top-[11px] end-[36px] text-gray-500 ",
             id: "span-eye",
           }),
         ],
@@ -103,7 +84,7 @@ export function loginForm() {
       El({
         element: "button",
         className:
-          "mt-[270px] bg-[#212529] mb-[32px] m-auto rounded-3xl h-[47px] w-[380px] text-white",
+          "mt-60 bg-[#212529] mb-[32px] m-auto rounded-3xl h-[47px] w-[380px] text-white",
 
         innerText: "Sing In",
         id: "Btn-singIn",
@@ -139,24 +120,19 @@ export function loginForm() {
       document.getElementById("span-envelope").classList.remove("text-black");
       document.getElementById("span-envelope").classList.add("text-gray-500");
     }
-
-    // if(){
-
-    // }
   }
 
   function showPassword() {
     const passInput = document.getElementById("input-password");
     const showPass = document.getElementById("span-eye");
-
     if (passInput.hasAttribute("type")) {
       passInput.removeAttribute("type");
-      showPass.classList.remove("icon-[mdi--eye-off]");
+      showPass.classList.remove("icon-[ion--eye-off]");
       showPass.classList.add("icon-[heroicons-solid--eye]");
     } else {
       passInput.setAttribute("type", "password");
       showPass.classList.remove("icon-[heroicons-solid--eye]");
-      showPass.classList.add("icon-[mdi--eye-off]");
+      showPass.classList.add("icon-[ion--eye-off]");
     }
   }
 

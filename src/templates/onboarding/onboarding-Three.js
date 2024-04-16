@@ -1,7 +1,7 @@
 import Swiper from "swiper/bundle";
 import "swiper/css/bundle";
-import { El } from "../utils/create-element";
-import { Link } from "../components/homePage/link/link";
+import { El } from "../../utils/create-element";
+import { Link } from "../../components/homePage/link/link";
 
 const slides = [
   {
@@ -50,7 +50,7 @@ function slider(item) {
   });
 }
 
-export const StartSlider = () => {
+export const OnboardingThree = () => {
   let swiper;
 
   const configSwiper = () => {

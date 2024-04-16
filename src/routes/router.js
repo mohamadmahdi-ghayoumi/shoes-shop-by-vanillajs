@@ -1,4 +1,5 @@
 import Navigo from "navigo";
+
 import { changePage } from "../utils/change-page";
 import { loginForm } from "../templates/login";
 import { homePage } from "../pages/homePage.js";
@@ -13,42 +14,43 @@ import { homeAllBrands } from "../templates/page-brand/homeAllBrands.js";
 import { mostPopular } from "../templates/mostPopular.js";
 import { cardFullDetail } from "../templates/cardFull.js";
 import { Product } from "../templates/selectedProduct.js";
-import { onboardingOnePage } from "../pages/onboardingOne-page.js";
-import { onboardingTwoPage } from "../pages/onboradingTwo-page.js";
 import { WishlistPage } from "../pages/whishlist-page.js";
 import { myCartPageTemplate } from "../templates/myCartPage.js";
 import { brandPage } from "../templates/brandPage.js";
-import { cardForWishlistPage } from "../components/wishlist/cardForWishlistPage/cardForWishlistPage.js";
 import { searchPage } from "../templates/searchPage.js";
-import { StartSlider } from "../templates/onboardingpage-three.js";
 import { checkoutPage } from "../templates/Orders/checkoutPage.js";
 import { shippingAddressPage } from "../templates/Orders/shippingAddressPage.js";
 import { chooseShipping } from "../templates/Orders/chooseShipping.js";
 import { paymentMethodsPage } from "../templates/Orders/paymentMethodsPage.js";
 import { successfulPage } from "../templates/Orders/successfulPage.js";
 import { myOrdersPage } from "../templates/myOrders.js";
-
-
-// import { cardForWishlistPage } from "../components/wishlist/cardForWishlistPage/cardForWishlistPage.js";
+import { onboardingOnePage } from "../pages/onboarding-page/onboardingOne-page.js";
+import { onboardingTwoPage } from "../pages/onboarding-page/onboradingTwo-page.js";
+import { onboardingThreePage } from "../pages/onboarding-page/onboardingThree-page.js";
 
 export const router = new Navigo("/");
 
 router
-  .on("/", () => {
+  .on("/onboardingpageone", () => {
     changePage(onboardingOnePage);
   })
-  .on("/slider", () => {
-    changePage(StartSlider);
+  .on("/onboardingpagetwo", () => {
+    changePage(onboardingTwoPage);
   })
+  .on("/onboardingpagethree", () => {
+    changePage(onboardingThreePage);
+  })
+  .on("/", () => {
+    changePage(WishlistPage);
+  })
+
   .on("/wishlistpage", () => {
     changePage(WishlistPage);
   })
   .on("/mycartpage", () => {
     changePage(myCartPageTemplate);
   })
-  .on("/onboradingpageTwo", () => {
-    changePage(onboardingTwoPage);
-  })
+
   .on("/login", () => {
     changePage(loginForm);
   })
@@ -99,7 +101,8 @@ router
   })
   .on("/successfulpage", () => {
     changePage(successfulPage);
-  }).on("/myorderspage", () => {
+  })
+  .on("/myorderspage", () => {
     changePage(myOrdersPage);
   })
   .on("/products/:id", ({ data }) => {

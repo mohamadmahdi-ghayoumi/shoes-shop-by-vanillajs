@@ -1,6 +1,6 @@
-import { El } from "../utils/create-element";
+import { El } from "../../utils/create-element";
 
-export function onBordingPageOne() {
+export function OnboardingOne() {
   const Element = El({
     element: "div",
     className: "  ",
@@ -37,7 +37,7 @@ export function onBordingPageOne() {
   });
 
   setTimeout(() => {
-    window.location.href = "/onboradingpageTwo";
+    window.location.href = "/onboardingpagetwo";
   }, "3000");
   return Element;
 }
