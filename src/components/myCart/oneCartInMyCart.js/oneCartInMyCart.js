@@ -15,6 +15,7 @@ export function oneCartInMyCart({ product }) {
     value,
     totalPrice,
   } = product;
+
   let color = "";
   switch (colors) {
     case "bg-red-500":
@@ -52,7 +53,6 @@ export function oneCartInMyCart({ product }) {
       counter--;
       quantityCounter.innerText = counter;
     }
-
   }
 
   function sumBtn(e) {

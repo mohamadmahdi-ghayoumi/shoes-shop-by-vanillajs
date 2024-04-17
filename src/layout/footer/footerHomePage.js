@@ -2,7 +2,7 @@ import { round } from "lodash";
 import { getCardProductForOrder } from "../../api/get/getProducts";
 import { El } from "../../utils/create-element";
 
-export function footerHomePage(classname , iconHome ,iconCart ) {
+export function footerHomePage(classname , iconHome ,iconCart , iconOrder ) {
   function goToCheckout() {
     window.location.href = "/checkout";
   }
@@ -135,8 +135,14 @@ export function footerHomePage(classname , iconHome ,iconCart ) {
                 children: [
                   El({
                     element: "span",
-                    className: "icon-[cil--cart] w-[24px] h-[24px]",
+                    className: `icon-[cil--cart] ${iconOrder} w-[24px] h-[24px]`,
                   }),
+                  //sefid order icon-[cil--cart]
+                  //meshki icon-[bi--cart-dash-fill]
+
+
+
+
                 ],
               }),
               El({
