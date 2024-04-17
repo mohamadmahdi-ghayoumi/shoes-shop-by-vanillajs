@@ -15,9 +15,9 @@ export function oneLocation(name, address, value , checked) {
     console.log(document.getElementById("addressLocation"));
     console.log(e.target);
 
+    // localStorage.setItem("location", JSON.stringify(data));
     const data = { name: namee, address: Addresss };
     console.log(data);
-    // localStorage.setItem("location", JSON.stringify(data));
 
     setLocalStorage("location", data);
   }

@@ -6,8 +6,11 @@ import { promoCode } from "../../components/checkout/promoCode/promoCode";
 import { oneLocation } from "../../components/shippingAddress/oneLocation/oneLocation";
 import { headerBack } from "../../layout/header/headerback";
 import { El } from "../../utils/create-element";
+import { getLocalStorage } from "../../utils/localStorage";
 
 export function checkoutPage() {
+
+
   return El({
     element: "div",
     className: "",

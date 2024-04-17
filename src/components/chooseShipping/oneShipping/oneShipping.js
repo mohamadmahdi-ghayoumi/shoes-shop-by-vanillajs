@@ -16,7 +16,7 @@ export function oneShipping(name, address, classIcon, price, value, checked) {
     const pricee =
       e.target.closest("#parentlocation").children[1].children[1].innerText;
 
-    const data = { name: namee, address: datee, price: pricee };
+    const data = { name: namee, address: datee, price: pricee  , parent: "show" , iconBack:"hidden" , icon : classIcon};
     console.log(data);
     setLocalStorage("shipping", data);
   }
