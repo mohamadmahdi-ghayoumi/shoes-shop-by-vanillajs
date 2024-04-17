@@ -20,11 +20,6 @@ export function oneShipping(name, address, classIcon, price, value, checked) {
     console.log(data);
     setLocalStorage("shipping", data);
   }
-  //   function sendToAnotherFunction(namee, Addresss) {
-  //     // Call the other function here with namee and Addresss as parameters
-  //     // For example:
-  //     shippingAddress(namee, Addresss);
-  //   }
 
   return El({
     element: "div",

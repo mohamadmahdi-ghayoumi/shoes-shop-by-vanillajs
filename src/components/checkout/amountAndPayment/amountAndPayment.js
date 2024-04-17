@@ -76,7 +76,7 @@ export function amountAndPayment() {
       El({
         element: "button",
         className:
-          "bg-black text-white w-[90%] rounded-[60px] relative text-[14px] m-auto h-[60px]",
+          "bg-black text-white w-[90%] rounded-[60px] relative text-[14px] m-auto h-[60px] cursor-pointer hover:bg-gray-900",
         innerText: "Checkout",
         id: "btnAddToCard",
         onclick: addToPayment,

@@ -7,64 +7,40 @@
       "password": "mohamad",
       "orders": [
         {
+          "id": 6,
+          "name": "Converse Phantom Venom Academy FG",
+          "brand": "converse",
+          "gender": "WOMEN",
+          "category": "FOOTBALL",
+          "price": 150,
+          "sizes": "43",
+          "colors": "bg-blue-500",
+          "items_left": 3,
+          "imageURL": "https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/s1amp7uosrn0nqpsxeue/phantom-vision-elite-dynamic-fit-fg-firm-ground-soccer-cleat-19Kv1V.jpg",
+          "slug": "nike-phantom-vision-elite-dynamic-fit-fg",
+          "quantity": "2",
+          "totalPrice": 300,
+          "value": 1713360806004
+        },
+        {
           "id": 1,
           "name": "Nike React Infinity Run Flyknit",
           "brand": "nike",
           "gender": "MEN",
           "category": "RUNNING",
           "price": 160,
-          "sizes": "42",
+          "sizes": "43",
           "colors": "bg-blue-500",
           "items_left": 3,
           "imageURL": "https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/i1-665455a5-45de-40fb-945f-c1852b82400d/react-infinity-run-flyknit-mens-running-shoe-zX42Nc.jpg",
           "slug": "nike-react-infinity-run-flyknit",
           "quantity": "2",
           "totalPrice": 320,
-          "value": 1713343513966
-        },
-        {
-          "id": 4,
-          "name": "Nike Joyride Run Flyknit",
-          "brand": "nike",
-          "gender": "WOMEN",
-          "category": "RUNNING",
-          "price": 180,
-          "sizes": "43",
-          "colors": "bg-[#1a1a1a]",
-          "items_left": 3,
-          "imageURL": "https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/99a7d3cb-e40c-4474-91c2-0f2e6d231fd2/joyride-run-flyknit-womens-running-shoe-HcfnJd.jpg",
-          "slug": "nike-joyride-run-flyknit",
-          "quantity": "2",
-          "totalPrice": 360,
-          "value": 1713343519917
+          "value": 1713360918318
         }
       ],
-      "wishlist": [
-        {
-          "id": 4,
-          "name": "Nike Joyride Run Flyknit",
-          "brand": "nike",
-          "gender": "WOMEN",
-          "category": "RUNNING",
-          "price": 180,
-          "sizes": [
-            41,
-            43,
-            45
-          ],
-          "colors": [
-            "black",
-            "brown",
-            "white",
-            "blue",
-            "red"
-          ],
-          "items_left": 3,
-          "imageURL": "https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/99a7d3cb-e40c-4474-91c2-0f2e6d231fd2/joyride-run-flyknit-womens-running-shoe-HcfnJd.jpg",
-          "slug": "nike-joyride-run-flyknit"
-        }
-      ],
-      "cart": [ ]
+      "wishlist": [],
+      "cart": []
     }
   ],
   "products": [

@@ -33,7 +33,7 @@ export function ShippingAddress() {
               El({
                 element: "span",
                 className:
-                  "icon-[el--map-marker-alt] w-[60px] h-[60px] m-auto absolute bottom-[10px] end-[10px]",
+                  "icon-[el--map-marker-alt]  w-[60px] h-[60px] m-auto absolute bottom-[10px] end-[10px]",
               }),
             ],
           }),
@@ -60,7 +60,7 @@ export function ShippingAddress() {
             element: "span",
             onclick: goToAddress,
 
-            className: "icon-[eva--edit-2-fill] w-8 h-8",
+            className: "icon-[eva--edit-2-fill] w-8 h-8 cursor-pointer",
           }),
         ],
       }),

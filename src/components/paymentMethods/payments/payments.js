@@ -49,7 +49,7 @@ export function payments() {
       El({
         element: "button",
         className:
-          "bg-black text-white w-[90%] rounded-[60px] mt-50  text-[20px] m-auto h-[60px]",
+          "bg-black text-white w-[90%] rounded-[60px] mt-50 cursor-pointer hover:bg-gray-900 text-[20px] m-auto h-[60px]",
         innerText: "Apply",
         onclick: finishOrder,
       }),

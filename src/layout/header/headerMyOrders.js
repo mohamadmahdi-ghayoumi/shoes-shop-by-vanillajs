@@ -48,7 +48,7 @@ export function headerMyOrders() {
               }),
               El({
                 element: "span",
-                className: `w-[32px] h-[32px] icon-[icon-park-outline--more-two] mt-[21px] mr-[24px]`,
+                className: `w-[32px] h-[32px] icon-[circum--circle-more] mt-[21px] mr-[24px]`,
               }),
             ],
           }),

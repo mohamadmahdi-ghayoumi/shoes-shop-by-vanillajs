@@ -15,7 +15,7 @@ export function checkoutPage() {
     element: "div",
     className: "",
     children: [
-      headerBack("Checkout", "icon-[gg--more-o]"),
+      headerBack("Checkout", "icon-[circum--circle-more]"),
       ShippingAddress(),
       orderList(),
       chooseShippingType(),

@@ -14,6 +14,12 @@ export function myCartPageTemplate() {
 
   const dataShipping = { name: "", address: "", price: " 0"  , parent : "hidden" , iconBack : "show"};
   setLocalStorage("shipping", dataShipping);
+  
+  
+  
+  
+  
+  
   const Elemenet = El({
     element: "div",
     className: " h-[926px] ",
@@ -31,7 +37,7 @@ export function myCartPageTemplate() {
         id: "home",
         children: [renderMyCart()],
       }),
-      footerHomePage("", "icon-[clarity--home-line]", "icon-[bi--bag-fill]"),
+      footerHomePage("", "icon-[clarity--home-line]", "icon-[bi--bag-fill]" , " icon-[cil--cart]"),
       modalDeleteOverlay(),
       modalDelete(),
     ],

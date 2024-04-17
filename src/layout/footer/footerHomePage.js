@@ -2,7 +2,7 @@ import { round } from "lodash";
 import { getCardProductForOrder } from "../../api/get/getProducts";
 import { El } from "../../utils/create-element";
 
-export function footerHomePage(classname , iconHome ,iconCart , iconOrder ) {
+export function footerHomePage(classname, iconHome, iconCart, iconOrder) {
   function goToCheckout() {
     window.location.href = "/checkout";
   }
@@ -47,7 +47,7 @@ export function footerHomePage(classname , iconHome ,iconCart , iconOrder ) {
           El({
             element: "button",
             className:
-              "bg-black text-white w-[65%] rounded-3xl relative text-[14px]",
+              "bg-black text-white w-[65%] rounded-3xl relative hover:bg-gray-900 cursor-pointer text-[14px]",
             innerText: "Add to Card",
             id: "btnAddToCard",
             onclick: goToCheckout,
@@ -80,11 +80,8 @@ export function footerHomePage(classname , iconHome ,iconCart , iconOrder ) {
                     element: "span",
                     className: `${iconHome} w-[24px] h-[24px]`,
                   }),
-//home sefiiiiid icon-[clarity--home-line]
-// meshki   icon-[ion--home-sharp]
-
-
-
+                  //home sefiiiiid icon-[clarity--home-line]
+                  // meshki   icon-[ion--home-sharp]
                 ],
               }),
               El({
@@ -99,29 +96,25 @@ export function footerHomePage(classname , iconHome ,iconCart , iconOrder ) {
             element: "div",
             className: "flex flex-col  items-center",
             children: [
-              
-              
               El({
                 element: "a",
                 href: "./mycartpage",
                 children: [
-              El({
-                element: "span",
-                id: "iconCart",
-                className:
-                  ` ${iconCart} w-[24px] h-[24px]`,
-              }),
-            ]
-          }),
-// sefid    icon-[bi--bag]
-              //meshkiii    icon-[bi--bag-fill]
-             
                   El({
                     element: "span",
-                    className: "",
-                    innerText: "Cart",
+                    id: "iconCart",
+                    className: ` ${iconCart} w-[24px] h-[24px] cursor-pointer`,
                   }),
-               
+                ],
+              }),
+              // sefid    icon-[bi--bag]
+              //meshkiii    icon-[bi--bag-fill]
+
+              El({
+                element: "span",
+                className: "",
+                innerText: "Cart",
+              }),
             ],
           }),
 
@@ -131,18 +124,14 @@ export function footerHomePage(classname , iconHome ,iconCart , iconOrder ) {
             children: [
               El({
                 element: "a",
-                href: "./",
+                href: "./myorderspage",
                 children: [
                   El({
                     element: "span",
-                    className: `icon-[cil--cart] ${iconOrder} w-[24px] h-[24px]`,
+                    className: ` ${iconOrder} w-[24px] h-[24px] cursor-pointer`,
                   }),
                   //sefid order icon-[cil--cart]
                   //meshki icon-[bi--cart-dash-fill]
-
-
-
-
                 ],
               }),
               El({
@@ -158,12 +147,12 @@ export function footerHomePage(classname , iconHome ,iconCart , iconOrder ) {
             className: "flex flex-col items-center",
             children: [
               El({
-                element: "a",
-                href: "./",
+                element: "div",
+                href: "",
                 children: [
                   El({
                     element: "span",
-                    className: "icon-[bi--wallet2] w-[24px] h-[24px]",
+                    className: "icon-[bi--wallet2] w-[24px] h-[24px] cursor-pointer" ,
                   }),
                 ],
               }),
@@ -180,13 +169,13 @@ export function footerHomePage(classname , iconHome ,iconCart , iconOrder ) {
             className: "flex flex-col items-center",
             children: [
               El({
-                element: "a",
-                href: "./",
+                element: "div",
+                href: "",
                 children: [
                   El({
                     element: "span",
                     className:
-                      "icon-[iconamoon--profile-light] w-[24px] h-[24px]",
+                      "icon-[iconamoon--profile-light] w-[24px] h-[24px] cursor-pointer",
                   }),
                 ],
               }),

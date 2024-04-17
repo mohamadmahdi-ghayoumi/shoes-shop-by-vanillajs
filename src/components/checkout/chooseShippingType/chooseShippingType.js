@@ -46,7 +46,7 @@ export function chooseShippingType() {
               El({
                 onclick: goToShipping,
                 element: "span",
-                className: `icon-[ooui--next-ltr] w-7 h-7 `,
+                className: `icon-[ooui--next-ltr] w-7 h-7 cursor-pointer`,
               }),
             ],
           }),
@@ -112,7 +112,7 @@ export function chooseShippingType() {
                     element: "span",
                     onclick: goToShipping,
 
-                    className: "icon-[eva--edit-2-fill] w-8 h-8",
+                    className: "icon-[eva--edit-2-fill] w-8 h-8 cursor-pointer",
                   }),
                 ],
               }),

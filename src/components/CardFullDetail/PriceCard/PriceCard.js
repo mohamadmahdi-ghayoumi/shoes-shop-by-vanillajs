@@ -8,27 +8,23 @@ export function PriceCard({ product }) {
     const color = document.querySelector("input[name='color']:checked");
     const size = document.querySelector("input[name='size']:checked");
     const price = document.getElementById("totalPrice").innerText;
-
     const quantity = document.querySelector("#span-count").innerText;
     console.log(product.price * quantity);
 
     if (color !== null && size !== null && quantity != "0") {
-      // console.log(size.value);
-      // console.log(quantity);
+
       const colorValue = color.value;
       const sizeValue = size.value;
-      console.log(quantity);
-
+      window.location.href = "/homepage";
       const data = {
         ...product,
         colors: colorValue,
         sizes: sizeValue,
-        quantity: quantity, //quantity
+        quantity: quantity, 
         totalPrice: product.price * quantity,
         value: Date.now(),
       };
       console.log(data);
-
       addToCart(data);
     } else {
     }
@@ -58,7 +54,7 @@ export function PriceCard({ product }) {
       El({
         element: "button",
         className:
-          "bg-black text-white w-full rounded-3xl relative text-[14px]",
+          "bg-black text-white w-full rounded-3xl hover:bg-gray-900 relative text-[14px]",
         innerText: "Add to Card",
         id: "btnAddToCard",
         onclick: addToCard,

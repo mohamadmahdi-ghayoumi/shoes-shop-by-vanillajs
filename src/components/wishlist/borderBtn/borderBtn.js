@@ -6,7 +6,7 @@ export function borderBtn({ Brand , classname}) {
   const button = El({
     element: "div",
     className:
-    `border-[2px] rounded-full whitespace-nowrap font-semibold filter-button border-black inline-block ${classname} px-[20px] text-[16px] m-auto	py-[5px]`,
+    `border-[2px] rounded-full whitespace-nowrap font-semibold filter-button cursor-pointer border-black inline-block ${classname} px-[20px] text-[16px] m-auto	py-[5px]`,
     innerText: Brand,
   });
   
