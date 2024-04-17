@@ -23,7 +23,8 @@ export function OneCardCompleted(product) {
   const Element = El({
     element: "div",
     value: "value",
-    className: "h-[150px] mt-10 flex gap-4 cart w-[426px] justify-center ",
+    className:
+      "h-[150px] mt-10 flex gap-4 cart  justify-center rounded-xl bg-white py-2",
     id: "parentcartt",
     children: [
       El({
@@ -39,7 +40,7 @@ export function OneCardCompleted(product) {
           El({
             element: "p",
             id: "id",
-            className: "font-bold text-[20px] truncate w-[200px] ",
+            className: "font-bold  text-[20px] truncate w-[200px] ",
             innerText: product.name,
           }),
           //whitespace-nowrap overflow-hidden overflow-ellipsis
