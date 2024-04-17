@@ -1,4 +1,4 @@
-import { BorderButtonsWishlist } from "../components/Wishlist/BorderButtonsWishlist/BorderButtonsWishlist";
+import { BorderBtnsWishlist } from "../components/Wishlist/BorderBtnsWishlist/BorderBtnsWishlist";
 import { RenderWishlist } from "../components/Wishlist/RenderWishlist/RenderWishlist";
 import { headerBack } from "../layout/header/headerback";
 import { El } from "../utils/create-element";
@@ -9,7 +9,7 @@ export function WishlistPageTemplate() {
     className: "",
     children: [
       headerBack("My Wishlist", "icon-[iconamoon--search-thin]"),
-      BorderButtonsWishlist(),
+      BorderBtnsWishlist(),
       El({
         element: "div",
         id: "home",

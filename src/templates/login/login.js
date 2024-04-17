@@ -1,5 +1,6 @@
 import { getUser } from "../../api/get/getUser";
 import { headerBack } from "../../layout/header/headerback";
+import { setCookie } from "../../utils/coockie";
 import { El } from "../../utils/create-element";
 
 export function login() {
@@ -71,6 +72,7 @@ export function login() {
           El({
             element: "input",
             className: "accent-black",
+            id: "inputRemember",
             type: "checkbox",
           }),
           El({
@@ -137,6 +139,7 @@ export function login() {
   }
 
   function btnSingIn() {
+    const inputRemember = document.getElementById("inputRemember").checked;
     getUser().then((data) => {
       console.log(data.password);
       const inputPass = document.getElementById("input-password");
@@ -145,14 +148,13 @@ export function login() {
         inputPass.value == data[0].password &&
         inputEmail.value == data[0].email
       ) {
+        setCookie("email", inputEmail.value, inputRemember ? 7 : "session");
+        window.location.href = "/homepage";
+
         console.log("ok");
       } else {
         console.log("zart");
-        // location.assign("/home");
-        window.location.href = "/homepage";
-        // document.addEventListener("animalfound", (e) => {
-        //   console.log(e.detail.name);
-        // });
+     
       }
     });
   }

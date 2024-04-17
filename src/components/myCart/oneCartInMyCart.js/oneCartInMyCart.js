@@ -2,7 +2,7 @@ import { getItemForEditCard } from "../../../api/get/getProducts";
 import { editCart } from "../../../api/post/postProduct";
 import { El } from "../../../utils/create-element";
 
-export function oneCartInMyCart({ product }) {
+export function OneCartInMyCart({ product }) {
   const {
     name,
     price,

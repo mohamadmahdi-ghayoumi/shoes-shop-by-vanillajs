@@ -1,6 +1,6 @@
-import { modalDelete } from "../components/myCart/modalDelete/modalDelete";
-import { modalDeleteOverlay } from "../components/myCart/modalDelete/modalDeleteOverlay";
-import { renderMyCart } from "../components/myCart/renderMyCard/renderMyCart";
+import { ModalDelete } from "../components/MyCart/ModalDelete/ModalDelete";
+import { ModalDeleteOverlay } from "../components/MyCart/ModalDelete/ModalDeleteOverlay";
+import { RenderMyCart } from "../components/MyCart/RenderMyCart/RenderMyCart";
 import { footerHomePage } from "../layout/footer/footerHomePage";
 import { headerMyCart } from "../layout/header/headerMyCart";
 import { El } from "../utils/create-element";
@@ -33,7 +33,7 @@ export function myCartPageTemplate() {
       El({
         element: "div",
         id: "home",
-        children: [renderMyCart()],
+        children: [RenderMyCart()],
       }),
       footerHomePage(
         "",
@@ -41,8 +41,8 @@ export function myCartPageTemplate() {
         "icon-[bi--bag-fill]",
         " icon-[cil--cart]"
       ),
-      modalDeleteOverlay(),
-      modalDelete(),
+      ModalDeleteOverlay(),
+      ModalDelete(),
     ],
   });
 

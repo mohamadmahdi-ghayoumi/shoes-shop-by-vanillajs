@@ -1,8 +1,8 @@
 import { El } from "../../../utils/create-element";
-import { renderMyCart } from "../renderMyCard/renderMyCart";
+import { RenderMyCart } from "../RenderMyCart/RenderMyCart";
 
 
-export function borderBtnMyCart({ Brand }) {
+export function BorderBtnMyCart({ Brand }) {
   const button = El({
     element: "div",
     className:
@@ -18,7 +18,7 @@ export function borderBtnMyCart({ Brand }) {
       render.remove();
     }
     const main = document.getElementById("home");
-    let productFilter = renderMyCart(filterBrand);
+    let productFilter = RenderMyCart(filterBrand);
 
     // console.log(productFilter);
 

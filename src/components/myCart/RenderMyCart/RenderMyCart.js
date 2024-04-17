@@ -3,9 +3,9 @@
 import { getCardProduct } from "../../../api/get/getProducts";
 import { El } from "../../../utils/create-element";
 // import { CardForWishlistPage } from "../../Wishlist/OneCartInMyCart/OneCartInMyCart";
-import { oneCartInMyCart } from "../oneCartInMyCart.js/oneCartInMyCart";
+import { OneCartInMyCart } from "../OneCartInMyCart.js/OneCartInMyCart";
 
-export function renderMyCart() {
+export function RenderMyCart() {
   const Element = El({
     element: "div",
     className:

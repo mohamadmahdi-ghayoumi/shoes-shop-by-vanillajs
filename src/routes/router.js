@@ -27,93 +27,233 @@ import { onboardingThreePage } from "../pages/onboarding-page/onboardingThree-pa
 import { loginPage } from "../pages/login-page/login-page.js";
 import { cardFullDetailPage } from "../pages/cardFullDetail-page/cardFullDetail-page.js";
 import { homePage } from "../pages/home-page/home-page.js";
+import { getCookie } from "../utils/coockie.js";
 
 export const router = new Navigo("/");
+const c = getCookie("email")
 
 router
   .on("/onboardingpageone", () => {
-    changePage(onboardingOnePage);
+    if(c.length){
+      changePage(homePage);
+}
+else {
+  changePage(onboardingOnePage);
+}
   })
   .on("/onboardingpagetwo", () => {
-    changePage(onboardingTwoPage);
+    if(c.length){
+      changePage(homePage);
+}
+else {
+  changePage(onboardingTwoPage);
+}
   })
   .on("/onboardingpagethree", () => {
-    changePage(onboardingThreePage);
+    if(c.length){
+      changePage(homePage);
+}
+else {
+  changePage(onboardingThreePage);
+}
   })
   .on("/login", () => {
-    changePage(loginPage);
+    if(c.length){
+      changePage(homePage);
+}
+else {
+  changePage(loginPage);
+}
   })
   .on("/", () => {
-    changePage(WishlistPage);
+
+    if(c.length){
+      changePage(homePage);
+}
+else {
+  changePage(WishlistPage);
+}
   })
 
   .on("/wishlistpage", () => {
-    changePage(WishlistPage);
+    if(c.length){
+      changePage(homePage);
+}
+else {
+  changePage(WishlistPage);
+}
+    
   })
   .on("/mycartpage", () => {
-    changePage(myCartPageTemplate);
+    if(c.length){
+      changePage(homePage);
+}
+else {
+  changePage(myCartPageTemplate);
+}
   })
 
   .on("/homepage", () => {
-    changePage(homePage);
+    if(c.length){
+          changePage(homePage);
+    }
+    else {
+      changePage(loginPage)
+    }
   })
   .on("/shoes-adidas", () => {
-    changePage(homeAdidas);
+    if(c.length){
+      changePage(homePage);
+}
+else {
+  changePage(homeAdidas);
+}
   })
   .on("/shoes-nike", () => {
-    changePage(homeNike);
+    if(c.length){
+      changePage(homePage);
+}
+else {
+  changePage(homeNike);
+}
   })
   .on("/shoes-reebok", () => {
-    changePage(homeReebok);
+    if(c.length){
+      changePage(homePage);
+}
+else {
+  changePage(homeReebok);
+}
   })
   .on("/shoes-newbalance", () => {
-    changePage(homeNewBalance);
+    if(c.length){
+      changePage(homePage);
+}
+else {
+  changePage(homeNewBalance);
+}
   })
   .on("/shoes-asics", () => {
-    changePage(homeAsics);
+    if(c.length){
+      changePage(homePage);
+}
+else {
+  changePage(homeAsics);
+}
   })
   .on("/shoes-puma", () => {
-    changePage(homePuma);
+    if(c.length){
+      changePage(homePage);
+}
+else {
+  changePage(homePuma);
+}
   })
   .on("/shoes-converse", () => {
-    changePage(homeConverse);
+    if(c.length){
+      changePage(homePage);
+}
+else {
+  changePage(homeConverse);
+}
   })
   .on("/shoes-allbrands", () => {
-    changePage(homeAllBrands);
+    if(c.length){
+      changePage(homePage);
+}
+else {
+  changePage(homeAllBrands);
+}
   })
   .on("/shoes-mostpopular", () => {
+    if(c.length){
+      changePage(homePage);
+}
+else {
     changePage(mostPopular);
+}
   })
   .on("/cardfulldetail", () => {
-    changePage();
+    if(c.length){
+      changePage(homePage);
+}
+else {
+  changePage(cardFullDetailPage);
+}
   })
   .on("/checkout", () => {
-    changePage(checkoutPage);
+    if(c.length){
+      changePage(homePage);
+}
+else {
+  changePage(checkoutPage);
+}
   })
   .on("/shippingaddresspage", () => {
-    changePage(shippingAddressPage);
+    if(c.length){
+      changePage(homePage);
+}
+else {
+  changePage(shippingAddressPage);
+}
+    
   })
   .on("/chooseshipping", () => {
-    changePage(chooseShipping);
+    if(c.length){
+      changePage(homePage);
+}
+else {
+  changePage(chooseShipping);
+}
   })
   .on("/paymentmethods", () => {
-    changePage(paymentMethodsPage);
+    if(c.length){
+      changePage(homePage);
+}
+else {
+  changePage(paymentMethodsPage);
+}
   })
   .on("/successfulpage", () => {
-    changePage(successfulPage);
+    if(c.length){
+      changePage(homePage);
+}
+else {
+  changePage(successfulPage);
+}
   })
   .on("/myorderspage", () => {
-    changePage(myOrdersPage);
+    if(c.length){
+      changePage(homePage);
+}
+else {
+  changePage(myOrdersPage);
+}
   })
   .on("/products/:id", ({ data }) => {
-    changePage(Product, data);
+    if(c.length){
+      changePage(homePage);
+}
+else {
+  changePage(Product, data);
+}
   })
   .on("/brand/:brand", ({ data }) => {
-    console.log(data);
-    changePage(brandPage, data);
+    if(c.length){
+      changePage(homePage);
+}
+else {
+  changePage(brandPage, data);
+}
   })
   .on("/searchpage", () => {
     changePage(searchPage);
+    if(c.length){
+      changePage(homePage);
+}
+else {
+  changePage(searchPage);
+}
   });
 // .on("/", () => {
 //   changePage(cardForWishlistPage);

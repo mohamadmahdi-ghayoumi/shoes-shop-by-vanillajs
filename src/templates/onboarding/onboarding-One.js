@@ -1,4 +1,5 @@
 import { El } from "../../utils/create-element";
+import { getLocalStorage, setLocalStorage } from "../../utils/localStorage";
 
 export function OnboardingOne() {
   const Element = El({
@@ -36,8 +37,22 @@ export function OnboardingOne() {
     ],
   });
 
-  setTimeout(() => {
+  const user = getLocalStorage("user");
+  console.log([...user].length);
+  if ([...user].length != 0) {
+    console.log([...user].length);
+
+    setLocalStorage("user", "b");
     window.location.href = "/onboardingpagetwo";
-  }, "3000");
-  return Element;
+
+  } else {
+    console.log("[...]");
+    setLocalStorage("user", "b");
+    setTimeout(() => {
+      window.location.href = "/onboardingpagetwo";
+    }, "1000");
+    return Element;
+  }
+  console.log(user);
+  console.log(typeof user);
 }

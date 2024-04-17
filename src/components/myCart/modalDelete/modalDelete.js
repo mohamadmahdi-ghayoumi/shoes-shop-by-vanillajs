@@ -1,9 +1,9 @@
 import { El } from "../../../utils/create-element";
-import { oneCartInMyCart } from "../oneCartInMyCart.js/oneCartInMyCart";
-import { renderMyCart } from "../renderMyCard/renderMyCart";
+import { OneCartInMyCart } from "../OneCartInMyCart.js/OneCartInMyCart";
 import { deleteCardProduct } from "../../../api/delete/deleteProducts";
+import { RenderMyCart } from "../RenderMyCart/RenderMyCart";
 
-export function modalDelete() {
+export function ModalDelete() {
   function removeBtn(e) {
     document.getElementById("footer").classList.remove("hidden");
     document.getElementById("modalDelete").classList.add("hidden");
@@ -12,7 +12,7 @@ export function modalDelete() {
     deleteCardProduct(value).then((data) => {
       const main = document.getElementById("home");
       main.innerText = "";
-      main.append(renderMyCart());
+      main.append(RenderMyCart());
     });
   }
 

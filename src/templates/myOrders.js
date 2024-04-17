@@ -1,4 +1,4 @@
-import { MainOrders } from "../components/myOrders/MainOrders/MainOrders";
+import { MainOrders } from "../components/MyOrders/MainOrders/MainOrders";
 import { footerHomePage } from "../layout/footer/footerHomePage";
 import { headerMyOrders } from "../layout/header/headerMyOrders";
 import { El } from "../utils/create-element";
