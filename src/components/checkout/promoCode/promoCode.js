@@ -1,6 +1,6 @@
 import { El } from "../../../utils/create-element";
 
-export function promoCode() {
+export function PromoCode() {
 
   return El({
     element: "div",

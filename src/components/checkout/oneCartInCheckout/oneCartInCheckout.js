@@ -1,6 +1,6 @@
 import { El } from "../../../utils/create-element";
 
-export function oneCartInCheckout({ product }) {
+export function OneCartInCheckout({ product }) {
   const { name, price, imageURL, id, colors, sizes, quantity, value , totalPrice} = product;
   let color = "";
   switch (colors) {

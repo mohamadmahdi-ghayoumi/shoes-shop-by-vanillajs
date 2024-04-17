@@ -1,5 +1,6 @@
 import { getProductsSearch } from "../../../api/get/getProducts";
-import { cardForWishlistPage } from "../../wishlist/cardForWishlistPage/cardForWishlistPage";
+import { oneCartInMyCart } from "../../myCart/oneCartInMyCart.js/oneCartInMyCart";
+
 
 export function renderCardApiSearch() {
   const searchInput = document.getElementById("inputSearch").value;
@@ -8,17 +9,13 @@ export function renderCardApiSearch() {
 
   cardsProduct.innerHTML = "";
   getProductsSearch(searchInput).then((data) => {
-
     const cardsProduct = document.getElementById("cardsProduct");
 
     data.map((product) => {
-      const cardSearch = cardForWishlistPage({ product });
+      const cardSearch = oneCartInMyCart({ product });
       return cardsProduct.append(cardSearch);
     });
 
-
-
-    
     if (Object.prototype.hasOwnProperty.call(data, "length")) {
       console.log(data.length);
       const countData = document.getElementById("countData");

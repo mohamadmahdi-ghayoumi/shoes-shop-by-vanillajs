@@ -1,6 +1,6 @@
-import { locations } from "../../components/shippingAddress/locations/locations";
-import { modalOverlay } from "../../components/successful/modalOverlay";
-import { successful } from "../../components/successful/successful";
+
+import { ModalOverlay } from "../../components/Successful/ModalOverlay";
+import { Successful } from "../../components/Successful/Successful";
 import { El } from "../../utils/create-element";
 
 export function successfulPage() {
@@ -8,6 +8,6 @@ export function successfulPage() {
     element: "div",
     className: "relative px-[24px]  flex justify-center items-center h-screen",
     inntText: "gdfg",
-    children: [ modalOverlay(),successful()],
+    children: [ModalOverlay(), Successful()],
   });
 }

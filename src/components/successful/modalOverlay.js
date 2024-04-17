@@ -1,6 +1,6 @@
 import { El } from "../../utils/create-element";
 
-export function modalOverlay() {
+export function ModalOverlay() {
   return El({
     element: "div",
     id: "overlayModal",

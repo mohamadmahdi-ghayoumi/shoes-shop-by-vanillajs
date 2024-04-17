@@ -2,9 +2,9 @@ import { deleteCardProductForCart } from "../../../api/delete/deleteProducts";
 import { getCardProductForOrder } from "../../../api/get/getProducts";
 import { addToOrder } from "../../../api/post/postProduct";
 import { El } from "../../../utils/create-element";
-import { onePayment } from "../onePayment/onePayment";
+import { OnePayment } from "../OnePayment/OnePayment";
 
-export function payments() {
+export function Payments() {
   function finishOrder() {
     
       getCardProductForOrder().then((data) => {
@@ -27,19 +27,19 @@ export function payments() {
         className: "text-gray-700",
         innerText: "Select the payment method you want to use",
       }),
-      onePayment(
+      OnePayment(
         "My wallet",
         "icon-[solar--wallet-bold] checked:bg-black",
         "$9.379",
         "economy",
         "My walle"
       ),
-      onePayment("PayPal", "icon-[logos--paypal]", "", "PayPal"),
+      OnePayment("PayPal", "icon-[logos--paypal]", "", "PayPal"),
 
-      onePayment("Google Pay", "icon-[devicon--google]", "", "Google Pay"),
+      OnePayment("Google Pay", "icon-[devicon--google]", "", "Google Pay"),
 
-      onePayment("Apple", "icon-[ic--twotone-apple]", "", "Apple"),
-      onePayment(
+      OnePayment("Apple", "icon-[ic--twotone-apple]", "", "Apple"),
+      OnePayment(
         ".... .... .... ....4679",
         "icon-[logos--mastercard]",
         "",

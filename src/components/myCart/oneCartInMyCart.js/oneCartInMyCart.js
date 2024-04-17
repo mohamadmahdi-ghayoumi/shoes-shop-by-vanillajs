@@ -1,7 +1,6 @@
 import { getItemForEditCard } from "../../../api/get/getProducts";
 import { editCart } from "../../../api/post/postProduct";
 import { El } from "../../../utils/create-element";
-import { Link } from "../../homePage/link/link";
 
 export function oneCartInMyCart({ product }) {
   const {
@@ -106,16 +105,13 @@ export function oneCartInMyCart({ product }) {
     className: " h-[130px]  mt-[24px]  flex gap-3 w-full cart",
     id: "parentcartt",
     children: [
-      Link({
-        href: `/products/${id}`,
-        children: [
+    
           El({
             element: "img",
             className: "rounded-2xl  w-[130px]",
             src: imageURL,
           }),
-        ],
-      }),
+      
 
       El({
         element: "div",

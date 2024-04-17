@@ -1,7 +1,7 @@
 import { El } from "../../../utils/create-element";
 import { getLocalStorage } from "../../../utils/localStorage";
 
-export function chooseShippingType() {
+export function ChooseShippingType() {
   const shipping = getLocalStorage("shipping");
   // if (shipping.price == 0) {
   //   document.getElementById("parentShipping").classList.add("hidden");

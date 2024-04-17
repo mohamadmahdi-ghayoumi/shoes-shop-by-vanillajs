@@ -1,5 +1,5 @@
 import { El } from "../../../utils/create-element";
-import { Link } from "../link/link";
+import { Link } from "../../../utils/link";
 
 export function CartProduct({ product }) {
   const { name, price, imageURL, id } = product;

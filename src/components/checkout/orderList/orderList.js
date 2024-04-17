@@ -1,7 +1,7 @@
 import { El } from "../../../utils/create-element";
-import { renderOrderCart } from "../renderOrderCart/renderOrderCart";
+import { RenderCartCheckout } from "../RenderCartCheckout.js/RenderCartCheckout";
 
-export function orderList() {
+export function OrderList() {
   return El({
     element: "div",
     className: "mx-[24px] mt-10",
@@ -15,7 +15,7 @@ export function orderList() {
       El({
         element: "div",
         className: "font-bold text-[25px] mb-[35px]",
-        children: [renderOrderCart()],
+        children: [RenderCartCheckout()],
       }),
     ],
   });

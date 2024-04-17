@@ -1,26 +1,22 @@
-import { ShippingAddress } from "../../components/checkout/ShippingAddress/shippingAddress";
-import { amountAndPayment } from "../../components/checkout/amountAndPayment/amountAndPayment";
-import { chooseShippingType } from "../../components/checkout/chooseShippingType/chooseShippingType";
-import { orderList } from "../../components/checkout/orderList/orderList";
-import { promoCode } from "../../components/checkout/promoCode/promoCode";
-import { oneLocation } from "../../components/shippingAddress/oneLocation/oneLocation";
+import { ShippingAddress } from "../../components/Checkout/ShippingAddress/ShippingAddress";
+import { AmountAndPayment } from "../../components/Checkout/AmountAndPayment/AmountAndPayment";
+import { ChooseShippingType } from "../../components/Checkout/ChooseShippingType/ChooseShippingType";
+import { OrderList } from "../../components/Checkout/OrderList/OrderList";
+import { PromoCode } from "../../components/Checkout/PromoCode/PromoCode";
 import { headerBack } from "../../layout/header/headerback";
 import { El } from "../../utils/create-element";
-import { getLocalStorage } from "../../utils/localStorage";
 
 export function checkoutPage() {
-
-
   return El({
     element: "div",
     className: "",
     children: [
       headerBack("Checkout", "icon-[circum--circle-more]"),
       ShippingAddress(),
-      orderList(),
-      chooseShippingType(),
-      promoCode(),
-      amountAndPayment(),
+      OrderList(),
+      ChooseShippingType(),
+      PromoCode(),
+      AmountAndPayment(),
     ],
   });
 }

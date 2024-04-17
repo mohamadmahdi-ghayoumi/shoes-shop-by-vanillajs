@@ -2,7 +2,7 @@
 
 import { getCardProduct } from "../../../api/get/getProducts";
 import { El } from "../../../utils/create-element";
-import { cardForWishlistPage } from "../../wishlist/cardForWishlistPage/cardForWishlistPage";
+// import { CardForWishlistPage } from "../../Wishlist/OneCartInMyCart/OneCartInMyCart";
 import { oneCartInMyCart } from "../oneCartInMyCart.js/oneCartInMyCart";
 
 export function renderMyCart() {

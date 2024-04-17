@@ -2,7 +2,7 @@ import { El } from "../../../utils/create-element";
 import { setLocalStorage } from "../../../utils/localStorage";
 // import { setLocalStorage } from "../../../utils/localStorage";
 
-export function oneLocation(name, address, value , checked) {
+export function OneLocation(name, address, value , checked) {
   function radioLocation(e) {
     console.log("Clicked location: " + this.value);
     const namee =

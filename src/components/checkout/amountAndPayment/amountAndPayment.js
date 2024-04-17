@@ -1,7 +1,7 @@
 import { El } from "../../../utils/create-element";
 import { getLocalStorage } from "../../../utils/localStorage";
 
-export function amountAndPayment() {
+export function AmountAndPayment() {
   const shipping = getLocalStorage("shipping");
   const totalPrice = getLocalStorage("totalPriceAmount");
 

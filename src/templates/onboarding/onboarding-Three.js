@@ -1,7 +1,7 @@
 import Swiper from "swiper/bundle";
 import "swiper/css/bundle";
 import { El } from "../../utils/create-element";
-import { Link } from "../../components/homePage/link/link";
+import { Link } from "../../utils/link";
 
 const slides = [
   {

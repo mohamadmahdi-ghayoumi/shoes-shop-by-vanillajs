@@ -1,9 +1,9 @@
 import { getWishlistProduct } from "../../../api/get/getProducts";
 import { El } from "../../../utils/create-element";
-import { cardForWishlistPage } from "../cardForWishlistPage/cardForWishlistPage";
+import { CardForWishlistPage } from "../CardForWishlistPage/CardForWishlistPage";
 // import { productcarts } from "../widget/productcarts";
 
-export function renderWishlist(filter) {
+export function RenderWishlist(filter) {
   if (!filter) {
     filter = "all";
   }
@@ -17,7 +17,7 @@ export function renderWishlist(filter) {
 
   getWishlistProduct(filter).then((carts) => {
     carts.map((product) => {
-      const productCard = cardForWishlistPage({ product });
+      const productCard = CardForWishlistPage({ product });
       Element.append(productCard);
     });
   });

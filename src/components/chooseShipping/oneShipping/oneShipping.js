@@ -1,10 +1,8 @@
 import { El } from "../../../utils/create-element";
 import { setLocalStorage } from "../../../utils/localStorage";
 
-export function oneShipping(name, address, classIcon, price, value, checked) {
+export function OneShipping(name, address, classIcon, price, value, checked) {
   function radioLocation(e) {
-    // localStorage.removeItem("shipping");
-
     console.log("Clicked location: " + this.value);
     const namee =
       e.target.closest("#parentlocation").children[0].children[1].children[0]
@@ -12,12 +10,9 @@ export function oneShipping(name, address, classIcon, price, value, checked) {
     const datee =
       e.target.closest("#parentlocation").children[0].children[1].children[1]
         .innerText;
-
     const pricee =
       e.target.closest("#parentlocation").children[1].children[1].innerText;
-
     const data = { name: namee, address: datee, price: pricee  , parent: "show" , iconBack:"hidden" , icon : classIcon};
-    console.log(data);
     setLocalStorage("shipping", data);
   }
 

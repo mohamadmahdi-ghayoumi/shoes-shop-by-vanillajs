@@ -1,5 +1,5 @@
-import { router } from "../../../routes/router";
-import { El } from "../../../utils/create-element";
+import { router } from "../routes/router";
+import { El } from "./create-element";
 
 export function Link({ href, ...rest }) {
   return El({

@@ -1,9 +1,9 @@
 import { getCardProduct } from "../../../api/get/getProducts";
 import { El } from "../../../utils/create-element";
 import { setLocalStorage } from "../../../utils/localStorage";
-import { oneCartInCheckout } from "../oneCartInCheckout/oneCartInCheckout";
+import { OneCartInCheckout } from "../OneCartInCheckout/OneCartInCheckout";
 
-export function renderOrderCart() {
+export function RenderCartCheckout() {
   // localStorage.removeItem("totalPriceAmount");
 
   const Element = El({
@@ -15,7 +15,7 @@ export function renderOrderCart() {
 
   getCardProduct().then((carts) => {
     carts.map((product) => {
-      const productCard = oneCartInCheckout({ product });
+      const productCard = OneCartInCheckout({ product });
       Element.append(productCard);
     });
     const arrayAmount = carts.map((item) => item.totalPrice);
