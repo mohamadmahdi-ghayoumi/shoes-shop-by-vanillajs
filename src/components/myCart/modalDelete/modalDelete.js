@@ -118,7 +118,7 @@ export function modalDelete() {
                     children: [
                       El({
                         element: "span",
-                        className: "font-bold",
+                        className: "font-bold cursor-pointer",
                         id: "span-subtract",
                         // addEvenListener: [
                         //   {
@@ -139,7 +139,7 @@ export function modalDelete() {
                       }),
                       El({
                         element: "span",
-                        className: "font-bold",
+                        className: "font-bold cursor-pointer",
                         id: "span-sum",
                         // onclick: sumBtn,
                         innerText: "+",
@@ -160,17 +160,16 @@ export function modalDelete() {
             element: "button",
             id: "nbbvn",
             className:
-              "hover:text-white hover:bg-black rounded-3xl bg-gray-200 w-[50%] text-[14px] h-[40px]",
+              "hover:text-white hover:bg-black rounded-3xl bg-gray-200 w-[50%] text-[14px] h-[40px] cursor-pointer",
             innerText: "cancel",
             onclick: cancelBtn,
           }),
           El({
             element: "button",
-            id: "fd",
+            id: "",
             onclick: removeBtn,
-
             className:
-              "hover:text-white hover:bg-black rounded-3xl bg-gray-200 w-[50%] text-[14px] h-[40px]",
+              "hover:text-white hover:bg-black rounded-3xl bg-gray-200 w-[50%] text-[14px] h-[40px] cursor-pointer",
             innerText: "Yes, Remove",
           }),
         ],

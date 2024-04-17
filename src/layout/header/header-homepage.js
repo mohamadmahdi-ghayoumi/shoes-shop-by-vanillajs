@@ -40,7 +40,8 @@ export function headerHomePage() {
         children: [
           El({
             element: "span",
-            className: "icon-[fluent-mdl2--ringer] w-5 h-5 mb-[6px]",
+            className:
+              "icon-[fluent-mdl2--ringer] w-5 h-5 mb-[6px] cursor-pointer",
           }),
           El({
             element: "a",

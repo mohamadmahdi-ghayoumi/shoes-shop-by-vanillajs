@@ -97,27 +97,31 @@ export function footerHomePage(classname , iconHome ,iconCart ) {
 
           El({
             element: "div",
-            className: "flex flex-col items-center",
+            className: "flex flex-col  items-center",
             children: [
+              
+              
+              El({
+                element: "a",
+                href: "./mycartpage",
+                children: [
               El({
                 element: "span",
                 id: "iconCart",
                 className:
                   ` ${iconCart} w-[24px] h-[24px]`,
               }),
+            ]
+          }),
 // sefid    icon-[bi--bag]
               //meshkiii    icon-[bi--bag-fill]
-              El({
-                element: "a",
-                href: "./mycartpage",
-                children: [
+             
                   El({
                     element: "span",
                     className: "",
                     innerText: "Cart",
                   }),
-                ],
-              }),
+               
             ],
           }),
 

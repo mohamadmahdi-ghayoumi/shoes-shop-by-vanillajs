@@ -20,7 +20,7 @@ export function SeeAll() {
           }),
           El({
             element: "span",
-            className: "font-semibold text-gl",
+            className: "font-semibold text-gl cursor-pointer",
             onclick: goPageSeeAll,
             innerText: "See All",
           }),

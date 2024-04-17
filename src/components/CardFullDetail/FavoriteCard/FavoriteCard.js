@@ -67,7 +67,7 @@ export function FavoriteCard({ product }) {
         element: "span",
         onclick: sendToWishlist,
         id: "iconHeart",
-        className: "icon-[ph--heart-light] w-[24px] h-[24px]",
+        className: "icon-[ph--heart-light] w-[24px] h-[24px] cursor-pointer",
       }),
     ],
   });

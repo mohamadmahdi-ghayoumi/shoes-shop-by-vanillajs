@@ -4,7 +4,7 @@ import { RenderProducts } from "../RenderProducts/RenderProducts";
 export function MarginButton({ Brand, classname }) {
   const button = El({
     element: "div",
-    className: `border-[2px] whitespace-nowrap rounded-full font-semibold border-black inline-block px-[20px] text-[16px] m-auto	py-[5px] filter-button ${classname}`,
+    className: `border-[2px] whitespace-nowrap rounded-full font-semibold border-black inline-block px-[20px] text-[16px] m-auto	py-[5px] filter-button cursor-pointer ${classname}`,
     innerText: Brand,
   });
 

@@ -58,7 +58,7 @@ export function QuantityCard({ product }) {
         children: [
           El({
             element: "span",
-            className: "font-bold",
+            className: "font-bold cursor-pointer",
             id: "span-subtract",
             onclick: subtractButton,
 
@@ -72,7 +72,7 @@ export function QuantityCard({ product }) {
           }),
           El({
             element: "span",
-            className: "font-bold",
+            className: "font-bold cursor-pointer",
             id: "span-sum",
             onclick: sumButton,
             innerText: "+",

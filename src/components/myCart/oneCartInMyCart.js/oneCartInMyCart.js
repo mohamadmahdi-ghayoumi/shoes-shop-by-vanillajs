@@ -203,7 +203,7 @@ export function oneCartInMyCart({ product }) {
             element: "span",
             onclick: deleteCart,
             className:
-              "icon-[ant-design--delete-outlined] absolute top-2 end-2 w-5 h-5",
+              "icon-[ant-design--delete-outlined] absolute top-2 end-2 w-5 h-5 cursor-pointer",
           }),
         ],
       }),

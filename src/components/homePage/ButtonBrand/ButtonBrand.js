@@ -45,7 +45,7 @@ export function ButtonBrand({ logo, brand, className }) {
     children: [
       El({
         element: "div",
-        className: `flex flex-col  ${className} font-bold  w-[60px] h-[91px]  whitespace-nowrap overflow-hidden overflow-ellipsis`,
+        className: `flex flex-col  ${className} font-bold  w-[60px] h-[91px] cursor-pointer whitespace-nowrap overflow-hidden overflow-ellipsis`,
         id: "btn",
         onclick: btnBrand,
         children: [

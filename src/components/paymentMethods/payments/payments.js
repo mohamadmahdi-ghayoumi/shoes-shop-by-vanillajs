@@ -1,3 +1,4 @@
+import { deleteCardProductForCart } from "../../../api/delete/deleteProducts";
 import { getCardProductForOrder } from "../../../api/get/getProducts";
 import { addToOrder } from "../../../api/post/postProduct";
 import { El } from "../../../utils/create-element";
@@ -9,8 +10,8 @@ export function payments() {
       getCardProductForOrder().then((data) => {
         {
           addToOrder(data);
+          deleteCardProductForCart()
       window.location.href = "/successfulpage";
-
           console.log(data);
         }
       });
