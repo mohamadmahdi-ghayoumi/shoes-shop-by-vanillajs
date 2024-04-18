@@ -15,7 +15,7 @@ export function cardFullDetail({ product }) {
  El({
   element : "div",
   className : "bg-gray-100",
-  children : [    ` headerBack("")`,
+  children : [     headerBack(""),
   ImageCard({ product }),]
  }),
       FavoriteCard({ product }),

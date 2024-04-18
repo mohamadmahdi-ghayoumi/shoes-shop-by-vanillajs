@@ -27,6 +27,7 @@ export function PriceCard({ product }) {
       console.log(data);
       addToCart(data);
     } else {
+      alert("Please enter the full values!" )
     }
   }
 

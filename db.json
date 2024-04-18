@@ -263,7 +263,40 @@
           "slug": "nike-react-miler"
         }
       ],
-      "cart": []
+      "cart": [
+        {
+          "id": 2,
+          "name": "Nike React Miler",
+          "brand": "nike",
+          "gender": "MEN",
+          "category": "RUNNING",
+          "price": 130,
+          "sizes": "43",
+          "colors": "brown",
+          "items_left": 3,
+          "imageURL": "https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/i1-5cc7de3b-2afc-49c2-a1e4-0508997d09e6/react-miler-mens-running-shoe-DgF6nr.jpg",
+          "slug": "nike-react-miler",
+          "quantity": "2",
+          "totalPrice": 260,
+          "value": 1713456883199
+        },
+        {
+          "id": 6,
+          "name": "Converse Phantom Venom Academy FG",
+          "brand": "converse",
+          "gender": "WOMEN",
+          "category": "FOOTBALL",
+          "price": 150,
+          "sizes": "45",
+          "colors": "brown",
+          "items_left": 3,
+          "imageURL": "https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/s1amp7uosrn0nqpsxeue/phantom-vision-elite-dynamic-fit-fg-firm-ground-soccer-cleat-19Kv1V.jpg",
+          "slug": "nike-phantom-vision-elite-dynamic-fit-fg",
+          "quantity": "2",
+          "totalPrice": 300,
+          "value": 1713456890504
+        }
+      ]
     }
   ],
   "products": [

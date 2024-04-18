@@ -40,9 +40,8 @@ export function OneCardSearch({ product }) {
         className: "flex items-center mt-1 mb-1",
         children: [
           El({
-            element: "img",
-            className: " w-[15px] h-[15px] ",
-            src: "./src/assets/image/like.svg",
+            element: "span",
+            className: " w-[15px] h-[15px] icon-[clarity--half-star-solid]",
           }),
           El({
             element: "p",
