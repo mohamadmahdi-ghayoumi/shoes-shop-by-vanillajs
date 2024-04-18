@@ -3,11 +3,12 @@ import { addToCart } from "../../../api/post/postProduct";
 import { El } from "../../../utils/create-element";
 
 export function PriceCard({ product }) {
+
   function addToCard(e) {
     e.preventDefault();
     const color = document.querySelector("input[name='color']:checked");
     const size = document.querySelector("input[name='size']:checked");
-    const price = document.getElementById("totalPrice").innerText;
+    // const price = document.getElementById("totalPrice").innerText;
     const quantity = document.querySelector("#span-count").innerText;
     console.log(product.price * quantity);
 
@@ -15,7 +16,6 @@ export function PriceCard({ product }) {
 
       const colorValue = color.value;
       const sizeValue = size.value;
-      window.location.href = "/homepage";
       const data = {
         ...product,
         colors: colorValue,
@@ -26,9 +26,12 @@ export function PriceCard({ product }) {
       };
       console.log(data);
       addToCart(data);
+      window.location.href = "/homepage";
+
+
     } else {
-      alert("Please enter the full values!" )
-    }
+document.getElementById("errorCard").classList.remove("hidden") 
+   }
   }
 
   return El({

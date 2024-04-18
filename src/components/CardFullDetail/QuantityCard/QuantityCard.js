@@ -45,7 +45,7 @@ export function QuantityCard({ product }) {
 
   return El({
     element: "div",
-    className: "flex mt-6 mb-9 mx-[24px]",
+    className: "flex mt-6 mb-7 mx-[24px]",
     children: [
       El({
         element: "div",

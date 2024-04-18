@@ -6,23 +6,24 @@ import { ImageCard } from "../../components/CardFullDetail/ImageCard/ImageCard";
 import { headerBack } from "../../layout/header/headerback";
 import { El } from "../../utils/create-element";
 import { ColorSizeButtons } from "../../components/CardFullDetail/Color-Size-Bottuns/ColorSizeButtons";
+import { ErrorCard } from "../../components/CardFullDetail/ErrorCard/ErrorCard";
 
 export function cardFullDetail({ product }) {
   const Element = El({
     element: "div",
     className: "flex flex-col",
     children: [
- El({
-  element : "div",
-  className : "bg-gray-100",
-  children : [     headerBack(""),
-  ImageCard({ product }),]
- }),
+      El({
+        element: "div",
+        className: "bg-gray-100",
+        children: [headerBack(""), ImageCard({ product })],
+      }),
       FavoriteCard({ product }),
       DescriptionCard(),
       ColorSizeButtons({ product }),
       QuantityCard({ product }),
       PriceCard({ product }),
+      ErrorCard(),
     ],
   });
 

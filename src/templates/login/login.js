@@ -1,4 +1,5 @@
 import { getUser } from "../../api/get/getUser";
+import { ErrorLogin } from "../../components/Login/ErrorLogin/ErrorLogin";
 import { headerBack } from "../../layout/header/headerback";
 import { setCookie } from "../../utils/coockie";
 import { El } from "../../utils/create-element";
@@ -86,12 +87,13 @@ export function login() {
       El({
         element: "button",
         className:
-          "mt-60  bg-gray-500 mb-[32px] m-auto rounded-3xl h-[47px] w-[380px] text-white",
+          "mt-56  bg-gray-500  m-auto rounded-3xl h-[47px] w-[380px] text-white",
 
         innerText: "Sing In",
         id: "Btn-singIn",
         onclick: btnSingIn,
       }),
+      ErrorLogin(),
     ],
   });
 
@@ -155,10 +157,8 @@ export function login() {
       ) {
         setCookie("email", inputEmail.value, inputRemember ? 7 : "session");
         window.location.href = "/homepage";
-
-        console.log("ok");
       } else {
-        console.log("zart");
+        document.getElementById("errorLogin").classList.remove("hidden");
       }
     });
   }

@@ -55,11 +55,11 @@ router
     }
   })
   .on("/login", () => {
-    if (c.length) {
-      changePage(homePage);
-    } else {
+    // if (c.length) {
+    //   changePage(homePage);
+    // } else {
       changePage(loginPage);
-    }
+    // }
   })
 
   .on("/wishlistpage", () => {
