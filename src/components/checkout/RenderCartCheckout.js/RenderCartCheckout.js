@@ -23,6 +23,7 @@ export function RenderCartCheckout() {
     document.getElementById("amount").innerText = `$ ${sum}`;
     const data = { total: sum };
     console.log(sum);
+    document.getElementById("totalPriceee").innerText = sum
     setLocalStorage("totalPriceAmount", data);
   });
 

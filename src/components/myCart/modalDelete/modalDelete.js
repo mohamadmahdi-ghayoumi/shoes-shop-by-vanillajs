@@ -27,7 +27,9 @@ export function ModalDelete() {
     id: "modalDelete",
     value: "valueparent",
     className:
-      "absolute bottom-0 w-full h-[400px] bg-gray-200 rounded-t-[70px]  p-2 flex flex-col pt-[50px] gap-[60px] items-center hidden parent",
+      " bottom-0 w-full h-[400px] fixed bg-gray-200 rounded-t-[70px]  p-2 flex flex-col pt-[50px] gap-[60px] items-center hidden parent",
+
+
     children: [
       El({
         element: "div",

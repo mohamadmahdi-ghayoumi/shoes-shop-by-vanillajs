@@ -1,20 +1,30 @@
 import { El } from "../../../utils/create-element";
 
 export function OneCartInCheckout({ product }) {
-  const { name, price, imageURL, id, colors, sizes, quantity, value , totalPrice} = product;
+  const {
+    name,
+    price,
+    imageURL,
+    id,
+    colors,
+    sizes,
+    quantity,
+    value,
+    totalPrice,
+  } = product;
   let color = "";
   switch (colors) {
-    case "bg-red-500":
-      color = "red";
+    case "red":
+      color = "bg-red-500";
       break;
-    case "bg-blue-500":
-      color = "blue";
+    case "blue":
+      color = "bg-blue-500";
       break;
-    case "bg-[#1a1a1a]":
-      color = "black";
+    case "black":
+      color = "bg-[#1a1a1a]";
       break;
-    case "bg-yellow-700":
-      color = "brown";
+    case "brown":
+      color = "bg-yellow-700";
       break;
     case "bg-white-500":
       color = "white";
@@ -50,14 +60,14 @@ export function OneCartInCheckout({ product }) {
             children: [
               El({
                 element: "div",
-                className: `w-7 ${colors} rounded-full`,
+                className: `w-7 ${color} rounded-full`,
                 innerText: "",
               }),
 
               El({
                 element: "div",
                 className: "text-[20px] text-gray-500",
-                innerText: color,
+                innerText: colors,
               }),
               El({
                 element: "div",

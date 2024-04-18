@@ -1,14 +1,14 @@
 import { El } from "../../../utils/create-element";
 import { setLocalStorage } from "../../../utils/localStorage";
-import { renderData } from "../renderData/renderData";
+import { RenderData } from "../RenderData/RenderData";
 
-export function titleSearch() {
+export function TitleSearch() {
   function clearData() {
 
     setLocalStorage("recentSearch", [] );
     const searchDataComment = document.getElementById("searchDataComment");
     searchDataComment.innerHTML = "";
-    searchDataComment.append(...renderData());
+    searchDataComment.append(...RenderData());
   }
 
   return El({

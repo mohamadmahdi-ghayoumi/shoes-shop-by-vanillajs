@@ -1,8 +1,8 @@
 import { El } from "../../../utils/create-element";
 import { getLocalStorage, setLocalStorage } from "../../../utils/localStorage";
-import { renderData } from "../renderData/renderData";
+import { RenderData } from "../RenderData/RenderData";
 
-export function oneData(name) {
+export function OneData(name) {
   
   function deleteData(e) {
     const nameData = e.target.closest("#parent-data").children[0].innerText;
@@ -14,7 +14,7 @@ export function oneData(name) {
 
     const searchDataComment = document.getElementById("searchDataComment");
     searchDataComment.innerHTML = "";
-    searchDataComment.append(...renderData());
+    searchDataComment.append(...RenderData());
   }
 
   return El({

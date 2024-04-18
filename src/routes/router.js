@@ -192,15 +192,15 @@ router
   .on("/successfulpage", () => {
     if (c.length) {
       changePage(successfulPage);
-    } else {      changePage(loginPage);
-
+    } else {
+      changePage(loginPage);
     }
   })
   .on("/myorderspage", () => {
     if (c.length) {
       changePage(myOrdersPage);
-    } else {      changePage(loginPage);
-
+    } else {
+      changePage(loginPage);
     }
   })
   .on("/products/:id", ({ data }) => {
@@ -213,16 +213,16 @@ router
   .on("/brand/:brand", ({ data }) => {
     if (c.length) {
       changePage(brandPage, data);
-    } else {      changePage(loginPage);
-
+    } else {
+      changePage(loginPage);
     }
   })
   .on("/searchpage", () => {
     changePage(searchPage);
     if (c.length) {
       changePage(searchPage);
-    } else {      changePage(loginPage);
-
+    } else {
+      changePage(loginPage);
     }
   });
 // .on("/", () => {

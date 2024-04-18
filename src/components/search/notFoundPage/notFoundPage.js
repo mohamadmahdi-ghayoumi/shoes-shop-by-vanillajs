@@ -1,6 +1,6 @@
 import { El } from "../../../utils/create-element";
 
-export function notFoundPage() {
+export function NotFoundPage() {
   return El({
     element: "div",
     id: "notfoundpage",

@@ -1,29 +1,27 @@
 import { debounce } from "lodash";
 import { El } from "../../../utils/create-element";
 import { getLocalStorage, setLocalStorage } from "../../../utils/localStorage";
-import { renderData } from "../renderData/renderData";
-import { renderCardApiSearch } from "../renderCardApiSearch/renderCardApiSearch";
+import { RenderData } from "../RenderData/RenderData";
+import { RenderCardApiSearch } from "../RenderCardApiSearch/RenderCardApiSearch";
 
-export function inputSearch() {
+export function InputSearch() {
   function searchInput() {
     const searchInput = document.getElementById("inputSearch").value;
 
     if (searchInput == "") {
       const searchDataComment = document.getElementById("searchDataComment");
       searchDataComment.innerHTML = "";
-      searchDataComment.append(...renderData());
-      renderCardApiSearch();
+      searchDataComment.append(...RenderData());
+      RenderCardApiSearch();
     } else if (searchInput) {
       setLocalStorage("recentSearch", [
         searchInput,
         ...getLocalStorage("recentSearch"),
       ]);
 
-
-
       // ...["Dfsdf" , "edfew"] => "Dfsdf" , "edfew" + "123" => ["Dfsdf" , "edfew" + "123"]
-      renderData();
-      renderCardApiSearch();
+      RenderData();
+      RenderCardApiSearch();
     }
 
     // if (searchInput != null) {

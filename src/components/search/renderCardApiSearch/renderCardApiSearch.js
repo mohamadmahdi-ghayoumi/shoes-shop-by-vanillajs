@@ -1,8 +1,7 @@
 import { getProductsSearch } from "../../../api/get/getProducts";
-import { OneCardSearch } from "../OneCardSerach/OneCardSearch";
+import { OneCardSearch } from "../../Search/OneCardSerach/OneCardSearch";
 
-
-export function renderCardApiSearch() {
+export function RenderCardApiSearch() {
   const searchInput = document.getElementById("inputSearch").value;
   const cardsProduct = document.getElementById("cardsProduct");
   const notfoundpage = document.getElementById("notfoundpage");

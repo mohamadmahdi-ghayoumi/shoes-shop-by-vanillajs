@@ -38,7 +38,7 @@ export function ButtonsBrand() {
         className: "flex gap-[41px] mt-3 mx[9px]",
         children: [
           ButtonBrand({
-            logo: "icon-[simple-icons--nike]",
+            logo: "icon-[simple-icons--reebok]",
             brand: "Reebok",
             className: "items-center justify-center",
           }),

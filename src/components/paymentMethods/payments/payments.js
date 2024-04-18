@@ -9,6 +9,7 @@ export function Payments() {
     
       getCardProductForOrder().then((data) => {
         {
+          console.log(data)
           addToOrder(data);
           deleteCardProductForCart()
       window.location.href = "/successfulpage";

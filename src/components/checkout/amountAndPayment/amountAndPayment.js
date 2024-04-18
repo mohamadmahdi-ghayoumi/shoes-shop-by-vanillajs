@@ -67,6 +67,7 @@ export function AmountAndPayment() {
               El({
                 element: "span",
                 className: "text-gray-700",
+                id: "totalPriceee",
                 innerText: +totalPrice.total + +shipping.price,
               }),
             ],

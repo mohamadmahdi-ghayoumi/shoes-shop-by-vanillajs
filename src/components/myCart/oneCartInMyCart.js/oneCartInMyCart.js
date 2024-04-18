@@ -17,17 +17,17 @@ export function OneCartInMyCart({ product }) {
 
   let color = "";
   switch (colors) {
-    case "bg-red-500":
-      color = "red";
+    case "red":
+      color = "bg-red-500";
       break;
-    case "bg-blue-500":
-      color = "blue";
+    case "blue":
+      color = "bg-blue-500";
       break;
-    case "bg-[#1a1a1a]":
-      color = "black";
+    case "black":
+      color = "bg-[#1a1a1a]";
       break;
-    case "bg-yellow-700":
-      color = "brown";
+    case "brown":
+      color = "bg-yellow-700";
       break;
     case "bg-white-500":
       color = "white";
@@ -105,13 +105,11 @@ export function OneCartInMyCart({ product }) {
     className: " h-[130px]  mt-[24px]  flex gap-3 w-full cart",
     id: "parentcartt",
     children: [
-    
-          El({
-            element: "img",
-            className: "rounded-2xl  w-[130px]",
-            src: imageURL,
-          }),
-      
+      El({
+        element: "img",
+        className: "rounded-2xl  w-[130px]",
+        src: imageURL,
+      }),
 
       El({
         element: "div",
@@ -130,14 +128,14 @@ export function OneCartInMyCart({ product }) {
             children: [
               El({
                 element: "div",
-                className: `w-6 ${colors} rounded-full`,
+                className: `w-6 ${color} rounded-full`,
                 innerText: "",
               }),
 
               El({
                 element: "div",
                 className: "",
-                innerText: color,
+                innerText: colors,
               }),
               El({
                 element: "div",

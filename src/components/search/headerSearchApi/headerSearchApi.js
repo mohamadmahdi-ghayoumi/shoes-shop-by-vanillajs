@@ -1,6 +1,6 @@
 import { El } from "../../../utils/create-element";
 
-export function headerSearchApi() {
+export function HeaderSearchApi() {
   // if( ){
 
   // }

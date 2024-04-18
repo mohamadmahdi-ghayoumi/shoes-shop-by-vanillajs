@@ -16,7 +16,7 @@ export function RenderMyCart() {
   let arrayPrice = [];
   getCardProduct().then((carts) => {
     carts.map((product) => {
-      const productCard = oneCartInMyCart({ product });
+      const productCard = OneCartInMyCart({ product });
       Element.append(productCard);
     });
 

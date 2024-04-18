@@ -1,3 +1,4 @@
+import { ButtnAddToCard } from "../components/MyCart/ButtonAddToCard/ButtonAddToCard";
 import { ModalDelete } from "../components/MyCart/ModalDelete/ModalDelete";
 import { ModalDeleteOverlay } from "../components/MyCart/ModalDelete/ModalDeleteOverlay";
 import { RenderMyCart } from "../components/MyCart/RenderMyCart/RenderMyCart";
@@ -21,7 +22,7 @@ export function myCartPageTemplate() {
 
   const Elemenet = El({
     element: "div",
-    className: " h-[926px] ",
+    className: "",
     children: [
       headerMyCart(),
       // borderBtnsMyCart(),
@@ -35,8 +36,9 @@ export function myCartPageTemplate() {
         id: "home",
         children: [RenderMyCart()],
       }),
+      ButtnAddToCard(),
       footerHomePage(
-        "",
+        "hidden",
         "icon-[clarity--home-line]",
         "icon-[bi--bag-fill]",
         " icon-[cil--cart]"

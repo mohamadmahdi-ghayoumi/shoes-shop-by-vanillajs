@@ -1,10 +1,9 @@
-import { headerSearchApi } from "../components/search/headerSearchApi/headerSearchApi";
-import { inputSearch } from "../components/search/inputSearch/inputSearch";
-import { notFoundPage } from "../components/search/notFoundPage/notFoundPage";
-import { renderData } from "../components/search/renderData/renderData";
-// import { renderData } from "../components/search/renderData/renderData";
-// import { recentData } from "../components/search/recentData/recentData";
-import { titleSearch } from "../components/search/titleSearch/titleSearch";
+import { HeaderSearchApi } from "../components/Search/HeaderSearchApi/HeaderSearchApi";
+import { InputSearch } from "../components/Search/InputSearch/InputSearch";
+import { NotFoundPage } from "../components/Search/NotFoundPage/NotFoundPage";
+import { RenderData } from "../components/Search/RenderData/RenderData";
+
+import { TitleSearch } from "../components/Search/TitleSearch/TitleSearch";
 import { El } from "../utils/create-element";
 // import { getLocalStorage } from "../utils/localStorage";
 
@@ -15,14 +14,14 @@ export function searchPage() {
     element: "div",
     className: "",
     children: [
-      inputSearch(),
-      headerSearchApi(),
-      titleSearch(),
+      InputSearch(),
+      HeaderSearchApi(),
+      TitleSearch(),
       El({
         element: "div",
         className: "",
         id: "searchDataComment",
-        children: [...renderData()],
+        children: [...RenderData()],
       }),
       El({
         element: "div",
@@ -31,7 +30,7 @@ export function searchPage() {
         id: "cardsProduct",
         children: [],
       }),
-      notFoundPage(),
+      NotFoundPage(),
     ],
   });
 }

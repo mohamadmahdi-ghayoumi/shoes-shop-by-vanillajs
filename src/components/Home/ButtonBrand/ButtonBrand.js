@@ -4,11 +4,11 @@ import { Link } from "../../../utils/link";
 export function ButtonBrand({ logo, brand, className }) {
   function btnBrand(e) {
     const brand = e.target.closest("#btn").children[1].innerText;
-    const dogFound = new CustomEvent("animalfound", {
-      detail: {
-        name: brand,
-      },
-    });
+    // const dogFound = new CustomEvent("animalfound", {
+    //   detail: {
+    //     name: brand,
+    //   },
+    // });
     // console.log(brand);
     // window.location.href = `brand/${brand.ToLowerCase()}`;
 
