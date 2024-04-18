@@ -33,14 +33,14 @@ export function Successful() {
           El({
             element: "button",
             className:
-              "hover:bg-black hover:text-white w-[70%] rounded-[60px] bg-gray-300  text-[20px] h-[60px]",
+              " bg-black text-white w-[70%] rounded-[60px]   text-[20px] h-[60px]",
             innerText: "View Order",
             onclick: btnViewOrder,
           }),
           El({
             element: "button",
             className:
-              "  w-[70%] rounded-[60px] hover:bg-black hover:text-white  text-[20px] h-[60px] bg-gray-300",
+              "  w-[70%] rounded-[60px] hover:bg-black hover:text-white  text-[20px] h-[60px] bg-gray-200",
             innerText: "View E-Receipt",
             // onclick: finishOrder,
           }),

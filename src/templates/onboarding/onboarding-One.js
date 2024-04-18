@@ -37,22 +37,23 @@ export function OnboardingOne() {
     ],
   });
 
-  const user = getLocalStorage("user");
-  console.log([...user].length);
-  if ([...user].length != 0) {
-    console.log([...user].length);
+  // const user = getLocalStorage("user");
+  // console.log([...user].length);
+  // if ([...user].length != 0) {
+  //   console.log([...user].length);
 
-    setLocalStorage("user", "b");
-    window.location.href = "/onboardingpagetwo";
+  //   setLocalStorage("user", "b");
+  //   window.location.href = "/onboardingpagetwo";
 
-  } else {
-    console.log("[...]");
-    setLocalStorage("user", "b");
+  // } else {
+  //   console.log("[...]");
+  //   setLocalStorage("user", "b");
     setTimeout(() => {
       window.location.href = "/onboardingpagetwo";
     }, "1000");
-    return Element;
-  }
-  console.log(user);
-  console.log(typeof user);
+
+  // }
+  // console.log(user);
+  // console.log(typeof user);
+  return Element;
 }

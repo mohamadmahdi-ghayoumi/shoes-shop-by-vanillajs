@@ -12,8 +12,12 @@ export function cardFullDetail({ product }) {
     element: "div",
     className: "flex flex-col",
     children: [
-      headerBack(""),
-      ImageCard({ product }),
+ El({
+  element : "div",
+  className : "bg-gray-100",
+  children : [     headerBack(""),
+  ImageCard({ product }),]
+ }),
       FavoriteCard({ product }),
       DescriptionCard(),
       ColorSizeButtons({ product }),

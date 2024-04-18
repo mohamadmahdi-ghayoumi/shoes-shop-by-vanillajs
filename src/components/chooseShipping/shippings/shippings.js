@@ -18,7 +18,7 @@ export function Shippings() {
         "economy"
       ),
       OneShipping(
-        "REgular",
+        "Regular",
         "Estimated Ariival Dec 20-22",
         "icon-[f7--cube-box-fill] text-white",
         "15",

@@ -11,7 +11,7 @@ export function RenderProducts(filter) {
   const Element = El({
     element: "div",
     className:
-      "flex flex-wrap gap-[6px] mx-[24px] mb-[100px]  justify-center items-center",
+      "grid grid-cols-2 gap-[6px] mx-[24px] mb-[100px]  justify-center items-center",
     id: "render",
   });
   getProducts(filter).then((carts) => {

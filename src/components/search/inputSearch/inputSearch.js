@@ -8,7 +8,7 @@ export function InputSearch() {
   function searchInput() {
     const searchInput = document.getElementById("inputSearch").value;
 
-    if (searchInput == "") {
+    if (searchInput.trim() == "") {
       const searchDataComment = document.getElementById("searchDataComment");
       searchDataComment.innerHTML = "";
       searchDataComment.append(...RenderData());

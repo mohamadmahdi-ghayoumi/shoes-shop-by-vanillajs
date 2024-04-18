@@ -86,7 +86,7 @@ export function login() {
       El({
         element: "button",
         className:
-          "mt-60 bg-[#212529] mb-[32px] m-auto rounded-3xl h-[47px] w-[380px] text-white",
+          "mt-60  bg-gray-500 mb-[32px] m-auto rounded-3xl h-[47px] w-[380px] text-white",
 
         innerText: "Sing In",
         id: "Btn-singIn",
@@ -112,15 +112,20 @@ export function login() {
   }
 
   function inputEmail() {
+    const BtnSingIn = document.getElementById("Btn-singIn");
     const inputEmail = document.getElementById("input-Email");
     if (inputEmail.value != "") {
       document
         .getElementById("span-envelope")
         .classList.remove("text-gray-500");
+      BtnSingIn.classList.remove("bg-gray-500");
+      BtnSingIn.classList.add("bg-[#212529]");
       document.getElementById("span-envelope").classList.add("text-black");
     } else if (inputEmail.value == "") {
       document.getElementById("span-envelope").classList.remove("text-black");
       document.getElementById("span-envelope").classList.add("text-gray-500");
+      BtnSingIn.classList.add("bg-gray-500");
+      BtnSingIn.classList.remove("bg-[#212529]");
     }
   }
 
@@ -154,7 +159,6 @@ export function login() {
         console.log("ok");
       } else {
         console.log("zart");
-     
       }
     });
   }

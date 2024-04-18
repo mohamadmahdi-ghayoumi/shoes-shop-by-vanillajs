@@ -12,7 +12,14 @@ export function OneShipping(name, address, classIcon, price, value, checked) {
         .innerText;
     const pricee =
       e.target.closest("#parentlocation").children[1].children[1].innerText;
-    const data = { name: namee, address: datee, price: pricee  , parent: "show" , iconBack:"hidden" , icon : classIcon};
+    const data = {
+      name: namee,
+      address: datee,
+      price: pricee,
+      parent: "show",
+      iconBack: "hidden",
+      icon: classIcon,
+    };
     setLocalStorage("shipping", data);
   }
 
@@ -81,7 +88,7 @@ export function OneShipping(name, address, classIcon, price, value, checked) {
         value: value,
         checked: checked,
 
-        className: "radio-button w-5 h-5",
+        className: "accent-black w-5 h-5",
         onclick: radioLocation,
       }),
     ],

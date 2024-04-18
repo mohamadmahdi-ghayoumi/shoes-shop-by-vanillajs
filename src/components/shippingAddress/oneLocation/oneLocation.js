@@ -70,7 +70,7 @@ export function OneLocation(name, address, value , checked) {
         value: value,
         checked: checked,
 
-        className: "radio-button w-5 h-5",
+        className: "accent-black w-5 h-5",
         onclick: radioLocation,
       }),
     ],

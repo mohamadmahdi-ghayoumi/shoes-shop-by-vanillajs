@@ -10,8 +10,6 @@ export function ShippingAddress() {
     window.location.href = "/shippingaddresspage";
   }
 
-  // console.log();
-  // setTimeout(oneLocation, 0);
   return El({
     element: "div",
     className: "mx-[24px] pl-5",
@@ -28,12 +26,12 @@ export function ShippingAddress() {
           El({
             element: "div",
             className:
-              "ml-2 bg-gray-300 rounded-full w-[100px] h-[80px] relative",
+              "bg-gray-300 rounded-full px-2 py-2 flex items-center justify-center",
             children: [
               El({
                 element: "span",
                 className:
-                  "icon-[el--map-marker-alt]  w-[60px] h-[60px] m-auto absolute bottom-[10px] end-[10px]",
+                  "icon-[el--map-marker-alt]  w-[60px] h-[60px]  ",
               }),
             ],
           }),

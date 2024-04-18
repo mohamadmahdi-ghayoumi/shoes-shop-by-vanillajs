@@ -65,7 +65,7 @@ export function OnePayment(name, classIcon, price, value, checked) {
             name: "option",
             value: value,
             checked: checked,
-            className: " w-5 h-5 radio-button",
+            className: " w-5 h-5 accent-black",
             onclick: radioLocation,
           }),
         ],

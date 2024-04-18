@@ -56,11 +56,11 @@ export function OneCartInCheckout({ product }) {
           }),
           El({
             element: "div",
-            className: "flex gap-4 ",
+            className: "flex gap-3 ",
             children: [
               El({
                 element: "div",
-                className: `w-7 ${color} rounded-full`,
+                className: `w-7  h-7 ${color} rounded-full`,
                 innerText: "",
               }),
 
@@ -97,11 +97,11 @@ export function OneCartInCheckout({ product }) {
               }),
               El({
                 element: "div",
-                className: "bg-gray-200  flex gap-4 px-4 rounded-2xl",
+                className: "bg-gray-100  flex gap-4 px-4 rounded-full",
                 children: [
                   El({
                     element: "span",
-                    className: "font-bold countCart",
+                    className: "font-bold text-lg countCart",
                     id: "span-countCart",
                     innerText: quantity,
                   }),

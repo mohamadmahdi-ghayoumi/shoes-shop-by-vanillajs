@@ -63,7 +63,7 @@ export function MainOrders() {
       El({
         element: "div",
         id: "Completed",
-        className: "tabcontent hidden flex justify-center items-center",
+        className: "tabcontent hidden flex justify-center items-center mb-44",
         children: [CardProductRender()],
       }),
     ],

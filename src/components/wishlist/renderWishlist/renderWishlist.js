@@ -10,8 +10,7 @@ export function RenderWishlist(filter) {
   // console.log(filter)
   const Element = El({
     element: "div",
-    className:
-      "flex flex-wrap gap-[6px] m-[24px] mb-[80px]  items-center  justify-center",
+    className: "grid grid-cols-2 gap-[6px] m-[24px] mb-[80px] justify-start ",
     id: "render",
   });
 

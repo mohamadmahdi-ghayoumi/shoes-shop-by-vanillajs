@@ -78,14 +78,14 @@ export function AmountAndPayment() {
         element: "button",
         className:
           "bg-black text-white w-[90%] rounded-[60px] relative text-[14px] m-auto h-[60px] cursor-pointer hover:bg-gray-900",
-        innerText: "Checkout",
+        innerText: "Continue to Payment ",
         id: "btnAddToCard",
         onclick: addToPayment,
         children: [
           El({
             element: "img",
             className:
-              " text-white absolute  w-[17px]  h-[17px] end-[100px] top-[23px] ",
+              " text-white absolute  w-[17px]  h-[17px] end-[50px] top-[23px] ",
             src: "src/assets/image/right.png",
           }),
         ],

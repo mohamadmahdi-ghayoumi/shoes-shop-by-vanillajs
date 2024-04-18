@@ -23,7 +23,7 @@ export function ButtonsColor(colors) {
 
   const element = El({
     element: "div",
-    className: "flex gap-2",
+    className: "flex gap-1 hideScroll",
     children: colors.map((item) => ButtonColor({ colorCircle: item })),
   });
 

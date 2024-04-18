@@ -21,7 +21,7 @@ export function HeaderSearchApi() {
     children: [
       El({
         element: "div",
-        className: "flex gap-5",
+        className: "flex gap-5 items-center",
         children: [
           El({
             element: "span",
@@ -30,7 +30,7 @@ export function HeaderSearchApi() {
           }),
           El({
             element: "span",
-            className: "font-bold",
+            className: "font-extrabold text-xl",
             id: "valueInput",
             innerText: ``,
           }),

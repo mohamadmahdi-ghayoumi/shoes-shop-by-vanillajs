@@ -79,7 +79,6 @@ export function OneCartInMyCart({ product }) {
     document.getElementById("footer").classList.add("hidden");
     document.getElementById("modalDelete").classList.remove("hidden");
     document.getElementById("overlayModal").classList.remove("hidden");
-
     document.getElementById("modalDelete").value = product.value;
     document.getElementById("imageModal").src = product.imageURL;
     document.getElementById("nameModal").innerText =
@@ -102,7 +101,7 @@ export function OneCartInMyCart({ product }) {
   const Element = El({
     element: "div",
     value: value,
-    className: " h-[130px]  mt-[24px]  flex gap-3 w-full cart",
+    className: "truncate cursor-pointer rounded-3xl flex bg-white shadow-sm cart",
     id: "parentcartt",
     children: [
       El({
@@ -159,14 +158,27 @@ export function OneCartInMyCart({ product }) {
             className: "flex justify-between items-center",
             children: [
               El({
-                element: "p",
-                className: "font-semibold text-[25px]",
-                id: `totalPriceSpan${product.value}`,
-                innerText: totalPrice,
+                element: "div",
+                className: "flex",
+                children: [
+                  El({
+                    element: "p",
+                    className: "font-semibold text-[25px]",
+                    innerText: `$`,
+                  }),
+                  El({
+                    element: "p",
+                    className: "font-semibold text-[25px]",
+                    id: `totalPriceSpan${product.value}`,
+                    innerText: `${totalPrice}`,
+                  }),
+                ],
               }),
+
+            
               El({
                 element: "div",
-                className: "bg-gray-200 ml-[60px] flex gap-4 px-4 rounded-2xl",
+                className: "bg-gray-100 ml-[60px] flex gap-4 px-4 rounded-2xl",
                 children: [
                   El({
                     element: "span",

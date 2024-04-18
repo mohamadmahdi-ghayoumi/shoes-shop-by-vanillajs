@@ -33,25 +33,25 @@ export const router = new Navigo("/");
 const c = getCookie("email");
 
 router
-  .on("/onboardingpageone", () => {
+  .on("/", () => {
     if (c.length) {
-      changePage(onboardingOnePage);
+      changePage(homePage);
     } else {
-      changePage(loginPage);
+      changePage(onboardingOnePage);
     }
   })
   .on("/onboardingpagetwo", () => {
     if (c.length) {
-      changePage(onboardingTwoPage);
+      changePage(homePage);
     } else {
-      changePage(loginPage);
+      changePage(onboardingTwoPage);
     }
   })
   .on("/onboardingpagethree", () => {
     if (c.length) {
-      changePage(onboardingThreePage);
+      changePage(homePage);
     } else {
-      changePage(loginPage);
+      changePage(onboardingThreePage);
     }
   })
   .on("/login", () => {
@@ -61,13 +61,13 @@ router
       changePage(loginPage);
     }
   })
-  .on("/", () => {
-    if (c.length) {
-      changePage(WishlistPage);
-    } else {
-      changePage(loginPage);
-    }
-  })
+  // .on("/", () => {
+  //   if (c.length) {
+  //     changePage(WishlistPage);
+  //   } else {
+  //     changePage(loginPage);
+  //   }
+  // })
 
   .on("/wishlistpage", () => {
     if (c.length) {
