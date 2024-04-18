@@ -7,7 +7,7 @@ import { headerMyCart } from "../layout/header/headerMyCart";
 import { El } from "../utils/create-element";
 import { setLocalStorage } from "../utils/localStorage";
 
-export function myCartPageTemplate() {
+export function myCart() {
   const data = { name: "Home", address: "61480 Sunbrook Park PC 5679" };
   setLocalStorage("location", data);
 
@@ -24,7 +24,6 @@ export function myCartPageTemplate() {
     element: "div",
     className: "",
     children: [
-      headerMyCart(),
       // borderBtnsMyCart(),
       El({
         element: "div",
@@ -37,12 +36,7 @@ export function myCartPageTemplate() {
         children: [RenderMyCart()],
       }),
       ButtnAddToCard(),
-      footerHomePage(
-        "hidden",
-        "icon-[clarity--home-line]",
-        "icon-[bi--bag-fill]",
-        " icon-[cil--cart]"
-      ),
+
       ModalDeleteOverlay(),
       ModalDelete(),
     ],

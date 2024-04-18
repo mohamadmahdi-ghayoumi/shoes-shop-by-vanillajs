@@ -5,7 +5,7 @@ export function ErrorLogin() {
     element: "span",
     className: "hidden text-red-500 m-auto pt-3",
     id: "errorLogin",
-    innerText: "Please enter the full values!",
+    innerText: "username or password is incorrect !",
   });
 
   return element;

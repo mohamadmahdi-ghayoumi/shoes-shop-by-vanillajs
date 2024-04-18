@@ -32,7 +32,8 @@ export function login() {
           }),
           El({
             element: "input",
-            className: "text-[14px] px-[32px] w-full mx-[24px]  bg-gray-100 ",
+            className:
+              "text-[14px] px-[32px] w-full mx-[24px]  bg-gray-100  p-3",
             placeholder: "Email",
             id: "input-Email",
             onkeyup: inputEmail,
@@ -47,11 +48,11 @@ export function login() {
             element: "span",
             id: "span-lock",
             className:
-              "icon-[uis--lock] w-4 h-4 my-auto absolute  text-gray-500 transform  start-10 inset-1/2 -translate-x-1/2",
+              "icon-[uis--lock] w-4 h-4 my-auto absolute  text-gray-500 transform  start-10 inset-1/2 -translate-x-1/2 ",
           }),
           El({
             element: "input",
-            className: "text-[14px] px-[32px] w-full mx-[24px] bg-gray-100 ",
+            className: "text-[14px] px-[32px] w-full mx-[24px] bg-gray-100 p-3",
             placeholder: "Password",
             id: "input-password",
             type: "password",
@@ -66,6 +67,8 @@ export function login() {
           }),
         ],
       }),
+      ErrorLogin(),
+
       El({
         element: "div",
         className: "mt-[40px] flex items-center justify-center gap-[8px]",
@@ -93,7 +96,6 @@ export function login() {
         id: "Btn-singIn",
         onclick: btnSingIn,
       }),
-      ErrorLogin(),
     ],
   });
 

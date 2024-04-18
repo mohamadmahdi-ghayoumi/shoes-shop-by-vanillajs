@@ -12,7 +12,6 @@ import { homeAllBrands } from "../templates/page-brand/homeAllBrands.js";
 import { mostPopular } from "../templates/mostPopular.js";
 import { Product } from "../templates/selectedProduct.js";
 import { WishlistPage } from "../pages/whishlist-page.js";
-import { myCartPageTemplate } from "../templates/myCartPage.js";
 import { brandPage } from "../templates/brandPage.js";
 import { searchPage } from "../templates/searchPage.js";
 import { shippingAddressPage } from "../templates/checkout/shippingAddressPage.js";
@@ -28,6 +27,7 @@ import { homePage } from "../pages/home-page/home-page.js";
 import { getCookie } from "../utils/coockie.js";
 import { checkoutPage } from "../pages/checkout-page/checkout-page.js";
 import { myOrdersPage } from "../pages/myOrders-page/myOrders-page.js";
+import { myCartPage } from "../pages/myCart-page/myCart-page.js";
 
 export const router = new Navigo("/");
 const c = getCookie("email");
@@ -58,7 +58,7 @@ router
     // if (c.length) {
     //   changePage(homePage);
     // } else {
-      changePage(loginPage);
+    changePage(loginPage);
     // }
   })
 
@@ -71,7 +71,7 @@ router
   })
   .on("/mycartpage", () => {
     if (c.length) {
-      changePage(myCartPageTemplate);
+      changePage(myCartPage);
     } else {
       changePage(loginPage);
     }
