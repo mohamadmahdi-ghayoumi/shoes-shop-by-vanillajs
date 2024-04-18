@@ -68,11 +68,11 @@ export function ChooseShippingType() {
                   El({
                     element: "div",
                     className:
-                      "ml-2 bg-black rounded-full w-[80px] h-[80px] relative",
+                      "bg-black rounded-full px-3 py-2 flex items-center justify-center",
                     children: [
                       El({
                         element: "span",
-                        className: `${shipping.icon} w-[50px] h-[50px] m-auto absolute bottom-[14px] end-[14px]`,
+                        className: `${shipping.icon} w-[40px] h-[40px] m-auto  `,
                       }),
                     ],
                   }),
@@ -111,8 +111,7 @@ export function ChooseShippingType() {
                   El({
                     element: "span",
                     onclick: goToShipping,
-
-                    className: "icon-[eva--edit-2-fill] w-8 h-8 cursor-pointer",
+                    className: "icon-[eva--edit-2-fill] w-7 h-7 cursor-pointer",
                   }),
                 ],
               }),

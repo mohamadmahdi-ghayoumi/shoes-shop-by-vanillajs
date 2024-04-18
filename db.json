@@ -117,9 +117,87 @@
           "quantity": "2",
           "totalPrice": 320,
           "value": 1713442557724
-        }
-      ],
-      "wishlist": [
+        },
+        {
+          "id": 1,
+          "name": "Nike React Infinity Run Flyknit",
+          "brand": "nike",
+          "gender": "MEN",
+          "category": "RUNNING",
+          "price": 160,
+          "sizes": "45",
+          "colors": "black",
+          "items_left": 3,
+          "imageURL": "https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/i1-665455a5-45de-40fb-945f-c1852b82400d/react-infinity-run-flyknit-mens-running-shoe-zX42Nc.jpg",
+          "slug": "nike-react-infinity-run-flyknit",
+          "quantity": "2",
+          "totalPrice": 320,
+          "value": 1713444126155
+        },
+        {
+          "id": 1,
+          "name": "Nike React Infinity Run Flyknit",
+          "brand": "nike",
+          "gender": "MEN",
+          "category": "RUNNING",
+          "price": 160,
+          "sizes": "45",
+          "colors": "black",
+          "items_left": 3,
+          "imageURL": "https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/i1-665455a5-45de-40fb-945f-c1852b82400d/react-infinity-run-flyknit-mens-running-shoe-zX42Nc.jpg",
+          "slug": "nike-react-infinity-run-flyknit",
+          "quantity": "1",
+          "totalPrice": 160,
+          "value": 1713446844611
+        },
+        {
+          "id": 1,
+          "name": "Nike React Infinity Run Flyknit",
+          "brand": "nike",
+          "gender": "MEN",
+          "category": "RUNNING",
+          "price": 160,
+          "sizes": "43",
+          "colors": "black",
+          "items_left": 3,
+          "imageURL": "https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/i1-665455a5-45de-40fb-945f-c1852b82400d/react-infinity-run-flyknit-mens-running-shoe-zX42Nc.jpg",
+          "slug": "nike-react-infinity-run-flyknit",
+          "quantity": "1",
+          "totalPrice": 160,
+          "value": 1713452573354
+        },
+        {
+          "id": 6,
+          "name": "Converse Phantom Venom Academy FG",
+          "brand": "converse",
+          "gender": "WOMEN",
+          "category": "FOOTBALL",
+          "price": 150,
+          "sizes": "45",
+          "colors": "blue",
+          "items_left": 3,
+          "imageURL": "https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/s1amp7uosrn0nqpsxeue/phantom-vision-elite-dynamic-fit-fg-firm-ground-soccer-cleat-19Kv1V.jpg",
+          "slug": "nike-phantom-vision-elite-dynamic-fit-fg",
+          "quantity": "1",
+          "totalPrice": 150,
+          "value": 1713452578750
+        },
+        {
+          "id": 32,
+          "name": "Club C Revenge Mens",
+          "brand": "reebok",
+          "gender": "MEN",
+          "category": "CASUAL",
+          "price": 70,
+          "sizes": "45",
+          "colors": "blue",
+          "items_left": 3,
+          "imageURL": "https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/i1-a52a8aec-22dc-4982-961b-75c5f4c72805/mercurial-superfly-7-pro-mds-fg-firm-ground-soccer-cleat-mhcpdN.jpg",
+          "slug": "club-c-revenge-mens",
+          "quantity": "3",
+          "totalPrice": 210,
+          "value": 1713453605262
+        },
         {
           "id": 2,
           "name": "Nike React Miler",
@@ -127,45 +205,17 @@
           "gender": "MEN",
           "category": "RUNNING",
           "price": 130,
-          "sizes": [
-            41,
-            43,
-            45
-          ],
-          "colors": [
-            "black",
-            "brown",
-            "white",
-            "blue",
-            "red"
-          ],
+          "sizes": "45",
+          "colors": "brown",
           "items_left": 3,
           "imageURL": "https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/i1-5cc7de3b-2afc-49c2-a1e4-0508997d09e6/react-miler-mens-running-shoe-DgF6nr.jpg",
-          "slug": "nike-react-miler"
-        },
-        {
-          "id": 4,
-          "name": "Nike Joyride Run Flyknit",
-          "brand": "nike",
-          "gender": "WOMEN",
-          "category": "RUNNING",
-          "price": 180,
-          "sizes": [
-            41,
-            43,
-            45
-          ],
-          "colors": [
-            "black",
-            "brown",
-            "white",
-            "blue",
-            "red"
-          ],
-          "items_left": 3,
-          "imageURL": "https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/99a7d3cb-e40c-4474-91c2-0f2e6d231fd2/joyride-run-flyknit-womens-running-shoe-HcfnJd.jpg",
-          "slug": "nike-joyride-run-flyknit"
-        },
+          "slug": "nike-react-miler",
+          "quantity": "1",
+          "totalPrice": 130,
+          "value": 1713455304488
+        }
+      ],
+      "wishlist": [
         {
           "id": 3,
           "name": "Nike Air Zoom Pegasus 37",
@@ -188,6 +238,29 @@
           "items_left": 3,
           "imageURL": "https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/i1-33b0a0a5-c171-46cc-ad20-04a768703e47/air-zoom-pegasus-37-womens-running-shoe-Jl0bDf.jpg",
           "slug": "nike-air-zoom-pegasus-37"
+        },
+        {
+          "id": 2,
+          "name": "Nike React Miler",
+          "brand": "nike",
+          "gender": "MEN",
+          "category": "RUNNING",
+          "price": 130,
+          "sizes": [
+            41,
+            43,
+            45
+          ],
+          "colors": [
+            "black",
+            "brown",
+            "white",
+            "blue",
+            "red"
+          ],
+          "items_left": 3,
+          "imageURL": "https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/i1-5cc7de3b-2afc-49c2-a1e4-0508997d09e6/react-miler-mens-running-shoe-DgF6nr.jpg",
+          "slug": "nike-react-miler"
         }
       ],
       "cart": []

@@ -16,8 +16,7 @@ export function MarginButtons() {
       MarginButton({ Brand: "Converse" }),
     ],
   });
-  // mozs.addEventListener("click" , (e)=>{
-  //   console.log(e.target)})
+
 
   return elemenet;
 }

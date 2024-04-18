@@ -87,7 +87,7 @@ export function OneCartInMyCart({ product }) {
       e.target.closest(".cart").children[1].children[1].children[1].innerText;
     document.getElementById("sizeModal").innerText =
       e.target.closest(".cart").children[1].children[1].children[4].innerText;
-    document.getElementById("priceModal").innerText = product.price;
+    document.getElementById("priceModal").innerText = product.totalPrice;
     // e.target.closest(".cart").children[1].children[2].children[0].innerText;
     document.getElementById("quantityModal").innerText =
       e.target.closest(
@@ -101,7 +101,8 @@ export function OneCartInMyCart({ product }) {
   const Element = El({
     element: "div",
     value: value,
-    className: "truncate cursor-pointer rounded-3xl flex bg-white shadow-sm cart",
+    className:
+      "truncate cursor-pointer rounded-3xl flex bg-white shadow-sm cart w-full gap-3 justify-between",
     id: "parentcartt",
     children: [
       El({
@@ -112,13 +113,13 @@ export function OneCartInMyCart({ product }) {
 
       El({
         element: "div",
-        className: "flex flex-col justify-between relative ",
+        className: "flex flex-col justify-between relative flex-1",
         children: [
           El({
             element: "p",
             id: id,
             className:
-              "font-semibold  text-[20px] whitespace-nowrap overflow-hidden overflow-ellipsis w-[150px] ",
+              "font-semibold  text-[20px] whitespace-nowrap overflow-hidden overflow-ellipsis w-[160px] ",
             innerText: name,
           }),
           El({
@@ -159,23 +160,22 @@ export function OneCartInMyCart({ product }) {
             children: [
               El({
                 element: "div",
-                className: "flex",
+                className: "flex   w-full justify-between",
                 children: [
                   El({
                     element: "p",
-                    className: "font-semibold text-[25px]",
+                    className: "font-semibold text-[25px] ",
                     innerText: `$`,
                   }),
                   El({
                     element: "p",
-                    className: "font-semibold text-[25px]",
+                    className: "font-semibold text-[25px] ",
                     id: `totalPriceSpan${product.value}`,
                     innerText: `${totalPrice}`,
                   }),
                 ],
               }),
 
-            
               El({
                 element: "div",
                 className: "bg-gray-100 ml-[60px] flex gap-4 px-4 rounded-2xl",

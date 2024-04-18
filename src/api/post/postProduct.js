@@ -10,18 +10,30 @@ export async function addToCart(data) {
 
 export async function addToWishlist(data) {
   const { data: userData } = await axios.get(`${BASE_URL}/users/1`);
-  console.log(`data: ${data}`);
   const wishlist = userData.wishlist.concat(data);
   let response = await axios.patch(`${BASE_URL}/users/1`, { wishlist });
-
   return response.data;
+  console.log(data)
+
+  // const res = await axios.get(`${BASE_URL}/users/1`);
+
+  // const userData = res;
+  // console.log(res.data.wishlist)
+  // userData.data.wishlist.push(...data);
+  // let response = await axios.patch(`${BASE_URL}/users/1`, {
+  //   wishlist: userData.wishlist,
+  // });
+  // return response.data;
 }
 
 export async function editCart(value, operation) {
-  const { data } = await axios.get(`${BASE_URL}/users/1`);
+  // const { data } = await axios.get(`${BASE_URL}/users/1`);
+  const response = await axios.get(`${BASE_URL}/users/1`);
+  const data = response.data;
+  console.log(data);
+  const cart = data.cart;
 
-  if (data.cart.find((item) => item.value === value)) {
-    const cart = data.cart;
+  if (cart.find((item) => item.value === value)) {
     const itemIndex = cart.findIndex((item) => item.value === value);
     const newElement = cart[itemIndex];
     newElement.quantity =
@@ -40,26 +52,21 @@ export async function editCart(value, operation) {
   }
 }
 
-
 export async function addToOrder(data) {
-  const { data: userData } = await axios.get(`${BASE_URL}/users/1`);
-  console.log(`data: ${data}`);
-  const orders = userData.orders.concat(data);
-  let response = await axios.patch(`${BASE_URL}/users/1`, { orders });
+  // const { data: userData } = await axios.get(`${BASE_URL}/users/1`);
+  // const res = await axios.get(`${BASE_URL}/users/1`);
+  // const userData = res.data;
 
+  // console.log(`data: ${data}`);
+  // const orders = userData.orders.concat(data);
+  // let response = await axios.patch(`${BASE_URL}/users/1`, { orders });
+
+  const res = await axios.get(`${BASE_URL}/users/1`);
+  const userData = res.data;
+  console.log(`data: ${userData}`);
+  userData.orders.push(...data);
+  let response = await axios.patch(`${BASE_URL}/users/1`, {
+    orders: userData.orders,
+  });
   return response.data;
 }
-
-
-
-// export async function addToOrder(orders) {
-//   let responseOrder = await axios.patch(`${BASE_URL}/users/1`, { orders });
-
-//   return responseOrder;
-// }
-
-// export async function postProductWhislist(data) {
-//   const response = await axios.post(`${BASE_URL}/wishlist`, data);
-//   // console.log(response.data)
-//   return response;
-// }

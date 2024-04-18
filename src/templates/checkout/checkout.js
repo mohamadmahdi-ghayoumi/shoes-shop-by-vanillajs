@@ -7,12 +7,11 @@ import { headerBack } from "../../layout/header/headerback";
 import { El } from "../../utils/create-element";
 document.title = "Shoe Shop";
 
-export function checkoutPage() {
+export function checkout() {
   return El({
     element: "div",
     className: "",
     children: [
-      headerBack("Checkout", "icon-[circum--circle-more]"),
       ShippingAddress(),
       OrderList(),
       ChooseShippingType(),

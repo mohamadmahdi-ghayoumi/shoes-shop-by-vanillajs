@@ -9,7 +9,7 @@ export function RenderMyCart() {
   const Element = El({
     element: "div",
     className:
-      "flex flex-wrap gap-[6px] m-[24px] mb-99  items-center  justify-center ",
+      "flex flex-wrap gap-[6px] m-[24px] mb-99   items-center  justify-center ",
     id: "render",
   });
 

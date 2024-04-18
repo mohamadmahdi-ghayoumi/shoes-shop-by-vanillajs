@@ -14,7 +14,7 @@ export function SearchBox() {
         className:
           " w-[380px] h-[40px] m-auto ml-[30px] relative mt-[16px] pl-[28px] bg-gray-100 rounded",
         placeholder: "Search",
-        onkeyup: goPageSearch,
+        onclick: goPageSearch,
         //  router.navigate("./searchpage"),
       }),
       El({

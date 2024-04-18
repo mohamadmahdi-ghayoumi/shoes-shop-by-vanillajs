@@ -30,8 +30,7 @@ export function ShippingAddress() {
             children: [
               El({
                 element: "span",
-                className:
-                  "icon-[el--map-marker-alt]  w-[60px] h-[60px]  ",
+                className: "icon-[el--map-marker-alt]  w-[60px] h-[60px]  ",
               }),
             ],
           }),
@@ -42,7 +41,7 @@ export function ShippingAddress() {
             children: [
               El({
                 element: "div",
-                className: "font-bold text-[20px]",
+                className: "font-bold text-[20px] truncate",
                 id: "nameLocation",
                 innerText: location.name,
               }),

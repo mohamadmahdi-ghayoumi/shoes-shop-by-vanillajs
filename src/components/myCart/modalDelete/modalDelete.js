@@ -2,6 +2,7 @@ import { El } from "../../../utils/create-element";
 import { OneCartInMyCart } from "../OneCartInMyCart.js/OneCartInMyCart";
 import { deleteCardProduct } from "../../../api/delete/deleteProducts";
 import { RenderMyCart } from "../RenderMyCart/RenderMyCart";
+import { editCart } from "../../../api/post/postProduct";
 
 export function ModalDelete() {
   function removeBtn(e) {
@@ -16,6 +17,50 @@ export function ModalDelete() {
     });
   }
 
+
+  function subtractBtn(e) {
+    const quantityCounter = document.getElementById(`quantityModal`);
+
+    const priceModal = document.getElementById("priceModal");
+    console.log(priceMyCart);
+    if (counter > 1) {
+      editCart(value, "subtract");
+      getItemForEditCard(value).then((item) => {
+        totalPrice.innerText = item.totalPrice - item.price;
+        // totalOfAllItems.innerText -= item.price;
+        priceModal.innerText = +priceModal.innerText - item.price;
+      });
+      counter--;
+      quantityCounter.innerText = counter;
+    }
+  }
+
+  function sumBtn(e) {
+    const quantityCounter = document.getElementById(`spanCounter${value}`);
+
+    const totalPrice = document.getElementById(`totalPriceSpan${value}`);
+
+    // const totalOfAllItems = document.getElementById('totalOfAllItems');
+    if (counter < 3) {
+      editCart(value, "add");
+      getItemForEditCard(product.value).then((item) => {
+        totalPrice.innerText = item.totalPrice + item.price;
+        const priceMyCart = document.getElementById("priceMyCart");
+
+        priceMyCart.innerText = +priceMyCart.innerText + item.price;
+
+        // totalOfAllItems.innerText += item.price;
+      });
+      counter++;
+      quantityCounter.innerText = counter;
+    }
+  }
+
+
+
+
+
+
   function cancelBtn() {
     document.getElementById("modalDelete").classList.add("hidden");
     document.getElementById("overlayModal").classList.add("hidden");
@@ -27,8 +72,8 @@ export function ModalDelete() {
     id: "modalDelete",
     value: "valueparent",
     className:
-      " bottom-0 w-full h-[400px] fixed bg-gray-200 rounded-t-[70px]  p-2 flex flex-col pt-[50px] gap-[60px] items-center hidden parent",
-
+      " bottom-0 w-full h-[400px] fixed bg-white rounded-t-[70px]  p-2 flex flex-col pt-[50px] gap-[60px] items-center hidden parent",
+    //bg-[#212529]
 
     children: [
       El({
@@ -122,19 +167,19 @@ export function ModalDelete() {
                         element: "span",
                         className: "font-bold cursor-pointer",
                         id: "span-subtract",
-                        // addEvenListener: [
-                        //   {
-                        //     event: "onclick",
-                        //     callback: (e) => subtractBtn(e),
-                        //   },
-                        // ],
+                        addEvenListener: [
+                          {
+                            event: "onclick",
+                            callback: (e) => subtractBtn(e),
+                          },
+                        ],
 
                         innerText: "-",
                       }),
                       El({
                         element: "span",
                         className: "font-bold countCart",
-                        id: "imageModal",
+                        id: "spanCounter${value}",
 
                         id: "quantityModal",
                         innerText: "quantity",
@@ -142,8 +187,8 @@ export function ModalDelete() {
                       El({
                         element: "span",
                         className: "font-bold cursor-pointer",
-                        id: "span-sum",
-                        // onclick: sumBtn,
+                        id: "spanSumM",
+                        onclick: sumBtn,
                         innerText: "+",
                       }),
                     ],
@@ -171,7 +216,7 @@ export function ModalDelete() {
             id: "",
             onclick: removeBtn,
             className:
-              "hover:text-white hover:bg-black rounded-3xl bg-gray-200 w-[50%] text-[14px] h-[40px] cursor-pointer",
+              "text-white hover:bg-black rounded-3xl bg-[#212529] w-[50%] text-[14px] h-[40px] cursor-pointer",
             innerText: "Yes, Remove",
           }),
         ],
