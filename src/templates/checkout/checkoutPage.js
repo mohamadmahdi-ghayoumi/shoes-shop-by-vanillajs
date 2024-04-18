@@ -5,6 +5,7 @@ import { OrderList } from "../../components/Checkout/OrderList/OrderList";
 import { PromoCode } from "../../components/Checkout/PromoCode/PromoCode";
 import { headerBack } from "../../layout/header/headerback";
 import { El } from "../../utils/create-element";
+document.title = "Shoe Shop";
 
 export function checkoutPage() {
   return El({

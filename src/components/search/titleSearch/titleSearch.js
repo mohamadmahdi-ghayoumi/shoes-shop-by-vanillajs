@@ -26,7 +26,7 @@ export function titleSearch() {
           }),
           El({
             element: "span",
-            className: "font-semibold",
+            className: "font-semibold cursor-pointer",
             innerText: "Clear All",
             onclick: clearData,
           }),

@@ -1,5 +1,5 @@
 import { getProductsSearch } from "../../../api/get/getProducts";
-import { OneCartInMyCart } from "../../MyCart/OneCartInMyCart.js/OneCartInMyCart";
+import { OneCardSearch } from "../OneCardSerach/OneCardSearch";
 
 
 export function renderCardApiSearch() {
@@ -12,7 +12,7 @@ export function renderCardApiSearch() {
     const cardsProduct = document.getElementById("cardsProduct");
 
     data.map((product) => {
-      const cardSearch = OneCartInMyCart({ product });
+      const cardSearch = OneCardSearch({ product });
       return cardsProduct.append(cardSearch);
     });
 

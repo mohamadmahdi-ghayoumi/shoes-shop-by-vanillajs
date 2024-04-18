@@ -29,7 +29,7 @@ export function oneData(name) {
       }),
       El({
         element: "span",
-        className: "icon-[solar--close-square-linear]",
+        className: "icon-[solar--close-square-linear] cursor-pointer",
         onclick: deleteData,
       }),
     ],

@@ -30,230 +30,200 @@ import { homePage } from "../pages/home-page/home-page.js";
 import { getCookie } from "../utils/coockie.js";
 
 export const router = new Navigo("/");
-const c = getCookie("email")
+const c = getCookie("email");
 
 router
   .on("/onboardingpageone", () => {
-    if(c.length){
-      changePage(homePage);
-}
-else {
-  changePage(onboardingOnePage);
-}
+    if (c.length) {
+      changePage(onboardingOnePage);
+    } else {
+      changePage(loginPage);
+    }
   })
   .on("/onboardingpagetwo", () => {
-    if(c.length){
-      changePage(homePage);
-}
-else {
-  changePage(onboardingTwoPage);
-}
+    if (c.length) {
+      changePage(onboardingTwoPage);
+    } else {
+      changePage(loginPage);
+    }
   })
   .on("/onboardingpagethree", () => {
-    if(c.length){
-      changePage(homePage);
-}
-else {
-  changePage(onboardingThreePage);
-}
+    if (c.length) {
+      changePage(onboardingThreePage);
+    } else {
+      changePage(loginPage);
+    }
   })
   .on("/login", () => {
-    if(c.length){
+    if (c.length) {
       changePage(homePage);
-}
-else {
-  changePage(loginPage);
-}
+    } else {
+      changePage(loginPage);
+    }
   })
   .on("/", () => {
-
-    if(c.length){
-      changePage(homePage);
-}
-else {
-  changePage(WishlistPage);
-}
+    if (c.length) {
+      changePage(WishlistPage);
+    } else {
+      changePage(loginPage);
+    }
   })
 
   .on("/wishlistpage", () => {
-    if(c.length){
-      changePage(homePage);
-}
-else {
-  changePage(WishlistPage);
-}
-    
+    if (c.length) {
+      changePage(WishlistPage);
+    } else {
+      changePage(loginPage);
+    }
   })
   .on("/mycartpage", () => {
-    if(c.length){
-      changePage(homePage);
-}
-else {
-  changePage(myCartPageTemplate);
-}
+    if (c.length) {
+      changePage(myCartPageTemplate);
+    } else {
+      changePage(loginPage);
+    }
   })
 
   .on("/homepage", () => {
-    if(c.length){
-          changePage(homePage);
-    }
-    else {
-      changePage(loginPage)
+    if (c.length) {
+      changePage(homePage);
+    } else {
+      changePage(loginPage);
     }
   })
   .on("/shoes-adidas", () => {
-    if(c.length){
-      changePage(homePage);
-}
-else {
-  changePage(homeAdidas);
-}
+    if (c.length) {
+      changePage(homeAdidas);
+    } else {
+      changePage(loginPage);
+    }
   })
   .on("/shoes-nike", () => {
-    if(c.length){
-      changePage(homePage);
-}
-else {
-  changePage(homeNike);
-}
+    if (c.length) {
+      changePage(homeNike);
+    } else {
+      changePage(loginPage);
+    }
   })
   .on("/shoes-reebok", () => {
-    if(c.length){
-      changePage(homePage);
-}
-else {
-  changePage(homeReebok);
-}
+    if (c.length) {
+      changePage(homeReebok);
+    } else {
+      changePage(loginPage);
+    }
   })
   .on("/shoes-newbalance", () => {
-    if(c.length){
-      changePage(homePage);
-}
-else {
-  changePage(homeNewBalance);
-}
+    if (c.length) {
+      changePage(homeNewBalance);
+    } else {
+      changePage(loginPage);
+    }
   })
   .on("/shoes-asics", () => {
-    if(c.length){
-      changePage(homePage);
-}
-else {
-  changePage(homeAsics);
-}
+    if (c.length) {
+      changePage(homeAsics);
+    } else {
+      changePage(loginPage);
+    }
   })
   .on("/shoes-puma", () => {
-    if(c.length){
-      changePage(homePage);
-}
-else {
-  changePage(homePuma);
-}
+    if (c.length) {
+      changePage(homePuma);
+    } else {
+      changePage(loginPage);
+    }
   })
   .on("/shoes-converse", () => {
-    if(c.length){
-      changePage(homePage);
-}
-else {
-  changePage(homeConverse);
-}
+    if (c.length) {
+      changePage(homeConverse);
+    } else {
+      changePage(loginPage);
+    }
   })
   .on("/shoes-allbrands", () => {
-    if(c.length){
-      changePage(homePage);
-}
-else {
-  changePage(homeAllBrands);
-}
+    if (c.length) {
+      changePage(homeAllBrands);
+    } else {
+      changePage(loginPage);
+    }
   })
   .on("/shoes-mostpopular", () => {
-    if(c.length){
-      changePage(homePage);
-}
-else {
-    changePage(mostPopular);
-}
+    if (c.length) {
+      changePage(mostPopular);
+    } else {
+      changePage(loginPage);
+    }
   })
   .on("/cardfulldetail", () => {
-    if(c.length){
-      changePage(homePage);
-}
-else {
-  changePage(cardFullDetailPage);
-}
+    if (c.length) {
+      changePage(cardFullDetailPage);
+    } else {
+      changePage(loginPage);
+    }
   })
   .on("/checkout", () => {
-    if(c.length){
-      changePage(homePage);
-}
-else {
-  changePage(checkoutPage);
-}
+    if (c.length) {
+      changePage(checkoutPage);
+    } else {
+      changePage(loginPage);
+    }
   })
   .on("/shippingaddresspage", () => {
-    if(c.length){
-      changePage(homePage);
-}
-else {
-  changePage(shippingAddressPage);
-}
-    
+    if (c.length) {
+      changePage(shippingAddressPage);
+    } else {
+      changePage(loginPage);
+    }
   })
   .on("/chooseshipping", () => {
-    if(c.length){
-      changePage(homePage);
-}
-else {
-  changePage(chooseShipping);
-}
+    if (c.length) {
+      changePage(chooseShipping);
+    } else {
+      changePage(loginPage);
+    }
   })
   .on("/paymentmethods", () => {
-    if(c.length){
-      changePage(homePage);
-}
-else {
-  changePage(paymentMethodsPage);
-}
+    if (c.length) {
+      changePage(paymentMethodsPage);
+    } else {
+      changePage(loginPage);
+    }
   })
   .on("/successfulpage", () => {
-    if(c.length){
-      changePage(homePage);
-}
-else {
-  changePage(successfulPage);
-}
+    if (c.length) {
+      changePage(successfulPage);
+    } else {      changePage(loginPage);
+
+    }
   })
   .on("/myorderspage", () => {
-    if(c.length){
-      changePage(homePage);
-}
-else {
-  changePage(myOrdersPage);
-}
+    if (c.length) {
+      changePage(myOrdersPage);
+    } else {      changePage(loginPage);
+
+    }
   })
   .on("/products/:id", ({ data }) => {
-    if(c.length){
-      changePage(homePage);
-}
-else {
-  changePage(Product, data);
-}
+    if (c.length) {
+      changePage(Product, data);
+    } else {
+      changePage(loginPage);
+    }
   })
   .on("/brand/:brand", ({ data }) => {
-    if(c.length){
-      changePage(homePage);
-}
-else {
-  changePage(brandPage, data);
-}
+    if (c.length) {
+      changePage(brandPage, data);
+    } else {      changePage(loginPage);
+
+    }
   })
   .on("/searchpage", () => {
     changePage(searchPage);
-    if(c.length){
-      changePage(homePage);
-}
-else {
-  changePage(searchPage);
-}
+    if (c.length) {
+      changePage(searchPage);
+    } else {      changePage(loginPage);
+
+    }
   });
 // .on("/", () => {
 //   changePage(cardForWishlistPage);

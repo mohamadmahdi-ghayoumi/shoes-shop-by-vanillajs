@@ -16,7 +16,7 @@ export function cardFullDetail({ product }) {
       ImageCard({ product }),
       FavoriteCard({ product }),
       DescriptionCard(),
-      ColorSizeButtons(),
+      ColorSizeButtons({ product }),
       QuantityCard({ product }),
       PriceCard({ product }),
     ],

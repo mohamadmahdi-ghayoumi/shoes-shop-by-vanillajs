@@ -16,7 +16,6 @@ export function FavoriteCard({ product }) {
 
   function sendToWishlist() {
     const iconHeart = document.getElementById("iconHeart");
-
     if (iconHeart.classList.contains("text-red-500")) {
       iconHeart.classList.add("icon-[ph--heart-light]");
       iconHeart.classList.remove("icon-[icon-park-solid--like]");
@@ -34,6 +33,8 @@ export function FavoriteCard({ product }) {
         console.log(data);
         console.log(product);
 
+
+        //aya object product dakhele data has ?
         const containsProduct = data.some(
           (item) => JSON.stringify(item) === JSON.stringify(product)
         );

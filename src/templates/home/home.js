@@ -7,7 +7,7 @@ import { RenderProducts } from "../../components/Home/RenderProducts/RenderProdu
 import { ButtonsBrand } from "../../components/Home/ButtonsBrand/ButtonsBrand";
 import { MarginButtons } from "../../components/Home/MarginButtons/MarginButtons";
 
-document.title = "home page";
+// document.title = "home page";
 
 export function home() {
   return El({
