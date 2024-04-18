@@ -19,7 +19,6 @@ import { shippingAddressPage } from "../templates/checkout/shippingAddressPage.j
 import { chooseShipping } from "../templates/checkout/chooseShipping.js";
 import { paymentMethodsPage } from "../templates/checkout/paymentMethodsPage.js";
 import { successfulPage } from "../templates/checkout/successfulPage.js";
-import { myOrdersPage } from "../templates/myOrders.js";
 import { onboardingOnePage } from "../pages/onboarding-page/onboardingOne-page.js";
 import { onboardingTwoPage } from "../pages/onboarding-page/onboradingTwo-page.js";
 import { onboardingThreePage } from "../pages/onboarding-page/onboardingThree-page.js";
@@ -28,6 +27,7 @@ import { cardFullDetailPage } from "../pages/cardFullDetail-page/cardFullDetail-
 import { homePage } from "../pages/home-page/home-page.js";
 import { getCookie } from "../utils/coockie.js";
 import { checkoutPage } from "../pages/checkout-page/checkout-page.js";
+import { myOrdersPage } from "../pages/myOrders-page/myOrders-page.js";
 
 export const router = new Navigo("/");
 const c = getCookie("email");

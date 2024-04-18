@@ -14,7 +14,6 @@ export function home() {
     element: "div",
     className: "",
     children: [
-      headerHomePage(),
       SearchBox(),
       ButtonsBrand(),
       SeeAll(),
@@ -24,12 +23,6 @@ export function home() {
         id: "home",
         children: [RenderProducts("all")],
       }),
-      footerHomePage(
-        "hidden",
-        "icon-[ion--home-sharp]",
-        "icon-[bi--bag]",
-        " icon-[cil--cart]"
-      ),
     ],
   });
 }
