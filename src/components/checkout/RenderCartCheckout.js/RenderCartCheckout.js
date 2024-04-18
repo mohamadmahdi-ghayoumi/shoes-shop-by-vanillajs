@@ -1,6 +1,6 @@
 import { getCardProduct } from "../../../api/get/getProducts";
 import { El } from "../../../utils/create-element";
-import { setLocalStorage } from "../../../utils/localStorage";
+import { getLocalStorage, setLocalStorage } from "../../../utils/localStorage";
 import { OneCartInCheckout } from "../OneCartInCheckout/OneCartInCheckout";
 
 export function RenderCartCheckout() {
@@ -23,8 +23,10 @@ export function RenderCartCheckout() {
     document.getElementById("amount").innerText = `$ ${sum}`;
     const data = { total: sum };
     console.log(sum);
-    document.getElementById("totalPriceee").innerText = sum
-    setLocalStorage("totalPriceAmount", data);
+    const shipping = getLocalStorage("shipping");
+
+    document.getElementById("totalPriceee").innerText = sum + +shipping.price;
+    // setLocalStorage("totalPriceAmount", data);
   });
 
   return Element;

@@ -4,7 +4,7 @@ import { getLocalStorage } from "../../../utils/localStorage";
 export function AmountAndPayment() {
   const shipping = getLocalStorage("shipping");
   const totalPrice = getLocalStorage("totalPriceAmount");
-
+console.log(shipping.price)
   function addToPayment() {
     window.location.href = "/paymentmethods";
   }
