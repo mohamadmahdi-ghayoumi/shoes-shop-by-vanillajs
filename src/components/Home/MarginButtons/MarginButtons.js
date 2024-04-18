@@ -1,4 +1,5 @@
 import { El } from "../../../utils/create-element";
+import { ImageButton } from "../ImageButton/ImageButton";
 import { MarginButton } from "../MarginButton/MarginButton";
 export function MarginButtons() {
   const elemenet = El({

@@ -1,5 +1,6 @@
 import { El } from "../../../utils/create-element";
 import { ButtonBrand } from "../ButtonBrand/ButtonBrand";
+import { ImageButton } from "../ImageButton/ImageButton";
 
 export function ButtonsBrand() {
   return El({
@@ -26,11 +27,12 @@ export function ButtonsBrand() {
             brand: "Puma",
             className: "items-center justify-center",
           }),
-          ButtonBrand({
-            logo: "icon-[simple-icons--reebok]",
-            brand: "Asics",
-            className: "items-center justify-center",
-          }),
+          // ButtonBrand({
+          //   logo: "icon-[simple-icons--reebok]",
+          //   brand: "Asics",
+          //   className: "items-center justify-center",
+          // }),
+          ImageButton({ brand: "Asics", src: "./src/assets/image/asics.svg" , className: "items-center justify-center" }),
         ],
       }),
       El({
@@ -47,12 +49,12 @@ export function ButtonsBrand() {
             brand: "New Balance",
             className: " justify-center",
           }),
-          ButtonBrand({
-            logo: "icon-[gg--adidas]",
-            brand: "Converse",
-            className: "items-center justify-center",
-          }),
-
+          // ButtonBrand({
+          //   logo: "icon-[gg--adidas]",
+          //   brand: "Converse",
+          //   className: "items-center justify-center",
+          // }),
+          ImageButton({ brand: "Converse", src: "./src/assets/image/converse.svg" , className: "items-center justify-center" }),
           ButtonBrand({
             logo: "icon-[icon-park-outline--more-two]",
             brand: "more",
