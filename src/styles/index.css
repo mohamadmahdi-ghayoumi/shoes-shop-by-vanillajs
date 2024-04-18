@@ -16,10 +16,7 @@ body {
 .swiper-wrapper {
   display: flex;
 }
-img {
-  width: 100px;
-  height: 100px;
-}
+
 .swiper-wrapper1 {
   background-color: red;
 }

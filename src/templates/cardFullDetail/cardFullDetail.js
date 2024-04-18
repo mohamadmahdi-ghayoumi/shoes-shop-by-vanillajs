@@ -10,7 +10,7 @@ import { ColorSizeButtons } from "../../components/CardFullDetail/Color-Size-Bot
 export function cardFullDetail({ product }) {
   const Element = El({
     element: "div",
-    className: "flex flex-col ",
+    className: "flex flex-col",
     children: [
       headerBack(""),
       ImageCard({ product }),
