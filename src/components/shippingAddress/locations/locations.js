@@ -11,9 +11,27 @@ export function Locations() {
     className: "mx-[24px] flex flex-col  gap-10 mt-[50px]",
     children: [
       OneLocation("Home", "61480 Sunbrook Park PC 5", "home", "checked"),
-      OneLocation("Office", "6993 Meadow Valley Terra. PC 3", "office"),
-      OneLocation("Apartment", "21833 Clyde Gallagher. PC 4", "apartment"),
-      OneLocation("Parent's House", "5259 Blue Bill Park. PC 4", "parent"),
+      OneLocation(
+        "Office",
+        "6993 Meadow Valley Terra.",
+        "office",
+        "",
+        "hidden"
+      ),
+      OneLocation(
+        "Apartment",
+        "21833 Clyde Gallagher. PC 4",
+        "apartment",
+        "",
+        "hidden"
+      ),
+      OneLocation(
+        "Parent's House",
+        "5259 Blue Bill Park. PC 4",
+        "parent",
+        "",
+        "hidden"
+      ),
 
       El({
         element: "button",

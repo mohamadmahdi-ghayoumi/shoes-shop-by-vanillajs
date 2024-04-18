@@ -2,10 +2,19 @@ import axios from "axios";
 import { BASE_URL } from "../const";
 
 export async function addToCart(data) {
-  const { data: userData } = await axios.get(`${BASE_URL}/users/1`);
-  const cart = userData.cart.concat(data);
-  let response = await axios.patch(`${BASE_URL}/users/1`, { cart });
-  return response.data;
+  // const { data: userData } = await axios.get(`${BASE_URL}/users/1`);
+  // const cart = userData.cart.concat(data);
+  // let response = await axios.patch(`${BASE_URL}/users/1`, { cart });
+  // return response.data;
+
+
+  const userDataResponse = await axios.get(`${BASE_URL}/users/1`); 
+  const userData = userDataResponse.data;
+
+userData.cart.push(data);
+
+const response = await axios.patch(`${BASE_URL}/users/1`, { cart: userData.cart });
+ return response.data;
 }
 
 export async function addToWishlist(data) {

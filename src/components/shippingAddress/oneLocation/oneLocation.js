@@ -2,11 +2,11 @@ import { El } from "../../../utils/create-element";
 import { setLocalStorage } from "../../../utils/localStorage";
 // import { setLocalStorage } from "../../../utils/localStorage";
 
-export function OneLocation(name, address, value , checked) {
+export function OneLocation(name, address, value, checked,classDefault) {
   function radioLocation(e) {
     console.log("Clicked location: " + this.value);
     const namee =
-      e.target.closest("#parentlocation").children[0].children[1].children[0]
+      e.target.closest("#parentlocation").children[0].children[1].children[0].children[0]
         .innerText;
     const Addresss =
       e.target.closest("#parentlocation").children[0].children[1].children[1]
@@ -50,9 +50,21 @@ export function OneLocation(name, address, value , checked) {
             children: [
               El({
                 element: "div",
-                className: "font-bold text-[20px]",
-                innerText: name,
+                className: "flex gap-2 items-center font-medium	font-normal	",
+                children: [
+                  El({
+                    element: "div",
+                    className: "font-bold text-[20px]",
+                    innerText: name,
+                  }),
+                  El({
+                    element: "div",
+                    className: `bg-gray-200 p-1 rounded text-xs	${classDefault}`,
+                    innerText: "Default",
+                  }),
+                ],
               }),
+
               El({
                 element: "div",
                 className: "text-[14px] whitespace-nowrap",
